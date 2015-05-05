@@ -26,14 +26,12 @@ bool AppDelegate::init() {
         director->setOpenGLView(glview);
     }
     multiresolutionSupport();
-    FileUtils::getInstance()->addSearchPath(FileUtils::getInstance()->getWritablePath());
 #ifdef COCOS2D_DEBUG
     //director->setDisplayStats(true);
-    //TODO: add choosed resource folder
+    //TODO: add choose resource folder
 #endif
     director->setAnimationInterval(1.0 / 60);
-    initManagers();
-    ScenesManager::getInstance()->runWithMain();
+    ScenesManager::getInstance()->runWithWater();
     return true;
 }
 
