@@ -15,6 +15,7 @@ public:
     }
     
     void runWithMain();
+    void runWithWater();
     
     void gotoMain(int num);
     

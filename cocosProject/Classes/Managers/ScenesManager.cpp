@@ -3,6 +3,7 @@
 #include "Managers/LevelsManager.h"
 
 #include "Scenes/MainScene.h"
+#include "Scenes/WaterScene.h"
 
 #include <cocos2d.h>
 
@@ -17,6 +18,13 @@ void ScenesManager::runWithMain() {
     auto director = Director::getInstance();
     director->runWithScene(_currentScene);
 }
+
+void ScenesManager::runWithWater() {
+    _currentScene = WaterScene::create();
+    auto director = Director::getInstance();
+    director->runWithScene(_currentScene);
+}
+
 
 void ScenesManager::gotoMain(int num) {
     if(num > 3) return;
