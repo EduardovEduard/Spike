@@ -7,9 +7,9 @@ class WaterNode: public cocos2d::Node {
 
 public:
     CREATE_FUNC(WaterNode);
-
-    void touch(float x);
-
+    
+    void touch(cocos2d::Vec2 pt);
+    
 private:
 
     /* STATE */
@@ -36,4 +36,6 @@ private:
 
     /* FUNS */
     void drawWater();
+    
+    double levelFun(double x, int lvl = 1);
 };

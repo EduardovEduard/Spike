@@ -11,33 +11,29 @@ constexpr int BAR_COUNT = 200;
 constexpr double DAMPENING = 0.025;
 constexpr double TENSION = 0.005;
 constexpr double SPREAD = 0.3;
-constexpr double DEFAULT_SPEED = -80;
+constexpr double DEFAULT_SPEED = -180;
 
-
-void WaterNode::touch(float x) {
+void WaterNode::touch(Vec2 pt) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
-        return std::abs(a.position.x - x) < std::abs(b.position.x - x);
+        return std::abs(a.position.x - pt.x) < std::abs(b.position.x - pt.x);
     });
-
-    closestSpring->velocity += DEFAULT_SPEED;
+    if(pt.y > closestSpring->position.y)
+	closestSpring->velocity += DEFAULT_SPEED;
+    else
+	closestSpring->velocity -= DEFAULT_SPEED;
 }
 
 bool WaterNode::init() {
     if(!Node::init())
         return false;
-
     auto windowSize = Director::getInstance()->getWinSize();
-
     _time = 0;
     _drawNode = DrawNode::create();
     _drawNode->setContentSize(windowSize);
     _seaLevel = windowSize.height / 2;
     setContentSize(windowSize);
-
     initBorder();
-
     addChild(_drawNode);
-
     scheduleUpdate();
     return true;
 }
@@ -45,11 +41,9 @@ bool WaterNode::init() {
 void WaterNode::initBorder() {
     const auto size = getContentSize();
     const auto barWidth = size.width / BAR_COUNT;
-
     for (int i = 0; i <= BAR_COUNT; ++i) {
         _border.push_back(Vec2(i * barWidth, _seaLevel));
     }
-
     for (auto& point : _border) {
         _springs.push_back({Vec2(point.x, point.y), 0});
     }
@@ -57,7 +51,6 @@ void WaterNode::initBorder() {
 
 void WaterNode::update(float dt) {
     _drawNode->clear();
-    const auto size = getContentSize();
 
     updateSprings();
 
@@ -97,9 +90,8 @@ void WaterNode::update(float dt) {
 
 void WaterNode::updateSprings() {
     for (auto& spring : _springs) {
-        double yShift = spring.position.y - _seaLevel;
+        double yShift =  spring.position.y - levelFun(spring.position.x);
         double accelration = (-TENSION * yShift) - DAMPENING * spring.velocity;
-
         spring.position.y += spring.velocity;
         spring.velocity += accelration;
     }
@@ -111,4 +103,8 @@ void WaterNode::drawWater() {
                                  Vec2(_border[i + 1].x, 0), Vec2(_border[i].x, 0)};
         _drawNode->drawSolidPoly(piece.data(), piece.size(), Color4F::BLUE);
     }
+}
+
+double WaterNode::levelFun(double x, int lvl) {
+    return _seaLevel + 100 * sin(x / _springs.size() * 3.1415926 * 1.5);
 }

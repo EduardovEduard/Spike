@@ -8,7 +8,7 @@ using namespace cocos2d;
 
 void WaterScene::onMouseDown(Vec2 pt)
 {
-    _node->touch(pt.x);
+    _node->touch(pt);
 }
 
 bool WaterScene::init() {
