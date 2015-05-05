@@ -16,6 +16,7 @@ public:
     
     void runWithMain();
     void runWithWater();
+    void runWithSpring();
     
     void gotoMain(int num);
     

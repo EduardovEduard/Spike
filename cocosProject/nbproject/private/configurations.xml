@@ -18,6 +18,8 @@
           <in>HeroAsset.h</in>
           <in>TextAsset.cpp</in>
           <in>TextAsset.h</in>
+          <in>WaterNode.cpp</in>
+          <in>WaterNode.h</in>
         </df>
         <df name="GUI">
           <in>AdvLayer.cpp</in>
@@ -60,6 +62,8 @@
           <in>BasicScene.h</in>
           <in>MainScene.cpp</in>
           <in>MainScene.h</in>
+          <in>SpringScene.cpp</in>
+          <in>SpringScene.h</in>
           <in>WaterScene.cpp</in>
           <in>WaterScene.h</in>
         </df>
@@ -13661,8 +13665,6 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
-        <gdb_signals>
-        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>

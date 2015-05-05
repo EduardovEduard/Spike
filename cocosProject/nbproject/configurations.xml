@@ -8,6 +8,7 @@
           <in>GapAsset.cpp</in>
           <in>HeroAsset.cpp</in>
           <in>TextAsset.cpp</in>
+          <in>WaterNode.cpp</in>
         </df>
         <df name="GUI">
           <in>AdvLayer.cpp</in>
@@ -24,6 +25,7 @@
         <df name="Scenes">
           <in>BasicScene.cpp</in>
           <in>MainScene.cpp</in>
+          <in>SpringScene.cpp</in>
           <in>WaterScene.cpp</in>
         </df>
         <in>AppDelegate.cpp</in>
@@ -272,6 +274,10 @@
         <ccTool flags="0">
         </ccTool>
       </item>
+      <item path="Classes/GameElements/WaterNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
       <item path="Classes/Managers/LivesManager.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
           <preprocessorList>
@@ -298,6 +304,10 @@
         </ccTool>
       </item>
       <item path="Classes/Scenes/MainScene.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Scenes/SpringScene.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>

@@ -20,7 +20,6 @@ bool AppDelegate::init() {
     auto glview = director->getOpenGLView();
     if (!glview) {
 	glview = GLViewImpl::createWithRect("Foxy Bird", Rect(100, 100,
-	    //1136 * 1.3, 640 * 1.3
 	    1280, 640
 	));
         director->setOpenGLView(glview);
@@ -32,6 +31,7 @@ bool AppDelegate::init() {
 #endif
     director->setAnimationInterval(1.0 / 60);
     ScenesManager::getInstance()->runWithWater();
+    ScenesManager::getInstance()->runWithSpring();
     return true;
 }
 

@@ -4,6 +4,7 @@
 
 #include "Scenes/MainScene.h"
 #include "Scenes/WaterScene.h"
+#include "Scenes/SpringScene.h"
 
 #include <cocos2d.h>
 
@@ -25,6 +26,11 @@ void ScenesManager::runWithWater() {
     director->runWithScene(_currentScene);
 }
 
+void ScenesManager::runWithSpring() {
+    _currentScene = SpringScene::create();
+    auto director = Director::getInstance();
+    director->runWithScene(_currentScene);
+}
 
 void ScenesManager::gotoMain(int num) {
     if(num > 3) return;

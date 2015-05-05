@@ -60,7 +60,7 @@ bool BasicScene::initBasic() {
     
     auto lc = MyLayer::create();
     lc->_basicScene = this;
-    addChild(lc, 1);
+    addChild(lc);
     
 #ifdef LINUX
     //initMouseCursor();
