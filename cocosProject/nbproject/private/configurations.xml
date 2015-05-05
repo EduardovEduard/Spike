@@ -103,6 +103,8 @@
         </df>
         <df name="Graman_PRE_BUILD.dir">
         </df>
+        <df name="Progress">
+        </df>
       </df>
       <df name="cocos2d">
         <df name="bin">
@@ -13625,6 +13627,475 @@
         </df>
       </df>
       <df name="lib">
+      </df>
+      <df name="proj.android">
+        <df name="assets">
+          <df name="levels">
+          </df>
+        </df>
+        <df name="bin">
+          <df name="classes">
+            <df name="org">
+              <df name="cocos2dx">
+                <df name="cpp">
+                </df>
+              </df>
+              <df name="jonyrock">
+                <df name="Spike">
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="dexedLibs">
+          </df>
+          <df name="res">
+          </df>
+        </df>
+        <df name="gen">
+        </df>
+        <df name="jni">
+          <df name="src">
+            <in>main.cpp</in>
+          </df>
+        </df>
+        <df name="libs">
+          <df name="armeabi">
+          </df>
+        </df>
+        <df name="obj">
+          <df name="local">
+            <df name="armeabi">
+              <df name="objs">
+                <df name="audioengine_static">
+                  <df name="__">
+                  </df>
+                </df>
+                <df name="box2d_static">
+                  <df name="Collision">
+                    <df name="Shapes">
+                    </df>
+                  </df>
+                  <df name="Common">
+                  </df>
+                  <df name="Dynamics">
+                    <df name="Contacts">
+                    </df>
+                    <df name="Joints">
+                    </df>
+                  </df>
+                  <df name="Rope">
+                  </df>
+                </df>
+                <df name="cocos2dcpp_shared">
+                  <df name="__">
+                    <df name="__">
+                      <df name="Classes">
+                        <df name="GameElements">
+                        </df>
+                        <df name="GUI">
+                        </df>
+                        <df name="Managers">
+                        </df>
+                        <df name="Models">
+                        </df>
+                        <df name="Scenes">
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                  <df name="src">
+                    <df name="JniMethods">
+                    </df>
+                    <df name="Managers">
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos2dx_internal_static">
+                  <df name="2d">
+                  </df>
+                  <df name="__">
+                    <df name="external">
+                      <df name="ConvertUTF">
+                      </df>
+                      <df name="edtaa3func">
+                      </df>
+                      <df name="tinyxml2">
+                      </df>
+                      <df name="unzip">
+                      </df>
+                      <df name="xxhash">
+                      </df>
+                    </df>
+                  </df>
+                  <df name="base">
+                  </df>
+                  <df name="deprecated">
+                  </df>
+                  <df name="math">
+                  </df>
+                  <df name="physics">
+                    <df name="chipmunk">
+                    </df>
+                  </df>
+                  <df name="platform">
+                  </df>
+                  <df name="renderer">
+                  </df>
+                </df>
+                <df name="cocos2dx_soomla_common_static">
+                  <df name="Soomla">
+                    <df name="data">
+                    </df>
+                    <df name="domain">
+                    </df>
+                    <df name="rewards">
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos2dx_store_static">
+                  <df name="Soomla">
+                    <df name="data">
+                    </df>
+                    <df name="domain">
+                      <df name="virtualCurrencies">
+                      </df>
+                      <df name="virtualGoods">
+                      </df>
+                    </df>
+                    <df name="NativeImpl">
+                    </df>
+                    <df name="PurchaseTypes">
+                    </df>
+                    <df name="rewards">
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos2dxandroid_static">
+                  <df name="jni">
+                  </df>
+                </df>
+                <df name="cocos3d_static">
+                </df>
+                <df name="cocos_extension_static">
+                  <df name="assets-manager">
+                  </df>
+                  <df name="GUI">
+                    <df name="CCControlExtension">
+                    </df>
+                    <df name="CCScrollView">
+                    </df>
+                  </df>
+                  <df name="physics-nodes">
+                  </df>
+                </df>
+                <df name="cocos_network_static">
+                </df>
+                <df name="cocos_protobuf-lite_static">
+                  <df name="src">
+                    <df name="google">
+                      <df name="protobuf">
+                        <df name="io">
+                        </df>
+                        <df name="stubs">
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos_ui_static">
+                  <df name="UIEditBox">
+                  </df>
+                </df>
+                <df name="cocosbuilder_static">
+                </df>
+                <df name="cocosdenshion_static">
+                  <df name="jni">
+                  </df>
+                </df>
+                <df name="cocostudio_static">
+                  <df name="ActionTimeline">
+                  </df>
+                  <df name="WidgetReader">
+                    <df name="ButtonReader">
+                    </df>
+                    <df name="CheckBoxReader">
+                    </df>
+                    <df name="ImageViewReader">
+                    </df>
+                    <df name="LayoutReader">
+                    </df>
+                    <df name="ListViewReader">
+                    </df>
+                    <df name="LoadingBarReader">
+                    </df>
+                    <df name="PageViewReader">
+                    </df>
+                    <df name="ScrollViewReader">
+                    </df>
+                    <df name="SliderReader">
+                    </df>
+                    <df name="TextAtlasReader">
+                    </df>
+                    <df name="TextBMFontReader">
+                    </df>
+                    <df name="TextFieldReader">
+                    </df>
+                    <df name="TextReader">
+                    </df>
+                  </df>
+                </df>
+                <df name="cpufeatures">
+                </df>
+                <df name="jansson_static">
+                </df>
+                <df name="spine_static">
+                </df>
+              </df>
+              <df name="objs-debug">
+                <df name="audioengine_static">
+                  <df name="__">
+                  </df>
+                </df>
+                <df name="box2d_static">
+                  <df name="Collision">
+                    <df name="Shapes">
+                    </df>
+                  </df>
+                  <df name="Common">
+                  </df>
+                  <df name="Dynamics">
+                    <df name="Contacts">
+                    </df>
+                    <df name="Joints">
+                    </df>
+                  </df>
+                  <df name="Rope">
+                  </df>
+                </df>
+                <df name="cocos2dcpp_shared">
+                  <df name="__">
+                    <df name="__">
+                      <df name="Classes">
+                        <df name="GameElements">
+                        </df>
+                        <df name="GUI">
+                        </df>
+                        <df name="Managers">
+                        </df>
+                        <df name="Models">
+                        </df>
+                        <df name="Scenes">
+                        </df>
+                        <df name="StoreTest">
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                  <df name="src">
+                    <df name="JniMethods">
+                    </df>
+                    <df name="Managers">
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos2dx_internal_static">
+                  <df name="2d">
+                  </df>
+                  <df name="__">
+                    <df name="external">
+                      <df name="ConvertUTF">
+                      </df>
+                      <df name="edtaa3func">
+                      </df>
+                      <df name="tinyxml2">
+                      </df>
+                      <df name="unzip">
+                      </df>
+                      <df name="xxhash">
+                      </df>
+                    </df>
+                  </df>
+                  <df name="base">
+                  </df>
+                  <df name="deprecated">
+                  </df>
+                  <df name="math">
+                  </df>
+                  <df name="physics">
+                    <df name="chipmunk">
+                    </df>
+                  </df>
+                  <df name="platform">
+                  </df>
+                  <df name="renderer">
+                  </df>
+                </df>
+                <df name="cocos2dx_soomla_common_static">
+                  <df name="Soomla">
+                    <df name="data">
+                    </df>
+                    <df name="domain">
+                    </df>
+                    <df name="rewards">
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos2dx_store_static">
+                  <df name="Soomla">
+                    <df name="data">
+                    </df>
+                    <df name="domain">
+                      <df name="virtualCurrencies">
+                      </df>
+                      <df name="virtualGoods">
+                      </df>
+                    </df>
+                    <df name="NativeImpl">
+                    </df>
+                    <df name="PurchaseTypes">
+                    </df>
+                    <df name="rewards">
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos2dxandroid_static">
+                  <df name="jni">
+                  </df>
+                </df>
+                <df name="cocos3d_static">
+                </df>
+                <df name="cocos_extension_static">
+                  <df name="assets-manager">
+                  </df>
+                  <df name="GUI">
+                    <df name="CCControlExtension">
+                    </df>
+                    <df name="CCScrollView">
+                    </df>
+                  </df>
+                  <df name="physics-nodes">
+                  </df>
+                </df>
+                <df name="cocos_network_static">
+                </df>
+                <df name="cocos_protobuf-lite_static">
+                  <df name="src">
+                    <df name="google">
+                      <df name="protobuf">
+                        <df name="io">
+                        </df>
+                        <df name="stubs">
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="cocos_ui_static">
+                  <df name="UIEditBox">
+                  </df>
+                </df>
+                <df name="cocosbuilder_static">
+                </df>
+                <df name="cocosdenshion_static">
+                  <df name="jni">
+                  </df>
+                </df>
+                <df name="cocostudio_static">
+                  <df name="ActionTimeline">
+                  </df>
+                  <df name="WidgetReader">
+                    <df name="ButtonReader">
+                    </df>
+                    <df name="CheckBoxReader">
+                    </df>
+                    <df name="ImageViewReader">
+                    </df>
+                    <df name="LayoutReader">
+                    </df>
+                    <df name="ListViewReader">
+                    </df>
+                    <df name="LoadingBarReader">
+                    </df>
+                    <df name="PageViewReader">
+                    </df>
+                    <df name="ScrollViewReader">
+                    </df>
+                    <df name="SliderReader">
+                    </df>
+                    <df name="TextAtlasReader">
+                    </df>
+                    <df name="TextBMFontReader">
+                    </df>
+                    <df name="TextFieldReader">
+                    </df>
+                    <df name="TextReader">
+                    </df>
+                  </df>
+                </df>
+                <df name="cpufeatures">
+                </df>
+                <df name="jansson_static">
+                </df>
+                <df name="spine_static">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="out">
+          <df name="production">
+            <df name="CatalinaAndroid">
+              <df name="org">
+                <df name="cocos2dx">
+                  <df name="cpp">
+                  </df>
+                  <df name="lib">
+                  </df>
+                </df>
+                <df name="jonyrock">
+                  <df name="FoxyBird">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="FoxyBird">
+              <df name="org">
+                <df name="cocos2dx">
+                  <df name="cpp">
+                  </df>
+                  <df name="lib">
+                  </df>
+                </df>
+                <df name="jonyrock">
+                  <df name="FoxyBird">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="res">
+          <df name="drawable-hdpi">
+          </df>
+          <df name="drawable-mdpi">
+          </df>
+          <df name="drawable-xhdpi">
+          </df>
+          <df name="drawable-xxhdpi">
+          </df>
+          <df name="drawable-xxxhdpi">
+          </df>
+          <df name="values">
+          </df>
+        </df>
+        <df name="src">
+          <df name="org">
+            <df name="cocos2dx">
+              <df name="cpp">
+              </df>
+            </df>
+          </df>
+        </df>
       </df>
       <df name="proj.linux">
         <df name="Managers">
