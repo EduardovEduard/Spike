@@ -6,7 +6,7 @@
 using namespace cocos2d;
 using namespace std;
 
-constexpr int BAR_COUNT = 20;
+constexpr int BAR_COUNT = 200;
 
 bool WaterNode::init() {
     if(!Node::init())
@@ -14,6 +14,7 @@ bool WaterNode::init() {
 
     auto windowSize = Director::getInstance()->getWinSize();
 
+    _time = 0;
     _drawNode = DrawNode::create();
     _drawNode->setContentSize(windowSize);
     setContentSize(windowSize);
@@ -38,6 +39,14 @@ void WaterNode::initBorder() {
 
 void WaterNode::update(float dt) {
     _drawNode->clear();
+    const auto size = getContentSize();
+
+    _time += dt;
+    for (size_t i = 0; i < _border.size(); ++i)
+    {
+        _border[i].y = (size.height / 2) + 10 * sin(((_border[i].x / _border.size()) + _time) * 10);
+    }
+
     drawWater();
 }
 

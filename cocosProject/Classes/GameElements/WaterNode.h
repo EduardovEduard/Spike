@@ -13,6 +13,7 @@ private:
     /* STATE */
     std::vector<cocos2d::Vec2> _border;
     cocos2d::DrawNode* _drawNode;
+    double _time;
 
     /* ELEMENTS */
 
