@@ -17,14 +17,15 @@ public:
     CREATE_FUNC(SpringScene);
 private:
 
-    /* STATE */
-
+    /* STATE */   
+    
     /* ELEMENTS */
 
     /* HANDLERS */
 
     /* INITS */
     bool init() override;
+    void initNodes();
     
     /* UPDATES */
     
