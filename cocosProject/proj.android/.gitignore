@@ -1,0 +1,10 @@
+obj/*
+bin/*
+gen/*
+out/*
+FoxyBird.apk
+local.properties
+assets/*
+libs/armeabi/libcocos2dcpp.so
+libs/armeabi/gdb.setup
+libs/armeabi/gdbserver
