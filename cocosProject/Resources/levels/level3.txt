@@ -1,0 +1,44 @@
+an: some short text
+a: yet another
+the: 
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+the: 'the' is used in front of any noun the listener or reader already knows about.
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+the: 'the' is used in front of any noun the listener or reader already knows about.
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+an: 'an' is put in front of any word that/begins with a pure vowel sound or a mute 'h'
+the: 'the' is used in front of any noun the listener or reader already knows about.
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+the: 'the' is used when the existence of something is common knowledge  
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+an: 'an' is put in front of any word that/begins with a pure vowel sound or a mute 'h'
+the: 'the' is used in front of any noun the listener or reader already knows about.
+the: 'the' is used in front of any noun the listener or reader already knows about.
+the: 'the' is used in front of any noun the listener or reader already knows about.
+the: 'the' is used when the existence of something is common knowledge
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+the: 'the' is used in front of any noun the listener or reader already knows about.
+a: 'a' is used in front of any word that/begins with a consonant or consonant-like vowel sound 
+the: 'the' is used in front of any noun the listener or reader already knows about.
+an: 'an' is put in front of any word that/begins with a pure vowel sound or a mute 'h'
+---
+I am sitting in ??? office 
+in ??? university somewhere 
+in ??? UK, looking at ??? desk. 
+On ??? desk there is ??? piece 
+of paper, under ??? piece of 
+paper there is ??? photograph 
+of ??? elephant. Next to ??? desk
+there is ??? window. Looking out 
+of ??? window I can see ??? young 
+man. He is wearing ??? uniform 
+and carrying ??? umbrella. 
+??? uniform is blue and 
+??? umbrella is black.
+??? young man is crossing ??? road. 
+He is walking towards ??? car.
+??? car is yellow. 
+He is ??? traffic warden and 
+??? yellow car has been parked 
+there for over ??? hour.

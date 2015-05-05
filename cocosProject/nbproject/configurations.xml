@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="Classes">
+        <df name="GameElements">
+          <in>BubbleAsset.cpp</in>
+          <in>GapAsset.cpp</in>
+          <in>HeroAsset.cpp</in>
+          <in>TextAsset.cpp</in>
+        </df>
+        <df name="GUI">
+          <in>AdvLayer.cpp</in>
+          <in>GUI.cpp</in>
+          <in>GameOverLayer.cpp</in>
+          <in>LivesAsset.cpp</in>
+          <in>ResultsLayer.cpp</in>
+        </df>
+        <df name="Managers">
+          <in>LivesManager.cpp</in>
+          <in>LocalizationManager.cpp</in>
+          <in>ScenesManager.cpp</in>
+        </df>
+        <df name="Scenes">
+          <in>BasicScene.cpp</in>
+          <in>MainScene.cpp</in>
+        </df>
+        <in>AppDelegate.cpp</in>
+        <in>Utils.cpp</in>
+      </df>
+      <df name="cocos2d">
+        <df name="cocos">
+          <df name="2d">
+            <in>CCAction.cpp</in>
+            <in>CCActionCamera.cpp</in>
+            <in>CCActionCatmullRom.cpp</in>
+            <in>CCActionEase.cpp</in>
+            <in>CCActionGrid.cpp</in>
+            <in>CCActionGrid3D.cpp</in>
+            <in>CCActionInstant.cpp</in>
+            <in>CCActionInterval.cpp</in>
+            <in>CCActionManager.cpp</in>
+            <in>CCActionPageTurn3D.cpp</in>
+            <in>CCActionProgressTimer.cpp</in>
+            <in>CCActionTiledGrid.cpp</in>
+            <in>CCActionTween.cpp</in>
+            <in>CCAnimation.cpp</in>
+            <in>CCAnimationCache.cpp</in>
+            <in>CCAtlasNode.cpp</in>
+            <in>CCCamera.cpp</in>
+            <in>CCClippingNode.cpp</in>
+            <in>CCClippingRectangleNode.cpp</in>
+            <in>CCComponent.cpp</in>
+            <in>CCComponentContainer.cpp</in>
+            <in>CCDrawNode.cpp</in>
+            <in>CCDrawingPrimitives.cpp</in>
+            <in>CCFastTMXLayer.cpp</in>
+            <in>CCFastTMXTiledMap.cpp</in>
+            <in>CCFont.cpp</in>
+            <in>CCFontAtlas.cpp</in>
+            <in>CCFontAtlasCache.cpp</in>
+            <in>CCFontCharMap.cpp</in>
+            <in>CCFontFNT.cpp</in>
+          </df>
+          <in>cocos2d.cpp</in>
+        </df>
+        <df name="external">
+          <df name="Box2D">
+            <df name="Collision">
+              <df name="Shapes">
+                <in>b2ChainShape.cpp</in>
+                <in>b2CircleShape.cpp</in>
+                <in>b2EdgeShape.cpp</in>
+                <in>b2PolygonShape.cpp</in>
+              </df>
+              <in>b2BroadPhase.cpp</in>
+              <in>b2CollideCircle.cpp</in>
+              <in>b2CollideEdge.cpp</in>
+              <in>b2CollidePolygon.cpp</in>
+              <in>b2Collision.cpp</in>
+              <in>b2Distance.cpp</in>
+              <in>b2DynamicTree.cpp</in>
+              <in>b2TimeOfImpact.cpp</in>
+            </df>
+            <df name="Common">
+              <in>b2BlockAllocator.cpp</in>
+              <in>b2Draw.cpp</in>
+              <in>b2Math.cpp</in>
+              <in>b2Settings.cpp</in>
+              <in>b2StackAllocator.cpp</in>
+              <in>b2Timer.cpp</in>
+            </df>
+            <df name="Dynamics">
+              <df name="Contacts">
+                <in>b2ChainAndCircleContact.cpp</in>
+                <in>b2ChainAndPolygonContact.cpp</in>
+                <in>b2CircleContact.cpp</in>
+                <in>b2Contact.cpp</in>
+                <in>b2ContactSolver.cpp</in>
+                <in>b2EdgeAndCircleContact.cpp</in>
+                <in>b2EdgeAndPolygonContact.cpp</in>
+                <in>b2PolygonAndCircleContact.cpp</in>
+                <in>b2PolygonContact.cpp</in>
+              </df>
+              <df name="Joints">
+                <in>b2DistanceJoint.cpp</in>
+                <in>b2FrictionJoint.cpp</in>
+                <in>b2GearJoint.cpp</in>
+                <in>b2Joint.cpp</in>
+                <in>b2MotorJoint.cpp</in>
+                <in>b2MouseJoint.cpp</in>
+                <in>b2PrismaticJoint.cpp</in>
+                <in>b2PulleyJoint.cpp</in>
+                <in>b2RevoluteJoint.cpp</in>
+                <in>b2RopeJoint.cpp</in>
+                <in>b2WeldJoint.cpp</in>
+                <in>b2WheelJoint.cpp</in>
+              </df>
+              <in>b2Body.cpp</in>
+              <in>b2ContactManager.cpp</in>
+              <in>b2Fixture.cpp</in>
+              <in>b2Island.cpp</in>
+              <in>b2World.cpp</in>
+              <in>b2WorldCallbacks.cpp</in>
+            </df>
+            <df name="Rope">
+              <in>b2Rope.cpp</in>
+            </df>
+          </df>
+          <df name="tinyxml2">
+            <in>tinyxml2.cpp</in>
+          </df>
+          <df name="unzip">
+            <in>ioapi.cpp</in>
+            <in>ioapi_mem.cpp</in>
+            <in>unzip.cpp</in>
+          </df>
+          <df name="xxhash">
+            <in>xxhash.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="proj.linux">
+        <df name="Managers">
+          <in>AdvertisingManager.cpp</in>
+          <in>EconomicsManager.cpp</in>
+        </df>
+        <in>Utils.cpp</in>
+        <in>main.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-std=c++11"/>
+        <element flagsID="1" commonFlags="-std=c89"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>bin/Graman</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>cocos2d/external/xxhash</pElem>
+            </incDir>
+          </cTool>
+          <ccTool>
+            <standard>8</standard>
+            <incDir>
+              <pElem>/usr/local/include/GLFW</pElem>
+              <pElem>/usr/include/GLFW</pElem>
+              <pElem>cocos2d</pElem>
+              <pElem>cocos2d/cocos</pElem>
+              <pElem>cocos2d/cocos/audio/include</pElem>
+              <pElem>cocos2d/cocos/platform</pElem>
+              <pElem>cocos2d/cocos/platform/desktop</pElem>
+              <pElem>cocos2d/cocos/platform/linux</pElem>
+              <pElem>cocos2d/cocos/editor-support</pElem>
+              <pElem>cocos2d/extensions</pElem>
+              <pElem>cocos2d/external</pElem>
+              <pElem>cocos2d/external/edtaa3func</pElem>
+              <pElem>cocos2d/external/chipmunk/include/chipmunk</pElem>
+              <pElem>cocos2d/external/jpeg/include/linux</pElem>
+              <pElem>cocos2d/external/tiff/include/linux</pElem>
+              <pElem>cocos2d/external/webp/include/linux</pElem>
+              <pElem>cocos2d/external/tinyxml2</pElem>
+              <pElem>cocos2d/external/unzip</pElem>
+              <pElem>cocos2d/external/freetype2/include/linux</pElem>
+              <pElem>cocos2d/external/websockets/include/linux</pElem>
+              <pElem>cocos2d/external/spidermonkey/include/linux</pElem>
+              <pElem>cocos2d/external/linux-specific/fmod/include/64-bit</pElem>
+              <pElem>cocos2d/external/xxhash</pElem>
+              <pElem>Classes</pElem>
+              <pElem>external</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>COCOS2D_DEBUG=1</Elem>
+              <Elem>LINUX</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="Classes/AppDelegate.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GUI/AdvLayer.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GUI/GUI.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GUI/GameOverLayer.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GUI/LivesAsset.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GUI/ResultsLayer.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/BubbleAsset.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/GapAsset.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/HeroAsset.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/TextAsset.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Managers/LivesManager.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="Classes/Managers/LocalizationManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="Classes/Managers/ScenesManager.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Scenes/BasicScene.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="Classes/Scenes/MainScene.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Utils.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCAction.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionCamera.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionCatmullRom.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionEase.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionGrid.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionGrid3D.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionInstant.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionInterval.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionPageTurn3D.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionProgressTimer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionTiledGrid.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCActionTween.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCAnimation.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCAnimationCache.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCAtlasNode.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/renderer</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCCamera.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCClippingNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/renderer</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCClippingRectangleNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/renderer</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCComponent.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCComponentContainer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCDrawNode.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/renderer</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCDrawingPrimitives.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/renderer</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCFastTMXLayer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/renderer</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCFastTMXTiledMap.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCFont.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCFontAtlas.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/renderer</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCFontAtlasCache.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCFontCharMap.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+            <pElem>cocos2d/cocos/math</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCFontFNT.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/cocos/math</pElem>
+            <pElem>cocos2d/cocos/2d</pElem>
+            <pElem>cocos2d/cocos/base</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/cocos2d.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/Shapes/b2ChainShape.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/Shapes/b2CircleShape.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/Shapes/b2EdgeShape.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/Shapes/b2PolygonShape.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2BroadPhase.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2CollideCircle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2CollideEdge.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2CollidePolygon.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2Collision.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2Distance.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2DynamicTree.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Collision/b2TimeOfImpact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Common/b2BlockAllocator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Common/b2Draw.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Common/b2Math.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Common/b2Settings.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Common/b2StackAllocator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Common/b2Timer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2CircleContact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2Contact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2ContactSolver.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Contacts/b2PolygonContact.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2DistanceJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2FrictionJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2GearJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2Joint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2MotorJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2MouseJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2PulleyJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2RopeJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2WeldJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/Joints/b2WheelJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/b2Body.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/b2ContactManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/b2Fixture.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/b2Island.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/b2World.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Joints</pElem>
+            <pElem>cocos2d/external/Box2D/Dynamics/Contacts</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Dynamics/b2WorldCallbacks.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Dynamics</pElem>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/external/Box2D/Rope/b2Rope.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/tinyxml2/tinyxml2.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/unzip/ioapi.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="cocos2d/external/unzip/ioapi_mem.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="cocos2d/external/unzip/unzip.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="cocos2d/external/xxhash/xxhash.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <folder path="0/Classes">
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/Classes/GUI">
+        <ccTool>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d">
+        <ccTool>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/external/Box2D/Collision/Shapes">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Collision/Shapes</pElem>
+            <pElem>cocos2d/external/Box2D/Collision</pElem>
+            <pElem>cocos2d/external/Box2D</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/external/Box2D/Common">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/external/Box2D/Rope">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/Box2D/Common</pElem>
+            <pElem>cocos2d/external/Box2D/Rope</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/proj.linux">
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <item path="proj.linux/Managers/AdvertisingManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="proj.linux/Managers/EconomicsManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="proj.linux/Utils.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="proj.linux/main.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

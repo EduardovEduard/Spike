@@ -1,0 +1,13 @@
+a: 'a' because university is pronounced with a y-consonate
+-: most city names don't take an article
+the: 'the' because we mentioned 'desk' 
+the: 'the' because we mentioned 'window'
+the: 'the' because we mentioned 'young man' 
+an: 'an' because of mute 'h'
+---
+I'm sitting in an office in ??? university 
+somewhere in ??? Saint-Petersburg, looking at a desk.
+Next to ??? desk there is a window. Looking
+out of ??? window I can see a young man. ??? young 
+man is crossing the road. He's walking towards a car. 
+The car has been parked there for over ??? hour.
