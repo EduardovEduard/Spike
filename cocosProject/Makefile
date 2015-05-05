@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alex/Github/GrammarDot/cocosProject
+CMAKE_SOURCE_DIR = /home/alex/Github/Spike/cocosProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex/Github/GrammarDot/cocosProject
+CMAKE_BINARY_DIR = /home/alex/Github/Spike/cocosProject
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Github/GrammarDot/cocosProject/CMakeFiles /home/alex/Github/GrammarDot/cocosProject/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Github/Spike/cocosProject/CMakeFiles /home/alex/Github/Spike/cocosProject/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Github/GrammarDot/cocosProject/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Github/Spike/cocosProject/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -661,6 +661,30 @@ Classes/Scenes/MainScene.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/MainScene.cpp.s
 .PHONY : Classes/Scenes/MainScene.cpp.s
 
+Classes/Scenes/WaterScene.o: Classes/Scenes/WaterScene.cpp.o
+.PHONY : Classes/Scenes/WaterScene.o
+
+# target to build an object file
+Classes/Scenes/WaterScene.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/WaterScene.cpp.o
+.PHONY : Classes/Scenes/WaterScene.cpp.o
+
+Classes/Scenes/WaterScene.i: Classes/Scenes/WaterScene.cpp.i
+.PHONY : Classes/Scenes/WaterScene.i
+
+# target to preprocess a source file
+Classes/Scenes/WaterScene.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/WaterScene.cpp.i
+.PHONY : Classes/Scenes/WaterScene.cpp.i
+
+Classes/Scenes/WaterScene.s: Classes/Scenes/WaterScene.cpp.s
+.PHONY : Classes/Scenes/WaterScene.s
+
+# target to generate assembly for a file
+Classes/Scenes/WaterScene.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/WaterScene.cpp.s
+.PHONY : Classes/Scenes/WaterScene.cpp.s
+
 Classes/Utils.o: Classes/Utils.cpp.o
 .PHONY : Classes/Utils.o
 
@@ -854,6 +878,9 @@ help:
 	@echo "... Classes/Scenes/MainScene.o"
 	@echo "... Classes/Scenes/MainScene.i"
 	@echo "... Classes/Scenes/MainScene.s"
+	@echo "... Classes/Scenes/WaterScene.o"
+	@echo "... Classes/Scenes/WaterScene.i"
+	@echo "... Classes/Scenes/WaterScene.s"
 	@echo "... Classes/Utils.o"
 	@echo "... Classes/Utils.i"
 	@echo "... Classes/Utils.s"

@@ -24,6 +24,7 @@
         <df name="Scenes">
           <in>BasicScene.cpp</in>
           <in>MainScene.cpp</in>
+          <in>WaterScene.cpp</in>
         </df>
         <in>AppDelegate.cpp</in>
         <in>Utils.cpp</in>
@@ -294,12 +295,13 @@
       </item>
       <item path="Classes/Scenes/BasicScene.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
-          <preprocessorList>
-            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
-          </preprocessorList>
         </ccTool>
       </item>
       <item path="Classes/Scenes/MainScene.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Scenes/WaterScene.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
