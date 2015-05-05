@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alex/Github/Spike/cocosProject
+CMAKE_SOURCE_DIR = /home/ees/C++/Spike/cocosProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex/Github/Spike/cocosProject
+CMAKE_BINARY_DIR = /home/ees/C++/Spike/cocosProject
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Github/Spike/cocosProject/CMakeFiles /home/alex/Github/Spike/cocosProject/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ees/C++/Spike/cocosProject/CMakeFiles /home/ees/C++/Spike/cocosProject/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/Github/Spike/cocosProject/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ees/C++/Spike/cocosProject/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -445,6 +445,30 @@ Classes/GameElements/TextAsset.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/TextAsset.cpp.s
 .PHONY : Classes/GameElements/TextAsset.cpp.s
 
+Classes/GameElements/WaterNode.o: Classes/GameElements/WaterNode.cpp.o
+.PHONY : Classes/GameElements/WaterNode.o
+
+# target to build an object file
+Classes/GameElements/WaterNode.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNode.cpp.o
+.PHONY : Classes/GameElements/WaterNode.cpp.o
+
+Classes/GameElements/WaterNode.i: Classes/GameElements/WaterNode.cpp.i
+.PHONY : Classes/GameElements/WaterNode.i
+
+# target to preprocess a source file
+Classes/GameElements/WaterNode.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNode.cpp.i
+.PHONY : Classes/GameElements/WaterNode.cpp.i
+
+Classes/GameElements/WaterNode.s: Classes/GameElements/WaterNode.cpp.s
+.PHONY : Classes/GameElements/WaterNode.s
+
+# target to generate assembly for a file
+Classes/GameElements/WaterNode.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNode.cpp.s
+.PHONY : Classes/GameElements/WaterNode.cpp.s
+
 Classes/Managers/DataManager.o: Classes/Managers/DataManager.cpp.o
 .PHONY : Classes/Managers/DataManager.o
 
@@ -661,6 +685,30 @@ Classes/Scenes/MainScene.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/MainScene.cpp.s
 .PHONY : Classes/Scenes/MainScene.cpp.s
 
+Classes/Scenes/SpringScene.o: Classes/Scenes/SpringScene.cpp.o
+.PHONY : Classes/Scenes/SpringScene.o
+
+# target to build an object file
+Classes/Scenes/SpringScene.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/SpringScene.cpp.o
+.PHONY : Classes/Scenes/SpringScene.cpp.o
+
+Classes/Scenes/SpringScene.i: Classes/Scenes/SpringScene.cpp.i
+.PHONY : Classes/Scenes/SpringScene.i
+
+# target to preprocess a source file
+Classes/Scenes/SpringScene.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/SpringScene.cpp.i
+.PHONY : Classes/Scenes/SpringScene.cpp.i
+
+Classes/Scenes/SpringScene.s: Classes/Scenes/SpringScene.cpp.s
+.PHONY : Classes/Scenes/SpringScene.s
+
+# target to generate assembly for a file
+Classes/Scenes/SpringScene.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/SpringScene.cpp.s
+.PHONY : Classes/Scenes/SpringScene.cpp.s
+
 Classes/Scenes/WaterScene.o: Classes/Scenes/WaterScene.cpp.o
 .PHONY : Classes/Scenes/WaterScene.o
 
@@ -851,6 +899,9 @@ help:
 	@echo "... Classes/GameElements/TextAsset.o"
 	@echo "... Classes/GameElements/TextAsset.i"
 	@echo "... Classes/GameElements/TextAsset.s"
+	@echo "... Classes/GameElements/WaterNode.o"
+	@echo "... Classes/GameElements/WaterNode.i"
+	@echo "... Classes/GameElements/WaterNode.s"
 	@echo "... Classes/Managers/DataManager.o"
 	@echo "... Classes/Managers/DataManager.i"
 	@echo "... Classes/Managers/DataManager.s"
@@ -878,6 +929,9 @@ help:
 	@echo "... Classes/Scenes/MainScene.o"
 	@echo "... Classes/Scenes/MainScene.i"
 	@echo "... Classes/Scenes/MainScene.s"
+	@echo "... Classes/Scenes/SpringScene.o"
+	@echo "... Classes/Scenes/SpringScene.i"
+	@echo "... Classes/Scenes/SpringScene.s"
 	@echo "... Classes/Scenes/WaterScene.o"
 	@echo "... Classes/Scenes/WaterScene.i"
 	@echo "... Classes/Scenes/WaterScene.s"

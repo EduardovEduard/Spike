@@ -1,4 +1,4 @@
-# Install script for directory: /home/alex/Github/Spike/cocosProject
+# Install script for directory: /home/ees/C++/Spike/cocosProject
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,11 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/alex/Github/Spike/cocosProject/cocos2d/external/Box2D/cmake_install.cmake")
-  INCLUDE("/home/alex/Github/Spike/cocosProject/cocos2d/external/unzip/cmake_install.cmake")
-  INCLUDE("/home/alex/Github/Spike/cocosProject/cocos2d/external/xxhash/cmake_install.cmake")
-  INCLUDE("/home/alex/Github/Spike/cocosProject/cocos2d/external/tinyxml2/cmake_install.cmake")
-  INCLUDE("/home/alex/Github/Spike/cocosProject/cocos2d/cocos/cmake_install.cmake")
+  INCLUDE("/home/ees/C++/Spike/cocosProject/cocos2d/external/Box2D/cmake_install.cmake")
+  INCLUDE("/home/ees/C++/Spike/cocosProject/cocos2d/external/unzip/cmake_install.cmake")
+  INCLUDE("/home/ees/C++/Spike/cocosProject/cocos2d/external/xxhash/cmake_install.cmake")
+  INCLUDE("/home/ees/C++/Spike/cocosProject/cocos2d/external/tinyxml2/cmake_install.cmake")
+  INCLUDE("/home/ees/C++/Spike/cocosProject/cocos2d/cocos/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -48,7 +48,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/alex/Github/Spike/cocosProject/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/ees/C++/Spike/cocosProject/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/alex/Github/Spike/cocosProject/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/ees/C++/Spike/cocosProject/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
