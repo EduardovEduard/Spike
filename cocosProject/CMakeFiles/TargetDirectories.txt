@@ -1,8 +1,0 @@
-/home/alex/Github/GrammarDot/cocosProject/CMakeFiles/Graman.dir
-/home/alex/Github/GrammarDot/cocosProject/CMakeFiles/Graman_CORE_PRE_BUILD.dir
-/home/alex/Github/GrammarDot/cocosProject/CMakeFiles/Graman_PRE_BUILD.dir
-/home/alex/Github/GrammarDot/cocosProject/cocos2d/external/Box2D/CMakeFiles/box2d.dir
-/home/alex/Github/GrammarDot/cocosProject/cocos2d/cocos/CMakeFiles/cocos2d.dir
-/home/alex/Github/GrammarDot/cocosProject/cocos2d/external/tinyxml2/CMakeFiles/tinyxml2.dir
-/home/alex/Github/GrammarDot/cocosProject/cocos2d/external/unzip/CMakeFiles/unzip.dir
-/home/alex/Github/GrammarDot/cocosProject/cocos2d/external/xxhash/CMakeFiles/xxhash.dir
