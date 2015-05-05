@@ -1,4 +1,5 @@
 #include "WaterScene.h"
+#include "GameElements/WaterNode.h"
 
 #include <iostream>
 
@@ -9,13 +10,9 @@ bool WaterScene::init() {
     if (!BasicScene::init())
         return false;
 
-    auto node = DrawNode::create();
+    auto node = WaterNode::create();
     node->setContentSize(Director::getInstance()->getWinSize());
-    addChild(node);
-
-    auto size = node->getContentSize();
-
-    node->drawSolidRect(Vec2(0, 0), Vec2(size.width, size.height / 2), Color4F::BLUE);
+    addChild(node, 1);
     return true;
 }
 
