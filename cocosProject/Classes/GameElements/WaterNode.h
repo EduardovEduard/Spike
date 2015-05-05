@@ -8,12 +8,22 @@ class WaterNode: public cocos2d::Node {
 public:
     CREATE_FUNC(WaterNode);
 
+    void touch(float x);
+
 private:
 
     /* STATE */
+    struct Spring {
+        cocos2d::Vec2 position;
+        double velocity;
+    };
+
     std::vector<cocos2d::Vec2> _border;
+    std::vector<Spring> _springs;
+
     cocos2d::DrawNode* _drawNode;
     double _time;
+    float _seaLevel;
 
     /* ELEMENTS */
 
@@ -22,6 +32,7 @@ private:
     void initBorder();
 
     void update(float dt) override;
+    void updateSprings();
 
     /* FUNS */
     void drawWater();
