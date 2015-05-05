@@ -10,3 +10,5 @@ lib/libtinyxml2.a
 lib/libunzip.a
 lib/libxxhash.a
 Makefile
+cocosProject/CMakeLists.txt.user
+cocosProject/Graman.cbp
