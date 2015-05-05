@@ -6,13 +6,18 @@
 
 using namespace cocos2d;
 
+void WaterScene::onMouseDown(Vec2 pt)
+{
+    _node->touch(pt.x);
+}
+
 bool WaterScene::init() {
     if (!BasicScene::init())
         return false;
 
-    auto node = WaterNode::create();
-    node->setContentSize(Director::getInstance()->getWinSize());
-    addChild(node, 1);
+    _node = WaterNode::create();
+    _node->setContentSize(Director::getInstance()->getWinSize());
+    addChild(_node, 1);
     return true;
 }
 
@@ -23,13 +28,3 @@ bool WaterScene::init() {
 /* HANDLERS */
 
 /* UPDATES */
-
-
-
-
-
-
-
-
-
-

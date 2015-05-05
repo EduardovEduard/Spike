@@ -31,7 +31,7 @@ bool AppDelegate::init() {
 #endif
     director->setAnimationInterval(1.0 / 60);
     ScenesManager::getInstance()->runWithWater();
-    ScenesManager::getInstance()->runWithSpring();
+    //ScenesManager::getInstance()->runWithSpring();
     return true;
 }
 

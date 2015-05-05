@@ -13649,6 +13649,16 @@
           <df name="dexedLibs">
           </df>
           <df name="res">
+            <df name="drawable-hdpi">
+            </df>
+            <df name="drawable-mdpi">
+            </df>
+            <df name="drawable-xhdpi">
+            </df>
+            <df name="drawable-xxhdpi">
+            </df>
+            <df name="drawable-xxxhdpi">
+            </df>
           </df>
         </df>
         <df name="gen">

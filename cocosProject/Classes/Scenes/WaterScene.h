@@ -2,15 +2,7 @@
 
 #include "BasicScene.h"
 #include <cocos2d.h>
-#include "GameElements/TextAsset.h"
-#include "GameElements/GapAsset.h"
-#include "GameElements/HeroAsset.h"
-#include "GameElements/BubbleAsset.h"
-#include "Models/LevelModel.h"
-#include "Models/Article.h"
-#include "Models/GameModel.h"
-#include "GUI/LivesAsset.h"
-
+#include "GameElements/WaterNode.h"
 
 class WaterScene : public BasicScene {
 public:
@@ -18,10 +10,12 @@ public:
 private:
 
     /* STATE */
+    WaterNode* _node;
 
     /* ELEMENTS */
 
     /* HANDLERS */
+    virtual void onMouseDown(cocos2d::Vec2 pt) override;
 
     /* INITS */
     bool init() override;
@@ -30,13 +24,3 @@ private:
     
     /* TOOLS */
 };
-
-
-
-
-
-
-
-
-
-
