@@ -20,15 +20,20 @@ void WaterNode::readInit(const string& filepath) {
     }
 }
 
-void WaterNode::touch(Vec2 pt) {
+double WaterNode::configValue(const std::string& key) const {
+    assert(config.count(key) != 0);
+    return config.find(key)->second;
+}
+
+void WaterNode::touch(Vec2 point, double verticalVelocity) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
-        return std::abs(a.position.x - pt.x) < std::abs(b.position.x - pt.x);
+        return std::abs(a.position.x - point.x) < std::abs(b.position.x - point.x);
     });
 
-    if(pt.y > closestSpring->position.y)
-        closestSpring->velocity += config["DEFAULT_SPEED"];
+    if(point.y > closestSpring->position.y)
+        closestSpring->velocity += verticalVelocity;
     else
-        closestSpring->velocity -= config["DEFAULT_SPEED"];
+        closestSpring->velocity -= verticalVelocity;
 }
 
 bool WaterNode::init() {

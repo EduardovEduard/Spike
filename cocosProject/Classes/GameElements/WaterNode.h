@@ -10,8 +10,8 @@ class WaterNode: public cocos2d::Node {
 public:
     CREATE_FUNC(WaterNode);
     
-    void touch(cocos2d::Vec2 pt);
-    
+    void touch(cocos2d::Vec2 pt, double verticalVelocity = 0);
+    double configValue(const std::string& key) const;
 private:
 
     /* STATE */

@@ -9,7 +9,7 @@ using namespace cocos2d;
 
 void WaterScene::onMouseDown(Vec2 pt)
 {
-    _node->touch(pt);
+    _node->touch(pt, _node->configValue("DEFAULT_SPEED"));
 }
 
 bool WaterScene::init() {
