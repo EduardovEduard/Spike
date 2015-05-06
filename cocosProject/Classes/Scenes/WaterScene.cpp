@@ -15,7 +15,7 @@ void WaterScene::onMouseDown(Vec2 pt)
 bool WaterScene::init() {
     if (!BasicScene::init())
         return false;
-    _node = WaterNodeRadial::create();
+    _node = WaterNode::create();
     _node->setContentSize(Director::getInstance()->getWinSize());
     addChild(_node, 1);
     return true;

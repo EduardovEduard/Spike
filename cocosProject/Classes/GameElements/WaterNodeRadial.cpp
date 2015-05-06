@@ -16,9 +16,9 @@ constexpr double DEFAULT_SPEED = -60;
 void WaterNodeRadial::touch(Vec2 pt) {
     Spring* closestSpring = &_springs[1];
     if((pt-_center).length() > closestSpring->radius)
-	closestSpring->velocity += DEFAULT_SPEED;
+        closestSpring->velocity += DEFAULT_SPEED;
     else
-	closestSpring->velocity -= DEFAULT_SPEED;
+        closestSpring->velocity -= DEFAULT_SPEED;
 }
 
 bool WaterNodeRadial::init() {

@@ -9,18 +9,23 @@ using namespace std;
 
 constexpr int BAR_COUNT = 200;
 constexpr double DAMPENING = 0.025;
-constexpr double TENSION = 0.005;
+constexpr double TENSION = 0.025;
 constexpr double SPREAD = 0.3;
-constexpr double DEFAULT_SPEED = -180;
+constexpr double DEFAULT_SPEED = -60;
+constexpr int WATER_NODE_OFFSET = 20;
+
 
 void WaterNode::touch(Vec2 pt) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
         return std::abs(a.position.x - pt.x) < std::abs(b.position.x - pt.x);
     });
+
+    closestSpring += WATER_NODE_OFFSET;
+
     if(pt.y > closestSpring->position.y)
-	closestSpring->velocity += DEFAULT_SPEED;
+        closestSpring->velocity += DEFAULT_SPEED;
     else
-	closestSpring->velocity -= DEFAULT_SPEED;
+        closestSpring->velocity -= DEFAULT_SPEED;
 }
 
 bool WaterNode::init() {
@@ -39,11 +44,15 @@ bool WaterNode::init() {
 }
 
 void WaterNode::initBorder() {
-    const auto size = getContentSize();
-    const auto barWidth = size.width / BAR_COUNT;
-    for (int i = 0; i <= BAR_COUNT; ++i) {
-        _border.push_back(Vec2(i * barWidth, _seaLevel));
+    auto size = getContentSize();
+    size.width += size.width / 2;
+
+    const auto barWidth = (2 * size.width) / BAR_COUNT;
+    for (int i = -WATER_NODE_OFFSET; i <= BAR_COUNT + WATER_NODE_OFFSET; i++) {
+        auto pos = i * barWidth;
+        _border.push_back(Vec2(pos, _seaLevel));
     }
+
     for (auto& point : _border) {
         _springs.push_back({Vec2(point.x, point.y), 0});
     }
@@ -98,13 +107,17 @@ void WaterNode::updateSprings() {
 }
 
 void WaterNode::drawWater() {
+    size_t offset = getContentSize().width / 2;
+
     for (size_t i = 0; i < _border.size() - 1; ++i) {
-        std::vector<Vec2> piece {_border[i], _border[i + 1],
-                                 Vec2(_border[i + 1].x, 0), Vec2(_border[i].x, 0)};
+        auto left = _border[i]; left.x -= offset;
+        auto right = _border[i + 1]; right.x -= offset;
+
+        std::vector<Vec2> piece {left, right, Vec2(right.x, 0), Vec2(left.x, 0)};
         _drawNode->drawSolidPoly(piece.data(), piece.size(), Color4F::BLUE);
     }
 }
 
 double WaterNode::levelFun(double x, int lvl) {
-    return _seaLevel + 100 * sin(x / _springs.size() * 3.1415926 * 1.5);
+    return _seaLevel;// + 100 * sin(x / _springs.size() * 3.1415926 * 1.5);
 }

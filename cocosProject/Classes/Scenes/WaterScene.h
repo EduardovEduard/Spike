@@ -11,7 +11,7 @@ public:
 private:
 
     /* STATE */
-    WaterNodeRadial* _node;
+    WaterNode* _node;
 
     /* ELEMENTS */
 
