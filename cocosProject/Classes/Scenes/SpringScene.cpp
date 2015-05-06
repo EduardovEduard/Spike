@@ -10,7 +10,6 @@ bool SpringScene::init() {
     if(!BasicScene::initWithPhysics())
         return false;
     getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
-    setContentSize(Director::getInstance()->getWinSize());
     initNodes();
     return true;
 }

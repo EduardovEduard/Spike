@@ -3,10 +3,10 @@
 #include <cocos2d.h>
 #include <vector>
 
-class WaterNode: public cocos2d::Node {
+class WaterNodeRadial: public cocos2d::Node {
 
 public:
-    CREATE_FUNC(WaterNode);
+    CREATE_FUNC(WaterNodeRadial);
     
     void touch(cocos2d::Vec2 pt);
     
@@ -14,12 +14,13 @@ private:
 
     /* STATE */
     struct Spring {
-        cocos2d::Vec2 position;
+	size_t index;
+	double radius;
         double velocity;
     };
 
-    std::vector<cocos2d::Vec2> _border;
     std::vector<Spring> _springs;
+    cocos2d::Vec2 _center;
 
     cocos2d::DrawNode* _drawNode;
     double _time;
@@ -32,10 +33,15 @@ private:
     void initBorder();
 
     void update(float dt) override;
+    
     void updateSprings();
 
     /* FUNS */
     void drawWater();
     
-    double levelFun(double x, int lvl = 1);
+    void computeSpringPositions();
+    double levelFun(double part);
+    
+    cocos2d::Vec2 computePosition(const Spring& s);
+    
 };

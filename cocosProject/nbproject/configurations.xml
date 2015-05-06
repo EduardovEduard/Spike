@@ -9,6 +9,7 @@
           <in>HeroAsset.cpp</in>
           <in>TextAsset.cpp</in>
           <in>WaterNode.cpp</in>
+          <in>WaterNodeRadial.cpp</in>
         </df>
         <df name="GUI">
           <in>AdvLayer.cpp</in>
@@ -18,9 +19,13 @@
           <in>ResultsLayer.cpp</in>
         </df>
         <df name="Managers">
+          <in>DataManager.cpp</in>
+          <in>LevelsManager.cpp</in>
           <in>LivesManager.cpp</in>
           <in>LocalizationManager.cpp</in>
           <in>ScenesManager.cpp</in>
+          <in>SettingsManager.cpp</in>
+          <in>SoundsManager.cpp</in>
         </df>
         <df name="Scenes">
           <in>BasicScene.cpp</in>
@@ -64,8 +69,104 @@
             <in>CCFontAtlasCache.cpp</in>
             <in>CCFontCharMap.cpp</in>
             <in>CCFontFNT.cpp</in>
+            <in>CCNode.cpp</in>
+            <in>CCScene.cpp</in>
+          </df>
+          <df name="audio">
+            <df name="linux">
+              <in>SimpleAudioEngineFMOD.cpp</in>
+            </df>
+          </df>
+          <df name="base">
+            <in>CCDirector.cpp</in>
+          </df>
+          <df name="deprecated">
+            <in>CCDeprecated.cpp</in>
+          </df>
+          <df name="editor-support">
+            <df name="cocosbuilder">
+              <in>CCNodeLoader.cpp</in>
+            </df>
+            <df name="cocostudio">
+              <df name="ActionTimeline">
+                <in>CCActionTimelineCache.cpp</in>
+                <in>CSLoader.cpp</in>
+              </df>
+              <df name="WidgetReader">
+                <df name="ButtonReader">
+                  <in>ButtonReader.cpp</in>
+                </df>
+                <df name="CheckBoxReader">
+                  <in>CheckBoxReader.cpp</in>
+                </df>
+                <df name="ImageViewReader">
+                  <in>ImageViewReader.cpp</in>
+                </df>
+                <df name="LayoutReader">
+                  <in>LayoutReader.cpp</in>
+                </df>
+                <df name="ListViewReader">
+                  <in>ListViewReader.cpp</in>
+                </df>
+                <df name="LoadingBarReader">
+                  <in>LoadingBarReader.cpp</in>
+                </df>
+                <df name="PageViewReader">
+                  <in>PageViewReader.cpp</in>
+                </df>
+                <df name="ScrollViewReader">
+                  <in>ScrollViewReader.cpp</in>
+                </df>
+                <df name="SliderReader">
+                  <in>SliderReader.cpp</in>
+                </df>
+                <df name="TextAtlasReader">
+                  <in>TextAtlasReader.cpp</in>
+                </df>
+                <df name="TextBMFontReader">
+                  <in>TextBMFontReader.cpp</in>
+                </df>
+                <df name="TextFieldReader">
+                  <in>TextFieldReader.cpp</in>
+                </df>
+                <df name="TextReader">
+                  <in>TextReader.cpp</in>
+                </df>
+                <in>WidgetReader.cpp</in>
+              </df>
+              <in>CCComRender.cpp</in>
+              <in>CCSGUIReader.cpp</in>
+              <in>CCSSceneReader.cpp</in>
+              <in>TriggerBase.cpp</in>
+              <in>TriggerMng.cpp</in>
+              <in>TriggerObj.cpp</in>
+            </df>
+            <df name="spine">
+              <in>PolygonBatch.cpp</in>
+              <in>SkeletonAnimation.cpp</in>
+              <in>SkeletonRenderer.cpp</in>
+              <in>spine-cocos2dx.cpp</in>
+            </df>
+          </df>
+          <df name="physics">
+            <in>CCPhysicsBody.cpp</in>
+            <in>CCPhysicsJoint.cpp</in>
+            <in>CCPhysicsShape.cpp</in>
+            <in>CCPhysicsWorld.cpp</in>
+          </df>
+          <df name="platform">
+            <df name="desktop">
+              <in>CCGLViewImpl-desktop.cpp</in>
+            </df>
           </df>
           <in>cocos2d.cpp</in>
+        </df>
+        <df name="extensions">
+          <df name="assets-manager">
+            <in>AssetsManagerEx.cpp</in>
+            <in>CCEventListenerAssetsManagerEx.cpp</in>
+            <in>Downloader.cpp</in>
+          </df>
         </df>
         <df name="external">
           <df name="Box2D">
@@ -262,9 +363,6 @@
       </item>
       <item path="Classes/GameElements/HeroAsset.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
-          <preprocessorList>
-            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
-          </preprocessorList>
         </ccTool>
       </item>
       <item path="Classes/GameElements/TextAsset.cpp" ex="false" tool="1" flavor2="8">
@@ -272,6 +370,21 @@
         </ccTool>
       </item>
       <item path="Classes/GameElements/WaterNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/WaterNodeRadial.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Managers/DataManager.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Managers/LevelsManager.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
@@ -287,12 +400,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="0">
-          <preprocessorList>
-            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
-          </preprocessorList>
         </ccTool>
       </item>
       <item path="Classes/Managers/ScenesManager.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Managers/SettingsManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Managers/SoundsManager.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
@@ -323,6 +444,9 @@
             <pElem>cocos2d/cocos/math</pElem>
             <pElem>cocos2d/cocos/2d</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionCamera.cpp"
@@ -335,6 +459,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/base</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionCatmullRom.cpp"
@@ -347,6 +474,9 @@
             <pElem>cocos2d/cocos/math</pElem>
             <pElem>cocos2d/cocos/2d</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionEase.cpp" ex="false" tool="1" flavor2="4">
@@ -356,6 +486,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionGrid.cpp" ex="false" tool="1" flavor2="4">
@@ -365,6 +498,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionGrid3D.cpp"
@@ -377,6 +513,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/base</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionInstant.cpp"
@@ -389,6 +528,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionInterval.cpp"
@@ -401,6 +543,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/base</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionManager.cpp"
@@ -413,6 +558,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionPageTurn3D.cpp"
@@ -425,6 +573,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionProgressTimer.cpp"
@@ -437,6 +588,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionTiledGrid.cpp"
@@ -449,6 +603,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/base</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCActionTween.cpp" ex="false" tool="1" flavor2="4">
@@ -458,6 +615,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCAnimation.cpp" ex="false" tool="1" flavor2="4">
@@ -467,6 +627,9 @@
             <pElem>cocos2d/cocos/math</pElem>
             <pElem>cocos2d/cocos/2d</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCAnimationCache.cpp"
@@ -479,6 +642,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCAtlasNode.cpp" ex="false" tool="1" flavor2="4">
@@ -489,6 +655,9 @@
             <pElem>cocos2d/cocos/math</pElem>
             <pElem>cocos2d/cocos/renderer</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCCamera.cpp" ex="false" tool="1" flavor2="4">
@@ -498,6 +667,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/base</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCClippingNode.cpp"
@@ -511,6 +683,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCClippingRectangleNode.cpp"
@@ -524,6 +699,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/renderer</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCComponent.cpp" ex="false" tool="1" flavor2="4">
@@ -533,6 +711,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCComponentContainer.cpp"
@@ -545,6 +726,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCDrawNode.cpp" ex="false" tool="1" flavor2="4">
@@ -555,6 +739,9 @@
             <pElem>cocos2d/cocos/renderer</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCDrawingPrimitives.cpp"
@@ -568,6 +755,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCFastTMXLayer.cpp"
@@ -581,6 +771,9 @@
             <pElem>cocos2d/cocos/math</pElem>
             <pElem>cocos2d/cocos/renderer</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCFastTMXTiledMap.cpp"
@@ -593,6 +786,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCFont.cpp" ex="false" tool="1" flavor2="4">
@@ -602,6 +798,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCFontAtlas.cpp" ex="false" tool="1" flavor2="4">
@@ -612,6 +811,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/renderer</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCFontAtlasCache.cpp"
@@ -624,6 +826,9 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCFontCharMap.cpp" ex="false" tool="1" flavor2="4">
@@ -633,6 +838,9 @@
             <pElem>cocos2d/cocos/base</pElem>
             <pElem>cocos2d/cocos/math</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="cocos2d/cocos/2d/CCFontFNT.cpp" ex="false" tool="1" flavor2="4">
@@ -642,9 +850,300 @@
             <pElem>cocos2d/cocos/2d</pElem>
             <pElem>cocos2d/cocos/base</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCNode.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/2d/CCScene.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/audio/linux/SimpleAudioEngineFMOD.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/base/CCDirector.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
         </ccTool>
       </item>
       <item path="cocos2d/cocos/cocos2d.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <preprocessorList>
+            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/deprecated/CCDeprecated.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocosbuilder/CCNodeLoader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineCache.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CSLoader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/CCComRender.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/CCSGUIReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/CCSSceneReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/TriggerBase.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/TriggerMng.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/TriggerObj.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/ButtonReader/ButtonReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/CheckBoxReader/CheckBoxReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/ImageViewReader/ImageViewReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/LayoutReader/LayoutReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/ListViewReader/ListViewReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/LoadingBarReader/LoadingBarReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/PageViewReader/PageViewReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/ScrollViewReader/ScrollViewReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/SliderReader/SliderReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/TextAtlasReader/TextAtlasReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/TextBMFontReader/TextBMFontReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/TextFieldReader/TextFieldReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/TextReader/TextReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/cocostudio/WidgetReader/WidgetReader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/spine/PolygonBatch.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/spine/SkeletonAnimation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/spine/SkeletonRenderer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/editor-support/spine/spine-cocos2dx.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/physics/CCPhysicsBody.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/physics/CCPhysicsJoint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/physics/CCPhysicsShape.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/physics/CCPhysicsWorld.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/cocos/platform/desktop/CCGLViewImpl-desktop.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/extensions/assets-manager/AssetsManagerEx.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/extensions/assets-manager/CCEventListenerAssetsManagerEx.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="cocos2d/extensions/assets-manager/Downloader.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
       </item>
       <item path="cocos2d/external/Box2D/Collision/Shapes/b2ChainShape.cpp"
             ex="false"
@@ -1230,7 +1729,77 @@
           </incDir>
         </ccTool>
       </folder>
-      <folder path="0/cocos2d">
+      <folder path="0/cocos2d/cocos/audio">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/cocos/base">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/cocos/deprecated">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/cocos/editor-support">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/cocos/physics">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/cocos/platform">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/extensions">
+        <ccTool>
+          <incDir>
+            <pElem>cocos2d/external/ConvertUTF,</pElem>
+            <pElem>cocos2d/external/ConvertUTF</pElem>
+            <pElem>extensions</pElem>
+            <pElem>cocos2d/external/xxtea</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/cocos2d/external">
         <ccTool>
           <preprocessorList>
             <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>

@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>GrammarDotCocos2dx</name>
+            <name>SpikeCocos2dx</name>
             <c-extensions>c,m</c-extensions>
             <cpp-extensions>cc,cpp,mm</cpp-extensions>
             <header-extensions>frag,h,hpp,inl,vert</header-extensions>
