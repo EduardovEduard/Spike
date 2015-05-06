@@ -18,8 +18,6 @@ void WaterNode::readInit(const string& filepath) {
         fin >> name >> value;
         config[name] = value;
     }
-    for (auto pair : config)
-        cout << pair.first << ' ' << pair.second << endl;
 }
 
 void WaterNode::touch(Vec2 pt) {
@@ -27,9 +25,6 @@ void WaterNode::touch(Vec2 pt) {
         return std::abs(a.position.x - pt.x) < std::abs(b.position.x - pt.x);
     });
 
-    std::cerr << pt.x << " " << pt.y << std::endl;
-    std::cerr << closestSpring->position.x << " " << closestSpring->position.y << std::endl;
-    
     if(pt.y > closestSpring->position.y)
         closestSpring->velocity += config["DEFAULT_SPEED"];
     else
@@ -45,19 +40,18 @@ bool WaterNode::init() {
     auto windowSize = Director::getInstance()->getWinSize();
     windowSize.width *= 2;
     
-    _time = 0;
     _drawNode = DrawNode::create();
     _drawNode->setContentSize(windowSize);
     _drawNode->setPosition({windowSize.width / 4, 0});
     _seaLevel = windowSize.height / 2;
     setContentSize(windowSize);
-    initBorder();
+    initSprings();
     addChild(_drawNode);
     scheduleUpdate();
     return true;
 }
 
-void WaterNode::initBorder() {
+void WaterNode::initSprings() {
     auto size = getContentSize();
 
     const auto barCount = config["BAR_COUNT"];;
@@ -127,5 +121,5 @@ void WaterNode::drawWater() {
 }
 
 double WaterNode::levelFun(double x, int lvl) {
-    return _seaLevel;// + 100 * sin(x / _springs.size() * 3.1415926 * 1.5);
+    return _seaLevel;
 }

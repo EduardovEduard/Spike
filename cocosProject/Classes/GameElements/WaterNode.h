@@ -25,14 +25,13 @@ private:
 
     std::map<std::string, double> config;
     cocos2d::DrawNode* _drawNode;
-    double _time;
     float _seaLevel;
 
     /* ELEMENTS */
 
     /* INITS */
     bool init() override;
-    void initBorder();
+    void initSprings();
     void readInit(const std::string& filepath);
     void update(float dt) override;
     void updateSprings();
