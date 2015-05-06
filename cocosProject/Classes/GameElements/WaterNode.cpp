@@ -1,36 +1,45 @@
 #include "WaterNode.h"
 #include <chipmunk.h>
 #include <cocos2d.h>
+#include <unistd.h>
 
+#include <fstream>
 #include <iostream>
 
 using namespace cocos2d;
 using namespace std;
 
-constexpr int BAR_COUNT = 200;
-constexpr double DAMPENING = 0.025;
-constexpr double TENSION = 0.025;
-constexpr double SPREAD = 0.3;
-constexpr double DEFAULT_SPEED = -60;
-constexpr int WATER_NODE_OFFSET = 20;
-
+void WaterNode::readInit(const string& filepath) {
+    ifstream fin(filepath.c_str());
+    string name;
+    double value;
+    while (fin.good()) {
+        fin >> name >> value;
+        config[name] = value;
+    }
+    for (auto pair : config)
+        cout << pair.first << ' ' << pair.second << endl;
+}
 
 void WaterNode::touch(Vec2 pt) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
         return std::abs(a.position.x - pt.x) < std::abs(b.position.x - pt.x);
     });
 
-    closestSpring += WATER_NODE_OFFSET;
+    closestSpring += config["WATER_NODE_OFFSET"];
 
     if(pt.y > closestSpring->position.y)
-        closestSpring->velocity += DEFAULT_SPEED;
+        closestSpring->velocity += config["DEFAULT_SPEED"];
     else
-        closestSpring->velocity -= DEFAULT_SPEED;
+        closestSpring->velocity -= config["DEFAULT_SPEED"];
 }
 
 bool WaterNode::init() {
     if(!Node::init())
         return false;
+
+    readInit("init.ini");
+
     auto windowSize = Director::getInstance()->getWinSize();
     _time = 0;
     _drawNode = DrawNode::create();
@@ -47,8 +56,8 @@ void WaterNode::initBorder() {
     auto size = getContentSize();
     size.width += size.width / 2;
 
-    const auto barWidth = (2 * size.width) / BAR_COUNT;
-    for (int i = -WATER_NODE_OFFSET; i <= BAR_COUNT + WATER_NODE_OFFSET; i++) {
+    const auto barWidth = (2 * size.width) / config["BAR_COUNT"];
+    for (int i = -config["WATER_NODE_OFFSET"]; i <= config["BAR_COUNT"] + config["WATER_NODE_OFFSET"]; i++) {
         auto pos = i * barWidth;
         _border.push_back(Vec2(pos, _seaLevel));
     }
@@ -72,12 +81,12 @@ void WaterNode::update(float dt) {
         {
             if (i > 0)
             {
-                leftDeltas[i] = SPREAD * (_springs[i].position.y - _springs[i - 1].position.y);
+                leftDeltas[i] = config["SPREAD"] * (_springs[i].position.y - _springs[i - 1].position.y);
                 _springs[i - 1].velocity += leftDeltas[i];
             }
             if (i < _springs.size() - 1)
             {
-                rightDeltas[i] = SPREAD * (_springs[i].position.y - _springs[i + 1].position.y);
+                rightDeltas[i] = config["SPREAD"] * (_springs[i].position.y - _springs[i + 1].position.y);
                 _springs[i + 1].velocity += rightDeltas[i];
             }
         }
@@ -100,7 +109,7 @@ void WaterNode::update(float dt) {
 void WaterNode::updateSprings() {
     for (auto& spring : _springs) {
         double yShift =  spring.position.y - levelFun(spring.position.x);
-        double accelration = (-TENSION * yShift) - DAMPENING * spring.velocity;
+        double accelration = (-config["TENSION"] * yShift) - config["DAMPENING"] * spring.velocity;
         spring.position.y += spring.velocity;
         spring.velocity += accelration;
     }

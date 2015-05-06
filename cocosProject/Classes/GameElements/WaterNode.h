@@ -2,6 +2,8 @@
 
 #include <cocos2d.h>
 #include <vector>
+#include <map>
+#include <string>
 
 class WaterNode: public cocos2d::Node {
 
@@ -21,6 +23,8 @@ private:
     std::vector<cocos2d::Vec2> _border;
     std::vector<Spring> _springs;
 
+
+    std::map<std::string, double> config;
     cocos2d::DrawNode* _drawNode;
     double _time;
     float _seaLevel;
@@ -30,7 +34,7 @@ private:
     /* INITS */
     bool init() override;
     void initBorder();
-
+    void readInit(const std::string& filepath);
     void update(float dt) override;
     void updateSprings();
 
