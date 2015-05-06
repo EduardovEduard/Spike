@@ -116,7 +116,7 @@ void WaterNode::update(float dt) {
     updateSprings();
     updatePlatforms();
     updateMeteors();
-    redrawWater();
+    //redrawWater();
 }
 
 void WaterNode::updateMeteors() {

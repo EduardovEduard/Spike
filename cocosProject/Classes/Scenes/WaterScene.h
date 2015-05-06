@@ -32,8 +32,11 @@ private:
     bool init() override;
     
     
+    
     /* UPDATES */
     
     /* TOOLS */
     void processMeteorCollision(MeteorNode*);
+    void dropItem();
+    
 };

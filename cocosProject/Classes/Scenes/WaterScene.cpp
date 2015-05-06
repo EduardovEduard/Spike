@@ -21,7 +21,6 @@ void WaterScene::onMouseDown(Vec2 pt) {
 bool WaterScene::init() {
     if (!BasicScene::initWithPhysics())
         return false;
-
     getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     _node = WaterNode::create();
     _node->setWaterPhysicsNodesTag(TAG_WATER);
@@ -29,19 +28,9 @@ bool WaterScene::init() {
     auto contactListener = EventListenerPhysicsContact::create();
     contactListener->onContactBegin = CC_CALLBACK_1(WaterScene::onContactBegin, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+    dropItem();
     return true;
 }
-
-void WaterScene::processMeteorCollision(MeteorNode* meteor)
-{
-    if(_meteors.find(meteor) == _meteors.end()) {
-        return;
-    }
-    _meteors.erase(meteor);
-    _node->touch(meteor);
-}
-
-/* STATE */
 
 /* HANDLERS */
 
@@ -67,3 +56,22 @@ bool WaterScene::onContactBegin(PhysicsContact& contact) {
 }
 
 /* UPDATES */
+
+/* TOOLS */
+
+void WaterScene::processMeteorCollision(MeteorNode* meteor) {
+    if(_meteors.find(meteor) == _meteors.end()) {
+        return;
+    }
+    _meteors.erase(meteor);
+    _node->touch(meteor);
+}
+
+void WaterScene::dropItem() {
+    auto n = Node::create();
+    n->setContentSize(Size(200, 10));
+    n->setPhysicsBody(PhysicsBody::createBox(n->getContentSize()));
+    addChild(n, 2);
+    n->setPosition(getContentSize()/2);
+}
+
