@@ -30,7 +30,7 @@ bool AppDelegate::init() {
     //TODO: add choose resource folder
 #endif
     director->setAnimationInterval(1.0 / 60);
-    ScenesManager::getInstance()->runWithWater();
+    ScenesManager::getInstance()->runWithGame();
     //ScenesManager::getInstance()->runWithSpring();
     return true;
 }

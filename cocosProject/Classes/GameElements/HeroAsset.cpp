@@ -4,9 +4,9 @@
 using namespace cocos2d;
 
 bool HeroAsset::init() {
-    if(!Node::init()) return false;
+    if(!Node::init()) 
+	return false;
     initSprite();
-    initAnimation();
     return true;
 }
 
@@ -17,7 +17,4 @@ void HeroAsset::initSprite() {
     addChild(s);
 }
 
-void HeroAsset::initAnimation() {
-
-}
 

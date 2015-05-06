@@ -4,12 +4,10 @@
     <df root="." name="0">
       <df name="Classes">
         <df name="GameElements">
-          <in>BubbleAsset.cpp</in>
-          <in>GapAsset.cpp</in>
           <in>HeroAsset.cpp</in>
           <in>MeteorNode.cpp</in>
           <in>SpringWaterNode.cpp</in>
-          <in>TextAsset.cpp</in>
+          <in>StartPlatformAsset.cpp</in>
           <in>WaterNode.cpp</in>
           <in>WaterNodeRadial.cpp</in>
         </df>
@@ -31,9 +29,8 @@
         </df>
         <df name="Scenes">
           <in>BasicScene.cpp</in>
-          <in>MainScene.cpp</in>
+          <in>GameScene.cpp</in>
           <in>SpringScene.cpp</in>
-          <in>WaterScene.cpp</in>
         </df>
         <in>AppDelegate.cpp</in>
         <in>Utils.cpp</in>
@@ -353,17 +350,6 @@
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="Classes/GameElements/BubbleAsset.cpp"
-            ex="false"
-            tool="1"
-            flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
-      <item path="Classes/GameElements/GapAsset.cpp" ex="false" tool="1" flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
       <item path="Classes/GameElements/HeroAsset.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
@@ -382,7 +368,10 @@
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="Classes/GameElements/TextAsset.cpp" ex="false" tool="1" flavor2="8">
+      <item path="Classes/GameElements/StartPlatformAsset.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
@@ -438,15 +427,11 @@
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="Classes/Scenes/MainScene.cpp" ex="false" tool="1" flavor2="8">
+      <item path="Classes/Scenes/GameScene.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
       <item path="Classes/Scenes/SpringScene.cpp" ex="false" tool="1" flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
-      <item path="Classes/Scenes/WaterScene.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>

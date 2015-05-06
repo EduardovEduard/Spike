@@ -10,18 +10,14 @@
       </df>
       <df name="Classes">
         <df name="GameElements">
-          <in>BubbleAsset.cpp</in>
-          <in>BubbleAsset.h</in>
-          <in>GapAsset.cpp</in>
-          <in>GapAsset.h</in>
           <in>HeroAsset.cpp</in>
           <in>HeroAsset.h</in>
           <in>MeteorNode.cpp</in>
           <in>MeteorNode.h</in>
           <in>SpringWaterNode.cpp</in>
           <in>SpringWaterNode.h</in>
-          <in>TextAsset.cpp</in>
-          <in>TextAsset.h</in>
+          <in>StartPlatformAsset.cpp</in>
+          <in>StartPlatformAsset.h</in>
           <in>WaterNode.cpp</in>
           <in>WaterNode.h</in>
           <in>WaterNodeRadial.cpp</in>
@@ -66,12 +62,10 @@
         <df name="Scenes">
           <in>BasicScene.cpp</in>
           <in>BasicScene.h</in>
-          <in>MainScene.cpp</in>
-          <in>MainScene.h</in>
+          <in>GameScene.cpp</in>
+          <in>GameScene.h</in>
           <in>SpringScene.cpp</in>
           <in>SpringScene.h</in>
-          <in>WaterScene.cpp</in>
-          <in>WaterScene.h</in>
         </df>
         <in>AppDelegate.cpp</in>
         <in>AppDelegate.h</in>

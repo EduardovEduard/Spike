@@ -1,14 +1,11 @@
 #pragma once
 
 #include <cocos2d.h>
-#include "Models/Article.h"
-#include <vector>
 
-class GapAsset : public cocos2d::Node {
+class StartPlatformAsset : public cocos2d::Node {
 
 public:
-    CREATE_FUNC(GapAsset);
-    void unlock(Models::Article a, bool success);
+    CREATE_FUNC(StartPlatformAsset);
     
 private:
     
@@ -19,7 +16,7 @@ private:
     
     /* INITS */
     bool init() override;
-    
-    /* FUNS */
+    void initView();
+    void initPhysics();
     
 };

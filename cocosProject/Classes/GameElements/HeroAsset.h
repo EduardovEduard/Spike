@@ -17,6 +17,5 @@ private:
     /* INITS */
     bool init() override;
     void initSprite();
-    void initAnimation();
     
 };

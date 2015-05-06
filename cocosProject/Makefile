@@ -349,54 +349,6 @@ Classes/GUI/ResultsLayer.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/ResultsLayer.cpp.s
 .PHONY : Classes/GUI/ResultsLayer.cpp.s
 
-Classes/GameElements/BubbleAsset.o: Classes/GameElements/BubbleAsset.cpp.o
-.PHONY : Classes/GameElements/BubbleAsset.o
-
-# target to build an object file
-Classes/GameElements/BubbleAsset.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/BubbleAsset.cpp.o
-.PHONY : Classes/GameElements/BubbleAsset.cpp.o
-
-Classes/GameElements/BubbleAsset.i: Classes/GameElements/BubbleAsset.cpp.i
-.PHONY : Classes/GameElements/BubbleAsset.i
-
-# target to preprocess a source file
-Classes/GameElements/BubbleAsset.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/BubbleAsset.cpp.i
-.PHONY : Classes/GameElements/BubbleAsset.cpp.i
-
-Classes/GameElements/BubbleAsset.s: Classes/GameElements/BubbleAsset.cpp.s
-.PHONY : Classes/GameElements/BubbleAsset.s
-
-# target to generate assembly for a file
-Classes/GameElements/BubbleAsset.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/BubbleAsset.cpp.s
-.PHONY : Classes/GameElements/BubbleAsset.cpp.s
-
-Classes/GameElements/GapAsset.o: Classes/GameElements/GapAsset.cpp.o
-.PHONY : Classes/GameElements/GapAsset.o
-
-# target to build an object file
-Classes/GameElements/GapAsset.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/GapAsset.cpp.o
-.PHONY : Classes/GameElements/GapAsset.cpp.o
-
-Classes/GameElements/GapAsset.i: Classes/GameElements/GapAsset.cpp.i
-.PHONY : Classes/GameElements/GapAsset.i
-
-# target to preprocess a source file
-Classes/GameElements/GapAsset.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/GapAsset.cpp.i
-.PHONY : Classes/GameElements/GapAsset.cpp.i
-
-Classes/GameElements/GapAsset.s: Classes/GameElements/GapAsset.cpp.s
-.PHONY : Classes/GameElements/GapAsset.s
-
-# target to generate assembly for a file
-Classes/GameElements/GapAsset.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/GapAsset.cpp.s
-.PHONY : Classes/GameElements/GapAsset.cpp.s
-
 Classes/GameElements/HeroAsset.o: Classes/GameElements/HeroAsset.cpp.o
 .PHONY : Classes/GameElements/HeroAsset.o
 
@@ -469,29 +421,29 @@ Classes/GameElements/SpringWaterNode.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/SpringWaterNode.cpp.s
 .PHONY : Classes/GameElements/SpringWaterNode.cpp.s
 
-Classes/GameElements/TextAsset.o: Classes/GameElements/TextAsset.cpp.o
-.PHONY : Classes/GameElements/TextAsset.o
+Classes/GameElements/StartPlatformAsset.o: Classes/GameElements/StartPlatformAsset.cpp.o
+.PHONY : Classes/GameElements/StartPlatformAsset.o
 
 # target to build an object file
-Classes/GameElements/TextAsset.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/TextAsset.cpp.o
-.PHONY : Classes/GameElements/TextAsset.cpp.o
+Classes/GameElements/StartPlatformAsset.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/StartPlatformAsset.cpp.o
+.PHONY : Classes/GameElements/StartPlatformAsset.cpp.o
 
-Classes/GameElements/TextAsset.i: Classes/GameElements/TextAsset.cpp.i
-.PHONY : Classes/GameElements/TextAsset.i
+Classes/GameElements/StartPlatformAsset.i: Classes/GameElements/StartPlatformAsset.cpp.i
+.PHONY : Classes/GameElements/StartPlatformAsset.i
 
 # target to preprocess a source file
-Classes/GameElements/TextAsset.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/TextAsset.cpp.i
-.PHONY : Classes/GameElements/TextAsset.cpp.i
+Classes/GameElements/StartPlatformAsset.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/StartPlatformAsset.cpp.i
+.PHONY : Classes/GameElements/StartPlatformAsset.cpp.i
 
-Classes/GameElements/TextAsset.s: Classes/GameElements/TextAsset.cpp.s
-.PHONY : Classes/GameElements/TextAsset.s
+Classes/GameElements/StartPlatformAsset.s: Classes/GameElements/StartPlatformAsset.cpp.s
+.PHONY : Classes/GameElements/StartPlatformAsset.s
 
 # target to generate assembly for a file
-Classes/GameElements/TextAsset.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/TextAsset.cpp.s
-.PHONY : Classes/GameElements/TextAsset.cpp.s
+Classes/GameElements/StartPlatformAsset.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/StartPlatformAsset.cpp.s
+.PHONY : Classes/GameElements/StartPlatformAsset.cpp.s
 
 Classes/GameElements/WaterNode.o: Classes/GameElements/WaterNode.cpp.o
 .PHONY : Classes/GameElements/WaterNode.o
@@ -733,29 +685,29 @@ Classes/Scenes/BasicScene.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/BasicScene.cpp.s
 .PHONY : Classes/Scenes/BasicScene.cpp.s
 
-Classes/Scenes/MainScene.o: Classes/Scenes/MainScene.cpp.o
-.PHONY : Classes/Scenes/MainScene.o
+Classes/Scenes/GameScene.o: Classes/Scenes/GameScene.cpp.o
+.PHONY : Classes/Scenes/GameScene.o
 
 # target to build an object file
-Classes/Scenes/MainScene.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/MainScene.cpp.o
-.PHONY : Classes/Scenes/MainScene.cpp.o
+Classes/Scenes/GameScene.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/GameScene.cpp.o
+.PHONY : Classes/Scenes/GameScene.cpp.o
 
-Classes/Scenes/MainScene.i: Classes/Scenes/MainScene.cpp.i
-.PHONY : Classes/Scenes/MainScene.i
+Classes/Scenes/GameScene.i: Classes/Scenes/GameScene.cpp.i
+.PHONY : Classes/Scenes/GameScene.i
 
 # target to preprocess a source file
-Classes/Scenes/MainScene.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/MainScene.cpp.i
-.PHONY : Classes/Scenes/MainScene.cpp.i
+Classes/Scenes/GameScene.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/GameScene.cpp.i
+.PHONY : Classes/Scenes/GameScene.cpp.i
 
-Classes/Scenes/MainScene.s: Classes/Scenes/MainScene.cpp.s
-.PHONY : Classes/Scenes/MainScene.s
+Classes/Scenes/GameScene.s: Classes/Scenes/GameScene.cpp.s
+.PHONY : Classes/Scenes/GameScene.s
 
 # target to generate assembly for a file
-Classes/Scenes/MainScene.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/MainScene.cpp.s
-.PHONY : Classes/Scenes/MainScene.cpp.s
+Classes/Scenes/GameScene.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/GameScene.cpp.s
+.PHONY : Classes/Scenes/GameScene.cpp.s
 
 Classes/Scenes/SpringScene.o: Classes/Scenes/SpringScene.cpp.o
 .PHONY : Classes/Scenes/SpringScene.o
@@ -780,30 +732,6 @@ Classes/Scenes/SpringScene.s: Classes/Scenes/SpringScene.cpp.s
 Classes/Scenes/SpringScene.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/SpringScene.cpp.s
 .PHONY : Classes/Scenes/SpringScene.cpp.s
-
-Classes/Scenes/WaterScene.o: Classes/Scenes/WaterScene.cpp.o
-.PHONY : Classes/Scenes/WaterScene.o
-
-# target to build an object file
-Classes/Scenes/WaterScene.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/WaterScene.cpp.o
-.PHONY : Classes/Scenes/WaterScene.cpp.o
-
-Classes/Scenes/WaterScene.i: Classes/Scenes/WaterScene.cpp.i
-.PHONY : Classes/Scenes/WaterScene.i
-
-# target to preprocess a source file
-Classes/Scenes/WaterScene.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/WaterScene.cpp.i
-.PHONY : Classes/Scenes/WaterScene.cpp.i
-
-Classes/Scenes/WaterScene.s: Classes/Scenes/WaterScene.cpp.s
-.PHONY : Classes/Scenes/WaterScene.s
-
-# target to generate assembly for a file
-Classes/Scenes/WaterScene.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/WaterScene.cpp.s
-.PHONY : Classes/Scenes/WaterScene.cpp.s
 
 Classes/Utils.o: Classes/Utils.cpp.o
 .PHONY : Classes/Utils.o
@@ -959,12 +887,6 @@ help:
 	@echo "... Classes/GUI/ResultsLayer.o"
 	@echo "... Classes/GUI/ResultsLayer.i"
 	@echo "... Classes/GUI/ResultsLayer.s"
-	@echo "... Classes/GameElements/BubbleAsset.o"
-	@echo "... Classes/GameElements/BubbleAsset.i"
-	@echo "... Classes/GameElements/BubbleAsset.s"
-	@echo "... Classes/GameElements/GapAsset.o"
-	@echo "... Classes/GameElements/GapAsset.i"
-	@echo "... Classes/GameElements/GapAsset.s"
 	@echo "... Classes/GameElements/HeroAsset.o"
 	@echo "... Classes/GameElements/HeroAsset.i"
 	@echo "... Classes/GameElements/HeroAsset.s"
@@ -974,9 +896,9 @@ help:
 	@echo "... Classes/GameElements/SpringWaterNode.o"
 	@echo "... Classes/GameElements/SpringWaterNode.i"
 	@echo "... Classes/GameElements/SpringWaterNode.s"
-	@echo "... Classes/GameElements/TextAsset.o"
-	@echo "... Classes/GameElements/TextAsset.i"
-	@echo "... Classes/GameElements/TextAsset.s"
+	@echo "... Classes/GameElements/StartPlatformAsset.o"
+	@echo "... Classes/GameElements/StartPlatformAsset.i"
+	@echo "... Classes/GameElements/StartPlatformAsset.s"
 	@echo "... Classes/GameElements/WaterNode.o"
 	@echo "... Classes/GameElements/WaterNode.i"
 	@echo "... Classes/GameElements/WaterNode.s"
@@ -1007,15 +929,12 @@ help:
 	@echo "... Classes/Scenes/BasicScene.o"
 	@echo "... Classes/Scenes/BasicScene.i"
 	@echo "... Classes/Scenes/BasicScene.s"
-	@echo "... Classes/Scenes/MainScene.o"
-	@echo "... Classes/Scenes/MainScene.i"
-	@echo "... Classes/Scenes/MainScene.s"
+	@echo "... Classes/Scenes/GameScene.o"
+	@echo "... Classes/Scenes/GameScene.i"
+	@echo "... Classes/Scenes/GameScene.s"
 	@echo "... Classes/Scenes/SpringScene.o"
 	@echo "... Classes/Scenes/SpringScene.i"
 	@echo "... Classes/Scenes/SpringScene.s"
-	@echo "... Classes/Scenes/WaterScene.o"
-	@echo "... Classes/Scenes/WaterScene.i"
-	@echo "... Classes/Scenes/WaterScene.s"
 	@echo "... Classes/Utils.o"
 	@echo "... Classes/Utils.i"
 	@echo "... Classes/Utils.s"

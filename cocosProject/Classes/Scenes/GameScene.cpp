@@ -1,6 +1,7 @@
-#include "WaterScene.h"
+#include "GameScene.h"
 #include "GameElements/MeteorNode.h"
 #include "GameElements/WaterNode.h"
+#include "GameElements/StartPlatformAsset.h"
 
 #include <iostream>
 
@@ -9,32 +10,55 @@ using namespace cocos2d;
 static const int TAG_WATER = 0x05;
 static const int TAG_METEOR = 0x06;
 
-void WaterScene::onMouseDown(Vec2 pt) {
-    auto m = MeteorNode::create();
-    m->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
-    m->setPosition(pt);
-    m->setTag(TAG_METEOR);
-    _meteors.emplace(m, MeteorInfo());
-    addChild(m, 2);
-}
 
-bool WaterScene::init() {
+/* INTIS */
+
+bool GameScene::init() {
     if (!BasicScene::initWithPhysics())
         return false;
-    getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
-    _node = WaterNode::create();
-    _node->setWaterPhysicsNodesTag(TAG_WATER);
-    addChild(_node, 1);
-    auto contactListener = EventListenerPhysicsContact::create();
-    contactListener->onContactBegin = CC_CALLBACK_1(WaterScene::onContactBegin, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
-    dropItem();
+    initPhysics();
+    initStartPlatform();
+    initFinishPlatform();
+    initPlatforms();
+    initWater();
     return true;
 }
 
+void GameScene::initPhysics() {
+    getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    auto contactListener = EventListenerPhysicsContact::create();
+    contactListener->onContactBegin = CC_CALLBACK_1(GameScene::onContactBegin, this);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+}
+
+void GameScene::initPlatforms() {
+    dropItem(100, 200);
+}
+
+void GameScene::initStartPlatform() {
+    auto sp = StartPlatformAsset::create();
+    sp->setPosition(Vec2::ZERO);
+    addChild(sp, 1);
+}
+
+void GameScene::initFinishPlatform() {
+    
+}
+
+void GameScene::initWater() {
+    _waterNode = WaterNode::create();
+    _waterNode->setWaterPhysicsNodesTag(TAG_WATER);
+    addChild(_waterNode, 1);
+}
+
+
 /* HANDLERS */
 
-bool WaterScene::onContactBegin(PhysicsContact& contact) {
+void GameScene::onMouseDown(Vec2 pt) {
+    dropMeteor(pt);
+}
+
+bool GameScene::onContactBegin(PhysicsContact& contact) {
     auto nodeA = contact.getShapeA()->getBody()->getNode();
     auto nodeB = contact.getShapeB()->getBody()->getNode();
     
@@ -59,19 +83,28 @@ bool WaterScene::onContactBegin(PhysicsContact& contact) {
 
 /* TOOLS */
 
-void WaterScene::processMeteorCollision(MeteorNode* meteor) {
+void GameScene::processMeteorCollision(MeteorNode* meteor) {
     if(_meteors.find(meteor) == _meteors.end()) {
         return;
     }
     _meteors.erase(meteor);
-    _node->touch(meteor);
+    _waterNode->touch(meteor);
 }
 
-void WaterScene::dropItem() {
+void GameScene::dropItem(double xOffset, double length) {
     auto n = Node::create();
-    n->setContentSize(Size(200, 10));
+    n->setContentSize(Size(length, 10));
     n->setPhysicsBody(PhysicsBody::createBox(n->getContentSize()));
     addChild(n, 2);
     n->setPosition(getContentSize()/2);
+}
+
+void GameScene::dropMeteor(Vec2 pt) {
+    auto m = MeteorNode::create();
+    m->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
+    m->setPosition(pt);
+    m->setTag(TAG_METEOR);
+    _meteors.emplace(m, MeteorInfo());
+    addChild(m, 2);
 }
 

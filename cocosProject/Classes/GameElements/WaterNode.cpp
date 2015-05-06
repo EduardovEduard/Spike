@@ -74,28 +74,23 @@ vector<Vec2> narrowPlatform(const Vec2& a, const Vec2& b){
     auto substract = [](const Vec2& a, const Vec2& b) {
 	return a - b;
     };
-
     vector<Vec2> platform;
     platform.push_back(Vec2::ZERO);
     platform.push_back(a - b);
     platform.push_back(substract(substract(a, b), {0, 1}));
     platform.push_back({0, -1});
-    
     return platform;
 }
 
 void WaterNode::initSprings() {
     auto size = getContentSize();
-
     const auto barCount = config["BAR_COUNT"];;
     const auto barWidth = size.width / barCount;
-    
     std::vector<Vec2> v;
     for (int i = 0; i <= barCount + 1; i++) {
 	const float xpos = i * barWidth;
         v.push_back({xpos, _seaLevel});
     }
-    
     for (int i = 0; i <= barCount; i++) {
         auto node = Node::create();
 	node->setPosition(v[i]);
@@ -103,10 +98,8 @@ void WaterNode::initSprings() {
         auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size());
         physicsPart->setDynamic(false);
         physicsPart->setContactTestBitmask(0xFFFFFFFF);
-
         node->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
         node->setPhysicsBody(physicsPart);
-
         addChild(node);
         _springs.push_back({node, 0.0});
     }

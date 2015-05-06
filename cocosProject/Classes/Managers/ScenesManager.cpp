@@ -2,8 +2,7 @@
 #include "Managers/SoundsManager.h"
 #include "Managers/LevelsManager.h"
 
-#include "Scenes/MainScene.h"
-#include "Scenes/WaterScene.h"
+#include "Scenes/GameScene.h"
 #include "Scenes/SpringScene.h"
 
 #include <cocos2d.h>
@@ -12,16 +11,8 @@
 using namespace cocos2d;
 
 
-void ScenesManager::runWithMain() {
-    _currentScene = nullptr;
-    auto lvl = new Models::Level(LevelsManager::getInstance()->getFirstLevel());
-    _currentScene = MainScene::create(lvl);
-    auto director = Director::getInstance();
-    director->runWithScene(_currentScene);
-}
-
-void ScenesManager::runWithWater() {
-    _currentScene = WaterScene::create();
+void ScenesManager::runWithGame() {
+    _currentScene = GameScene::create();
     auto director = Director::getInstance();
     director->runWithScene(_currentScene);
 }
@@ -30,15 +21,6 @@ void ScenesManager::runWithSpring() {
     _currentScene = SpringScene::create();
     auto director = Director::getInstance();
     director->runWithScene(_currentScene);
-}
-
-void ScenesManager::gotoMain(int num) {
-    if(num > 3) return;
-    _currentScene = nullptr;
-    auto lvl = new Models::Level(LevelsManager::getInstance()->getLevel(num));
-    _currentScene = MainScene::create(lvl);
-    auto director = Director::getInstance();
-    director->replaceScene(_currentScene);
 }
 
 ScenesManager::ScenesManager() {

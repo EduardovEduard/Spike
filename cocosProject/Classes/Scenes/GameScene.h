@@ -8,9 +8,9 @@
 #include <map>
 
 
-class WaterScene : public BasicScene {
+class GameScene : public BasicScene {
 public:
-    CREATE_FUNC(WaterScene);
+    CREATE_FUNC(GameScene);
 private:
     
     struct MeteorInfo {
@@ -18,8 +18,7 @@ private:
     };
 
     /* STATE */
-    WaterNode* _node;
-    
+    WaterNode* _waterNode;
     std::map<MeteorNode*, MeteorInfo> _meteors;
 
     /* ELEMENTS */
@@ -27,16 +26,20 @@ private:
     /* HANDLERS */
     virtual void onMouseDown(cocos2d::Vec2 pt) override;
     bool onContactBegin(cocos2d::PhysicsContact& contact);
-
+    
     /* INITS */
     bool init() override;
-    
-    
+    void initPhysics();
+    void initWater();
+    void initStartPlatform();
+    void initFinishPlatform();
+    void initPlatforms();
     
     /* UPDATES */
     
     /* TOOLS */
     void processMeteorCollision(MeteorNode*);
-    void dropItem();
+    void dropItem(double xOffset, double length);
+    void dropMeteor(cocos2d::Vec2 pt);
     
 };
