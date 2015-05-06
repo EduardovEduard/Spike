@@ -48,7 +48,9 @@ void GameScene::initFinishPlatform() {
 }
 
 void GameScene::initWater() {
-    _waterNode = WaterNode::create();
+    _waterNode = WaterNode::create(Size(
+	_size.width * 0.8, _size.height / 2
+    ));
     _waterNode->setWaterPhysicsNodesTag(TAG_WATER);
     _waterNode->setPosition(Vec2(_size.width * 0.1, 0));
     addChild(_waterNode, 1);

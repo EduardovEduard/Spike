@@ -13,6 +13,17 @@
 using namespace cocos2d;
 using namespace std;
 
+WaterNode* WaterNode::create(const Size& size) {
+    auto *pRet = new WaterNode(); 
+    if (pRet && pRet->init(size)) { 
+        pRet->autorelease();
+        return pRet; 
+    } else { 
+        delete pRet; 
+        pRet = NULL; 
+        return NULL; 
+    } 
+}
 
 void WaterNode::readInit(const string& filepath) {
     stringstream fin(Utils::getFileData(filepath));
@@ -37,7 +48,7 @@ void WaterNode::touch(Vec2 point, double verticalVelocity, double horiontalVeloc
 }
 
 void WaterNode::touch(MeteorNode* node) {
-    auto point = node->getPosition();
+    auto point = convertToNodeSpace(node->getPosition());
 
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
         return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
@@ -47,24 +58,22 @@ void WaterNode::touch(MeteorNode* node) {
     _meteors.push_back({node, springIndex, 5});
 }
 
-bool WaterNode::init() {
+bool WaterNode::init(const Size& size) {
     if(!Node::init())
         return false;
 
+    setContentSize(size);
     readInit("init.ini");
-    
-    auto windowSize = Director::getInstance()->getWinSize();
-    
+
     _drawNode = DrawNode::create();
-    _drawNode->setContentSize(windowSize);
+    _drawNode->setContentSize(size);
     _drawNode->setPosition(Vec2::ZERO);
-    _seaLevel = windowSize.height / 2;
+    _seaLevel = size.height;
     
-    setContentSize(windowSize);
     initSprings();
     _waterPhysics.resize(_springs.size());
     addChild(_drawNode);
-    	
+
     scheduleUpdate();
     
     return true;

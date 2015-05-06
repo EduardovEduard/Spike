@@ -10,7 +10,7 @@
 class WaterNode: public cocos2d::Node {
 
 public:
-    CREATE_FUNC(WaterNode);
+    static WaterNode* create(const cocos2d::Size& size);
     
     void touch(cocos2d::Vec2 pt, double verticalVelocity = 0, double horiontalVelocity = 0);
     void touch(MeteorNode* node);
@@ -20,7 +20,6 @@ public:
     
 private:
 
-    /* STATE */
     struct Spring {
         cocos2d::Node* node;
         double velocity;
@@ -34,16 +33,16 @@ private:
         }
     };
 
-    std::vector<Spring> _springs;
-
     struct MeteorCollision {
         MeteorNode* node;
         size_t index;
         int tries;
     };
+    
+    /* STATE */
 
     std::vector<MeteorCollision> _meteors;
-
+    std::vector<Spring> _springs;
     std::map<std::string, double> config;
     cocos2d::DrawNode* _drawNode;
     float _seaLevel;
@@ -53,7 +52,7 @@ private:
     /* ELEMENTS */
 
     /* INITS */
-    bool init() override;
+    bool init(const cocos2d::Size& size);
     
     void initSprings();
     void readInit(const std::string& filepath);
