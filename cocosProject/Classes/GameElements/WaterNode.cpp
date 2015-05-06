@@ -59,19 +59,37 @@ bool WaterNode::init() {
     return true;
 }
 
+vector<Vec2> narrowPlatform(const Vec2& a, const Vec2& b)
+{
+    auto substract = [](const Vec2& a, const Vec2& b) {
+	return Vec2(a.x - b.x, a.y - b.y);	
+    };
+
+    vector<Vec2> platform;
+    platform.push_back(Vec2::ZERO);
+    platform.push_back(substract(a, b));
+    platform.push_back(substract(substract(a, b), {0, 1}));
+    platform.push_back({0, -1});
+    return platform;
+}
+
 void WaterNode::initSprings() {
     auto size = getContentSize();
 
     const auto barCount = config["BAR_COUNT"];;
     const auto barWidth = size.width / barCount;
     
+    std::vector<Vec2> v;
+    for (int i = 0; i <= barCount + 1; i++) {
+	const float xpos = i * barWidth;
+        v.push_back({xpos, _seaLevel});
+    }
+    
     for (int i = 0; i <= barCount; i++) {
-        const float xpos = i * barWidth;
-
         auto node = Node::create();
-        node->setPosition({xpos, _seaLevel});
-
-        auto physicsPart = PhysicsBody::createCircle(5);
+	node->setPosition(v[i]);
+	vector<Vec2> waterSurface = narrowPlatform(v[i + 1], v[i]);
+        auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size());
         physicsPart->setDynamic(false);
         physicsPart->setContactTestBitmask(0xFFFFFFFF);
 
@@ -122,7 +140,16 @@ void WaterNode::update(float dt) {
             }
         }
     }
-
+    
+    /*for (size_t i = 0; i + 1 < _springs.size(); ++i) {
+	auto node = Node::create();
+	node->setPosition(_springs[i].getPosition());
+	vector<Vec2> waterSurface = narrowPlatform(_springs[i + 1].getPosition(), _springs[i].getPosition());
+        auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size());
+        physicsPart->setDynamic(false);
+        physicsPart->setContactTestBitmask(0xFFFFFFFF);
+        node->setPhysicsBody(physicsPart);
+    }*/
     redrawWater();
 }
 

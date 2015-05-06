@@ -52,6 +52,6 @@ private:
 
     /* FUNS */
     void redrawWater();
-    
+    std::vector<cocos2d::Vec2> narrowPlaform(const cocos2d::Vec2&, const cocos2d::Vec2);
     double levelFun(double x, int lvl = 1);
 };
