@@ -17,6 +17,7 @@ bool SpringScene::init() {
 void SpringScene::initNodes() {
     auto n1 = Node::create();
     n1->setPhysicsBody(PhysicsBody::createBox(Size(100, 100)));
+    n1 ->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
     addChild(n1);
     auto size = getContentSize();
     n1->setPosition(Vec2(size.width/2, size.height/2));

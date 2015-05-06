@@ -16,6 +16,8 @@
           <in>GapAsset.h</in>
           <in>HeroAsset.cpp</in>
           <in>HeroAsset.h</in>
+          <in>MeteorNode.cpp</in>
+          <in>MeteorNode.h</in>
           <in>SpringWaterNode.cpp</in>
           <in>SpringWaterNode.h</in>
           <in>TextAsset.cpp</in>
@@ -106,6 +108,8 @@
         <df name="Graman_CORE_PRE_BUILD.dir">
         </df>
         <df name="Graman_PRE_BUILD.dir">
+        </df>
+        <df name="Progress">
         </df>
       </df>
       <df name="cocos2d">
@@ -13637,6 +13641,16 @@
         </df>
         <df name="bin">
           <df name="classes">
+            <df name="org">
+              <df name="cocos2dx">
+                <df name="cpp">
+                </df>
+              </df>
+              <df name="jonyrock">
+                <df name="Spike">
+                </df>
+              </df>
+            </df>
           </df>
           <df name="dexedLibs">
           </df>

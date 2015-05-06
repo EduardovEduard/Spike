@@ -7,6 +7,8 @@
           <in>BubbleAsset.cpp</in>
           <in>GapAsset.cpp</in>
           <in>HeroAsset.cpp</in>
+          <in>MeteorNode.cpp</in>
+          <in>SpringWaterNode.cpp</in>
           <in>TextAsset.cpp</in>
           <in>WaterNode.cpp</in>
           <in>WaterNodeRadial.cpp</in>
@@ -290,7 +292,7 @@
               <pElem>cocos2d/external/xxhash</pElem>
             </incDir>
           </cTool>
-          <ccTool>
+          <ccTool flags="0">
             <standard>8</standard>
             <incDir>
               <pElem>/usr/local/include/GLFW</pElem>
@@ -318,6 +320,7 @@
               <pElem>cocos2d/external/xxhash</pElem>
               <pElem>Classes</pElem>
               <pElem>external</pElem>
+              <pElem>.</pElem>
             </incDir>
             <preprocessorList>
               <Elem>COCOS2D_DEBUG=1</Elem>
@@ -362,6 +365,20 @@
         </ccTool>
       </item>
       <item path="Classes/GameElements/HeroAsset.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/MeteorNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/SpringWaterNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
@@ -1722,13 +1739,6 @@
         <cTool flags="1">
         </cTool>
       </item>
-      <folder path="0/Classes">
-        <ccTool>
-          <incDir>
-            <pElem>.</pElem>
-          </incDir>
-        </ccTool>
-      </folder>
       <folder path="0/cocos2d/cocos/audio">
         <ccTool>
           <incDir>
@@ -1828,13 +1838,6 @@
           <incDir>
             <pElem>cocos2d/external/Box2D/Common</pElem>
             <pElem>cocos2d/external/Box2D/Rope</pElem>
-          </incDir>
-        </ccTool>
-      </folder>
-      <folder path="0/proj.linux">
-        <ccTool>
-          <incDir>
-            <pElem>.</pElem>
           </incDir>
         </ccTool>
       </folder>

@@ -10,18 +10,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/GameElements/TextAsset.cpp</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/GameElements/TextAsset.h</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/AppDelegate.cpp</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/Utils.h</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/Utils.cpp</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/Scenes/MainScene.cpp</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Resources/levels/level1.txt</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Resources/levels/level2.txt</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/GameElements/GapAsset.h</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/GameElements/GapAsset.cpp</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/Classes/AppDelegate.h</file>
-            <file>file:/home/alex/Github/GrammarDot/cocosProject/proj.android/jni/src/Managers/EconomicsManager.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/GameElements/MeteorNode.h</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/GameElements/MeteorNode.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/Scenes/WaterScene.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/Scenes/WaterScene.h</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/Scenes/SpringScene.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/GameElements/WaterNode.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/Scenes/MainScene.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/AppDelegate.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/Managers/ScenesManager.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/cocos2d/cocos/2d/CCDrawNode.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/GameElements/WaterNode.h</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/cocos2d/cocos/base/ccMacros.h</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/cocos2d/cocos/physics/CCPhysicsBody.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/GameElements/SpringWaterNode.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/cocos2d/cocos/2d/CCNode.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/cocos2d/cocos/physics/CCPhysicsBody.h</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/cocos2d/cocos/2d/CCNode.h</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/Utils.h</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/Classes/Utils.cpp</file>
+            <file>file:/home/alex/Github/Spike/cocosProject/cocos2d/cocos/math/Vec2.h</file>
         </group>
     </open-files>
 </project-private>

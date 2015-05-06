@@ -2,6 +2,9 @@
 #include <chipmunk.h>
 #include <cocos2d.h>
 #include <unistd.h>
+#include "Utils.h"
+#include "MeteorNode.h"
+#include <sstream>
 
 #include <fstream>
 #include <iostream>
@@ -10,8 +13,9 @@
 using namespace cocos2d;
 using namespace std;
 
+
 void WaterNode::readInit(const string& filepath) {
-    ifstream fin(filepath.c_str());
+    stringstream fin(Utils::getFileData(filepath));
     string name;
     double value;
     while (fin.good()) {
@@ -41,7 +45,7 @@ bool WaterNode::init() {
         return false;
 
     readInit("init.ini");
-
+    
     auto windowSize = Director::getInstance()->getWinSize();
     windowSize.width *= 2;
     
@@ -49,10 +53,16 @@ bool WaterNode::init() {
     _drawNode->setContentSize(windowSize);
     _drawNode->setPosition({windowSize.width / 4, 0});
     _seaLevel = windowSize.height / 2;
+    
     setContentSize(windowSize);
     initSprings();
+    _waterPhysics.resize(_springs.size());
     addChild(_drawNode);
+    
+//    schedule(CC_SCHEDULE_SELECTOR(WaterNode::tick), 0.3f);
+	
     scheduleUpdate();
+    
     return true;
 }
 
@@ -64,9 +74,19 @@ void WaterNode::initSprings() {
     
     for (int i = 0; i <= barCount; i++) {
         const float xpos = i * barWidth;
-	_springs.push_back({{xpos, _seaLevel}, 0.0});
+	auto node = Node::create();
+	node->setPosition({xpos, _seaLevel});
+	auto physicsPart = PhysicsBody::createCircle(5);
+	physicsPart->setGravityEnable(false);
+	physicsPart->setCollisionBitmask(0x03);
+	physicsPart->setCategoryBitmask(0x03);
+	physicsPart->setContactTestBitmask(0xFFFFFFFF);
+	node->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
+	node->setPhysicsBody(physicsPart);
+	addChild(node);
+	_springs.push_back({node, {xpos, _seaLevel}, 0.0});
     }
-}
+ }
 
 void WaterNode::update(float dt) {
     _drawNode->clear();
@@ -100,7 +120,11 @@ void WaterNode::update(float dt) {
                 _springs[i + 1].position.y += rightDeltas[i];
         }
     }
-
+    
+    for(auto& sp: _springs) {
+	sp.node->setPosition(sp.position);
+    }
+    
     drawWater();
 }
 
@@ -111,6 +135,7 @@ void WaterNode::updateSprings() {
         spring.position.y += spring.velocity;
         spring.velocity += accelration;
     }
+    
 }
 
 void WaterNode::drawWater() {
@@ -128,3 +153,21 @@ void WaterNode::drawWater() {
 double WaterNode::levelFun(double x, int lvl) {
     return _seaLevel;
 }
+
+void WaterNode::tick(float dt)
+{
+    // TODO Add meteors at random positions.
+//    auto sprite1 = addSpriteAtPosition(Vec2(s_centre.x + cocos2d::random(-300,300),
+//      s_centre.y + cocos2d::random(-300,300)));
+//    auto physicsBody = sprite1->getPhysicsBody();
+//    physicsBody->setVelocity(Vec2(cocos2d::random(-500,500),cocos2d::random(-500,500)));
+//    physicsBody->setContactTestBitmask(0xFFFFFFFF);
+}
+
+void WaterNode::setWaterPhysicsNodesTag(int tag) {
+    for(auto& sp: _springs) {
+	sp.node->setTag(tag);
+    }
+}
+
+

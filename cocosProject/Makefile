@@ -421,6 +421,54 @@ Classes/GameElements/HeroAsset.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/HeroAsset.cpp.s
 .PHONY : Classes/GameElements/HeroAsset.cpp.s
 
+Classes/GameElements/MeteorNode.o: Classes/GameElements/MeteorNode.cpp.o
+.PHONY : Classes/GameElements/MeteorNode.o
+
+# target to build an object file
+Classes/GameElements/MeteorNode.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/MeteorNode.cpp.o
+.PHONY : Classes/GameElements/MeteorNode.cpp.o
+
+Classes/GameElements/MeteorNode.i: Classes/GameElements/MeteorNode.cpp.i
+.PHONY : Classes/GameElements/MeteorNode.i
+
+# target to preprocess a source file
+Classes/GameElements/MeteorNode.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/MeteorNode.cpp.i
+.PHONY : Classes/GameElements/MeteorNode.cpp.i
+
+Classes/GameElements/MeteorNode.s: Classes/GameElements/MeteorNode.cpp.s
+.PHONY : Classes/GameElements/MeteorNode.s
+
+# target to generate assembly for a file
+Classes/GameElements/MeteorNode.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/MeteorNode.cpp.s
+.PHONY : Classes/GameElements/MeteorNode.cpp.s
+
+Classes/GameElements/SpringWaterNode.o: Classes/GameElements/SpringWaterNode.cpp.o
+.PHONY : Classes/GameElements/SpringWaterNode.o
+
+# target to build an object file
+Classes/GameElements/SpringWaterNode.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/SpringWaterNode.cpp.o
+.PHONY : Classes/GameElements/SpringWaterNode.cpp.o
+
+Classes/GameElements/SpringWaterNode.i: Classes/GameElements/SpringWaterNode.cpp.i
+.PHONY : Classes/GameElements/SpringWaterNode.i
+
+# target to preprocess a source file
+Classes/GameElements/SpringWaterNode.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/SpringWaterNode.cpp.i
+.PHONY : Classes/GameElements/SpringWaterNode.cpp.i
+
+Classes/GameElements/SpringWaterNode.s: Classes/GameElements/SpringWaterNode.cpp.s
+.PHONY : Classes/GameElements/SpringWaterNode.s
+
+# target to generate assembly for a file
+Classes/GameElements/SpringWaterNode.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/SpringWaterNode.cpp.s
+.PHONY : Classes/GameElements/SpringWaterNode.cpp.s
+
 Classes/GameElements/TextAsset.o: Classes/GameElements/TextAsset.cpp.o
 .PHONY : Classes/GameElements/TextAsset.o
 
@@ -920,6 +968,12 @@ help:
 	@echo "... Classes/GameElements/HeroAsset.o"
 	@echo "... Classes/GameElements/HeroAsset.i"
 	@echo "... Classes/GameElements/HeroAsset.s"
+	@echo "... Classes/GameElements/MeteorNode.o"
+	@echo "... Classes/GameElements/MeteorNode.i"
+	@echo "... Classes/GameElements/MeteorNode.s"
+	@echo "... Classes/GameElements/SpringWaterNode.o"
+	@echo "... Classes/GameElements/SpringWaterNode.i"
+	@echo "... Classes/GameElements/SpringWaterNode.s"
 	@echo "... Classes/GameElements/TextAsset.o"
 	@echo "... Classes/GameElements/TextAsset.i"
 	@echo "... Classes/GameElements/TextAsset.s"

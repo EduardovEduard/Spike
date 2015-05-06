@@ -12,29 +12,38 @@ public:
     
     void touch(cocos2d::Vec2 pt, double verticalVelocity = 0);
     double configValue(const std::string& key) const;
+    
+    void setWaterPhysicsNodesTag(int tag);
+    
 private:
 
     /* STATE */
     struct Spring {
+	cocos2d::Node* node;
         cocos2d::Vec2 position;
         double velocity;
     };
 
     std::vector<Spring> _springs;
 
-
     std::map<std::string, double> config;
     cocos2d::DrawNode* _drawNode;
     float _seaLevel;
+    
+    std::vector<cocos2d::PhysicsBody*> _waterPhysics;
 
     /* ELEMENTS */
 
     /* INITS */
     bool init() override;
+    
     void initSprings();
     void readInit(const std::string& filepath);
     void update(float dt) override;
     void updateSprings();
+    
+    void tick(float dt);
+
 
     /* FUNS */
     void drawWater();
