@@ -5,8 +5,10 @@
 #include "GameElements/FinishPlatformAsset.h"
 
 #include <iostream>
+#include <utility>
 
 using namespace cocos2d;
+using namespace std;
 
 static const int TAG_WATER = 0x05;
 static const int TAG_METEOR = 0x06;
@@ -21,8 +23,9 @@ bool GameScene::init() {
     initPhysics();
     initStartPlatform();
     initFinishPlatform();
-    initPlatforms();
     initWater();
+    initPlatforms();
+    
     return true;
 }
 
@@ -34,7 +37,18 @@ void GameScene::initPhysics() {
 }
 
 void GameScene::initPlatforms() {
-    dropItem(100, 200);
+    vector<pair<double, double>> plfs;
+    plfs.emplace_back(0.1, 0.1);
+    plfs.emplace_back(0.25, 0.12);
+    plfs.emplace_back(0.44, 0.18);
+    plfs.emplace_back(0.62, 0.1);
+    plfs.emplace_back(0.8, 0.05);
+    double w = _waterNode->getContentSize().width;
+    for(auto p: plfs) {
+	dropItem(
+	    _waterNode->getPosition().x + w * p.first, w * p.second
+	);
+    }    
 }
 
 void GameScene::initStartPlatform() {
@@ -64,7 +78,8 @@ void GameScene::initWater() {
 /* HANDLERS */
 
 void GameScene::onMouseDown(Vec2 pt) {
-    dropMeteor(pt);
+    //dropMeteor(pt);
+    // TODO: add hero velocity
 }
 
 bool GameScene::onContactBegin(PhysicsContact& contact) {
@@ -105,7 +120,9 @@ void GameScene::dropItem(double xOffset, double length) {
     n->setContentSize(Size(length, 10));
     n->setPhysicsBody(PhysicsBody::createBox(n->getContentSize()));
     addChild(n, 2);
-    n->setPosition(getContentSize()/2);
+    n->setPosition(
+	xOffset, _waterNode->getContentSize().height + n->getContentSize().height/2
+    );
 }
 
 void GameScene::dropMeteor(Vec2 pt) {
