@@ -33,7 +33,6 @@ void WaterNode::touch(Vec2 point, double verticalVelocity) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
         return std::abs(a.position.x - point.x) < std::abs(b.position.x - point.x);
     });
-
     if(point.y > closestSpring->position.y)
         closestSpring->velocity += verticalVelocity;
     else
@@ -47,11 +46,10 @@ bool WaterNode::init() {
     readInit("init.ini");
     
     auto windowSize = Director::getInstance()->getWinSize();
-    windowSize.width *= 2;
     
     _drawNode = DrawNode::create();
     _drawNode->setContentSize(windowSize);
-    _drawNode->setPosition({windowSize.width / 4, 0});
+    _drawNode->setPosition(Vec2::ZERO);
     _seaLevel = windowSize.height / 2;
     
     setContentSize(windowSize);
@@ -122,7 +120,7 @@ void WaterNode::update(float dt) {
     }
     
     for(auto& sp: _springs) {
-	sp.node->setPosition(sp.position);
+	sp.node->setPosition(sp.position + Vec2(0, 100));
     }
     
     drawWater();
@@ -139,15 +137,18 @@ void WaterNode::updateSprings() {
 }
 
 void WaterNode::drawWater() {
-    size_t offset = getContentSize().width / 2;
+    vector<Vec2> border;
+    std::transform(
+	_springs.begin(), _springs.end(), back_inserter(border), 
+	[](const Spring& s) { return s.position; }
+    );
+    border.push_back(Vec2(_drawNode->getContentSize().width,0));
+    border.push_back(Vec2::ZERO);
+    _drawNode->drawPolygon(
+	border.data(), border.size(), Color4F::BLUE, 0, Color4F::BLUE
+    );
+    
 
-    for (size_t i = 0; i < _springs.size() - 1; ++i) {
-        auto left = _springs[i].position; left.x -= offset;
-        auto right = _springs[i + 1].position; right.x -= offset;
-	
-        std::vector<Vec2> piece {left, right, Vec2(right.x, 0), Vec2(left.x, 0)};
-        _drawNode->drawSolidPoly(piece.data(), piece.size(), Color4F::BLUE);
-    }
 }
 
 double WaterNode::levelFun(double x, int lvl) {
