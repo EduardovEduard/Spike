@@ -27,8 +27,9 @@ void WaterNode::touch(Vec2 pt) {
         return std::abs(a.position.x - pt.x) < std::abs(b.position.x - pt.x);
     });
 
-    closestSpring += config["WATER_NODE_OFFSET"];
-
+    std::cerr << pt.x << " " << pt.y << std::endl;
+    std::cerr << closestSpring->position.x << " " << closestSpring->position.y << std::endl;
+    
     if(pt.y > closestSpring->position.y)
         closestSpring->velocity += config["DEFAULT_SPEED"];
     else
@@ -42,9 +43,12 @@ bool WaterNode::init() {
     readInit("init.ini");
 
     auto windowSize = Director::getInstance()->getWinSize();
+    windowSize.width *= 2;
+    
     _time = 0;
     _drawNode = DrawNode::create();
     _drawNode->setContentSize(windowSize);
+    _drawNode->setPosition({windowSize.width / 4, 0});
     _seaLevel = windowSize.height / 2;
     setContentSize(windowSize);
     initBorder();
@@ -55,14 +59,13 @@ bool WaterNode::init() {
 
 void WaterNode::initBorder() {
     auto size = getContentSize();
-    size.width += size.width / 2;
 
-    const auto barCount = config["BAR_COUNT"];
-    const auto nodeOffset = config["WATER_NODE_OFFSET"];
-    const auto barWidth = (2 * size.width) / (barCount + nodeOffset * 2);
-    for (int i = -nodeOffset; i <= barCount + nodeOffset; i++) {
-        const auto xpos = i * barWidth;
-	_springs.push_back({{xpos, _seaLevel}, 0});
+    const auto barCount = config["BAR_COUNT"];;
+    const auto barWidth = size.width / barCount;
+    
+    for (int i = 0; i <= barCount; i++) {
+        const float xpos = i * barWidth;
+	_springs.push_back({{xpos, _seaLevel}, 0.0});
     }
 }
 
