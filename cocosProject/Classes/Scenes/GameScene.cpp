@@ -16,6 +16,7 @@ static const int TAG_METEOR = 0x06;
 bool GameScene::init() {
     if (!BasicScene::initWithPhysics())
         return false;
+  
     initPhysics();
     initStartPlatform();
     initFinishPlatform();
@@ -36,8 +37,9 @@ void GameScene::initPlatforms() {
 }
 
 void GameScene::initStartPlatform() {
-    auto sp = StartPlatformAsset::create();
-    sp->setPosition(Vec2::ZERO);
+    Vec2 sz(_size.width * 0.1, _size.height / 1.9);
+    auto sp = StartPlatformAsset::create(Size(sz));
+    sp->setPosition(sz/2);
     addChild(sp, 1);
 }
 
@@ -48,6 +50,7 @@ void GameScene::initFinishPlatform() {
 void GameScene::initWater() {
     _waterNode = WaterNode::create();
     _waterNode->setWaterPhysicsNodesTag(TAG_WATER);
+    _waterNode->setPosition(Vec2(_size.width * 0.1, 0));
     addChild(_waterNode, 1);
 }
 

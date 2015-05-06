@@ -5,7 +5,7 @@
 class StartPlatformAsset : public cocos2d::Node {
 
 public:
-    CREATE_FUNC(StartPlatformAsset);
+    static StartPlatformAsset* create(const cocos2d::Size& size);
     
 private:
     
@@ -15,7 +15,7 @@ private:
     cocos2d::Sprite* _sprite;
     
     /* INITS */
-    bool init() override;
+    bool init(const cocos2d::Size& size);
     void initView();
     void initPhysics();
     
