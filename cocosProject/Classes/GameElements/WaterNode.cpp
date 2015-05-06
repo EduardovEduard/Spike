@@ -31,7 +31,7 @@ double WaterNode::configValue(const std::string& key) const {
 
 void WaterNode::touch(Vec2 point, double verticalVelocity) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
-        return std::abs(a.position.x - point.x) < std::abs(b.position.x - point.x);
+        return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
     });
     closestSpring->velocity += verticalVelocity;
 }
@@ -67,23 +67,25 @@ void WaterNode::initSprings() {
     
     for (int i = 0; i <= barCount; i++) {
         const float xpos = i * barWidth;
-	auto node = Node::create();
-	node->setPosition({xpos, _seaLevel});
-	auto physicsPart = PhysicsBody::createCircle(5);
-	//physicsPart->setGravityEnable(false);
-	physicsPart->setDynamic(false);
-	physicsPart->setContactTestBitmask(0xFFFFFFFF);
-	node->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
-	node->setPhysicsBody(physicsPart);
-	addChild(node);
-	_springs.push_back({node, {xpos, _seaLevel}, 0.0});
+
+        auto node = Node::create();
+        node->setPosition({xpos, _seaLevel});
+
+        auto physicsPart = PhysicsBody::createCircle(5);
+        physicsPart->setDynamic(false);
+        physicsPart->setContactTestBitmask(0xFFFFFFFF);
+
+        node->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
+        node->setPhysicsBody(physicsPart);
+
+        addChild(node);
+        _springs.push_back({node, 0.0});
     }
  }
 
 void WaterNode::update(float dt) {
     
     updateSprings();
-    
 
     std::vector<double> leftDeltas(_springs.size());
     std::vector<double> rightDeltas(_springs.size());
@@ -94,12 +96,12 @@ void WaterNode::update(float dt) {
         {
             if (i > 0)
             {
-                leftDeltas[i] = config["SPREAD"] * (_springs[i].position.y - _springs[i - 1].position.y);
+                leftDeltas[i] = config["SPREAD"] * (_springs[i].getPosition().y - _springs[i - 1].getPosition().y);
                 _springs[i - 1].velocity += leftDeltas[i];
             }
             if (i < _springs.size() - 1)
             {
-                rightDeltas[i] = config["SPREAD"] * (_springs[i].position.y - _springs[i + 1].position.y);
+                rightDeltas[i] = config["SPREAD"] * (_springs[i].getPosition().y - _springs[i + 1].getPosition().y);
                 _springs[i + 1].velocity += rightDeltas[i];
             }
         }
@@ -107,53 +109,48 @@ void WaterNode::update(float dt) {
         for (size_t i = 0; i < _springs.size(); ++i)
         {
             if (i > 0)
-                _springs[i - 1].position.y += leftDeltas[i];
+            {
+                auto pos = _springs[i - 1].getPosition();
+                pos.y += leftDeltas[i];
+                _springs[i - 1].setPosition(pos);
+            }
             if (i < _springs.size() - 1)
-                _springs[i + 1].position.y += rightDeltas[i];
+            {
+                auto pos = _springs[i + 1].getPosition();
+                pos.y += rightDeltas[i];
+                _springs[i + 1].setPosition(pos);
+            }
         }
     }
-    
-    
-    
-    for(auto& sp: _springs) {
-	sp.node->setPosition(sp.position);
-    }
-    
-    redrawWater();
 
-    
+    redrawWater();
 }
 
 void WaterNode::updateSprings() {
     for (auto& spring : _springs) {
-        double yShift =  spring.position.y - levelFun(spring.position.x);
+        double yShift =  spring.getPosition().y - levelFun(spring.getPosition().x);
         double accelration = (-config["TENSION"] * yShift) - config["DAMPENING"] * spring.velocity;
-        spring.position.y += spring.velocity;
+
+        auto pos = spring.getPosition();
+        pos.y += spring.velocity;
+        spring.setPosition(pos);
+
         spring.velocity += accelration;
     }
 }
 
 void WaterNode::redrawWater() {
     _drawNode->clear();
-    vector<Vec2> border;
-    std::transform(
-	_springs.begin(), _springs.end(), back_inserter(border), 
-	[](const Spring& sp) {
-	    return sp.node->getPosition();
-	}
-    );
-//    border.push_back(Vec2(_drawNode->getContentSize().width - 100, 100));
-//    border.push_back(Vec2(_drawNode->getContentSize().width, 100));
-    border.push_back(Vec2(_drawNode->getContentSize().width,0));
-    border.push_back(Vec2::ZERO);
-//    _drawNode->drawPolygon(
-//	border.data(), border.size(), Color4F::BLUE, 0, Color4F::BLUE
-//    );
-    
-    _drawNode->drawPolygon(
-	border.data(), border.size(), Color4F::BLUE, 0, Color4F::BLUE
-    );
-    
+
+    for (size_t i = 0; i + 1 < _springs.size(); ++i) {
+        auto left = _springs[i];
+        auto right = _springs[i + 1];
+
+        std::vector<Vec2> piece = {{left.getPosition().x, 0}, left.getPosition(),
+                                   right.getPosition(), {right.getPosition().x, 0}};
+
+        _drawNode->drawPolygon(piece.data(), piece.size(), Color4F::BLUE, 0, Color4F::BLUE);
+    }
 }
 
 double WaterNode::levelFun(double x, int lvl) {

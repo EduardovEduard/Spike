@@ -19,8 +19,16 @@ private:
 
     /* STATE */
     struct Spring {
-	cocos2d::Node* node;
+        cocos2d::Node* node;
         double velocity;
+
+        const cocos2d::Vec2& getPosition() const {
+            return node->getPosition();
+        }
+
+        void setPosition(const cocos2d::Vec2& vec) {
+            node->setPosition(vec);
+        }
     };
 
     std::vector<Spring> _springs;

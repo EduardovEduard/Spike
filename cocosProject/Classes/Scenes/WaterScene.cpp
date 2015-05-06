@@ -40,22 +40,22 @@ bool WaterScene::onContactBegin(PhysicsContact& contact) {
     auto nodeB = contact.getShapeB()->getBody()->getNode();
     
     auto isTagPair = [&](int tagA, int tagB) {
-	if(!nodeA || !nodeB) return false;
-	if (nodeA->getTag() == tagB && nodeB->getTag() == tagA) return true;
-	if (nodeA->getTag() == tagA && nodeB->getTag() == tagB) return true;
-	return false;
+        if(!nodeA || !nodeB) return false;
+        if (nodeA->getTag() == tagB && nodeB->getTag() == tagA) return true;
+        if (nodeA->getTag() == tagA && nodeB->getTag() == tagB) return true;
+        return false;
     };
     
     if(isTagPair(TAG_WATER, TAG_WATER)) return false;
     if(isTagPair(TAG_METEOR, TAG_METEOR)) return false;
     if(isTagPair(TAG_WATER, TAG_METEOR)) {
-	MeteorNode* mn = dynamic_cast<MeteorNode*>(nodeA->getTag() == TAG_METEOR ? nodeA : nodeB);
-	if(_meteors.find(mn) == _meteors.end()) {
-	    return false;
-	}
-	_meteors.erase(mn);
-	_node->touch(mn->getPosition(), -mn->getPhysicsBody()->getVelocity().length());
-	return false;
+        MeteorNode* mn = dynamic_cast<MeteorNode*>(nodeA->getTag() == TAG_METEOR ? nodeA : nodeB);
+        if(_meteors.find(mn) == _meteors.end()) {
+            return false;
+        }
+        _meteors.erase(mn);
+        _node->touch(mn->getPosition(), -mn->getPhysicsBody()->getVelocity().length());
+        return false;
     }
     return true;
 }
