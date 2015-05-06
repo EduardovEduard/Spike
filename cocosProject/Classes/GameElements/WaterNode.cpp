@@ -33,7 +33,7 @@ void WaterNode::touch(Vec2 point, double verticalVelocity) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
         return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
     });
-    closestSpring->velocity += verticalVelocity;
+    closestSpring->velocity += 3 *  verticalVelocity;
 }
 
 bool WaterNode::init() {
@@ -59,17 +59,17 @@ bool WaterNode::init() {
     return true;
 }
 
-vector<Vec2> narrowPlatform(const Vec2& a, const Vec2& b)
-{
+vector<Vec2> narrowPlatform(const Vec2& a, const Vec2& b){
     auto substract = [](const Vec2& a, const Vec2& b) {
-	return Vec2(a.x - b.x, a.y - b.y);	
+	return a - b;
     };
 
     vector<Vec2> platform;
     platform.push_back(Vec2::ZERO);
-    platform.push_back(substract(a, b));
+    platform.push_back(a - b);
     platform.push_back(substract(substract(a, b), {0, 1}));
     platform.push_back({0, -1});
+    
     return platform;
 }
 
@@ -88,7 +88,7 @@ void WaterNode::initSprings() {
     for (int i = 0; i <= barCount; i++) {
         auto node = Node::create();
 	node->setPosition(v[i]);
-	vector<Vec2> waterSurface = narrowPlatform(v[i + 1], v[i]);
+	vector<Vec2> waterSurface = narrowPlatform(v[i+1], v[i]);
         auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size());
         physicsPart->setDynamic(false);
         physicsPart->setContactTestBitmask(0xFFFFFFFF);
@@ -139,17 +139,16 @@ void WaterNode::update(float dt) {
                 _springs[i + 1].setPosition(pos);
             }
         }
+	
+	// set angles
+	for (size_t i = 0; i + 1 < _springs.size(); ++i) {
+	    Vec2 toNext = _springs[i + 1].node->getPosition() - _springs[i].node->getPosition();
+	    float ang = 180 * toNext.getAngle() / M_PI;
+	    _springs[i].node->setRotation(-ang); // its because rotation clockwise
+	}
+
     }
     
-    /*for (size_t i = 0; i + 1 < _springs.size(); ++i) {
-	auto node = Node::create();
-	node->setPosition(_springs[i].getPosition());
-	vector<Vec2> waterSurface = narrowPlatform(_springs[i + 1].getPosition(), _springs[i].getPosition());
-        auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size());
-        physicsPart->setDynamic(false);
-        physicsPart->setContactTestBitmask(0xFFFFFFFF);
-        node->setPhysicsBody(physicsPart);
-    }*/
     redrawWater();
 }
 
