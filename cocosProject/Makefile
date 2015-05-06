@@ -349,6 +349,30 @@ Classes/GUI/ResultsLayer.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/ResultsLayer.cpp.s
 .PHONY : Classes/GUI/ResultsLayer.cpp.s
 
+Classes/GameElements/FinishPlatformAsset.o: Classes/GameElements/FinishPlatformAsset.cpp.o
+.PHONY : Classes/GameElements/FinishPlatformAsset.o
+
+# target to build an object file
+Classes/GameElements/FinishPlatformAsset.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/FinishPlatformAsset.cpp.o
+.PHONY : Classes/GameElements/FinishPlatformAsset.cpp.o
+
+Classes/GameElements/FinishPlatformAsset.i: Classes/GameElements/FinishPlatformAsset.cpp.i
+.PHONY : Classes/GameElements/FinishPlatformAsset.i
+
+# target to preprocess a source file
+Classes/GameElements/FinishPlatformAsset.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/FinishPlatformAsset.cpp.i
+.PHONY : Classes/GameElements/FinishPlatformAsset.cpp.i
+
+Classes/GameElements/FinishPlatformAsset.s: Classes/GameElements/FinishPlatformAsset.cpp.s
+.PHONY : Classes/GameElements/FinishPlatformAsset.s
+
+# target to generate assembly for a file
+Classes/GameElements/FinishPlatformAsset.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/FinishPlatformAsset.cpp.s
+.PHONY : Classes/GameElements/FinishPlatformAsset.cpp.s
+
 Classes/GameElements/HeroAsset.o: Classes/GameElements/HeroAsset.cpp.o
 .PHONY : Classes/GameElements/HeroAsset.o
 
@@ -887,6 +911,9 @@ help:
 	@echo "... Classes/GUI/ResultsLayer.o"
 	@echo "... Classes/GUI/ResultsLayer.i"
 	@echo "... Classes/GUI/ResultsLayer.s"
+	@echo "... Classes/GameElements/FinishPlatformAsset.o"
+	@echo "... Classes/GameElements/FinishPlatformAsset.i"
+	@echo "... Classes/GameElements/FinishPlatformAsset.s"
 	@echo "... Classes/GameElements/HeroAsset.o"
 	@echo "... Classes/GameElements/HeroAsset.i"
 	@echo "... Classes/GameElements/HeroAsset.s"

@@ -4,6 +4,7 @@
     <df root="." name="0">
       <df name="Classes">
         <df name="GameElements">
+          <in>FinishPlatformAsset.cpp</in>
           <in>HeroAsset.cpp</in>
           <in>MeteorNode.cpp</in>
           <in>SpringWaterNode.cpp</in>
@@ -347,6 +348,13 @@
         </ccTool>
       </item>
       <item path="Classes/GUI/ResultsLayer.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/FinishPlatformAsset.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>

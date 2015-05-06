@@ -10,6 +10,8 @@
       </df>
       <df name="Classes">
         <df name="GameElements">
+          <in>FinishPlatformAsset.cpp</in>
+          <in>FinishPlatformAsset.h</in>
           <in>HeroAsset.cpp</in>
           <in>HeroAsset.h</in>
           <in>MeteorNode.cpp</in>

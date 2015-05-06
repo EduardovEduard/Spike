@@ -2,6 +2,7 @@
 #include "GameElements/MeteorNode.h"
 #include "GameElements/WaterNode.h"
 #include "GameElements/StartPlatformAsset.h"
+#include "GameElements/FinishPlatformAsset.h"
 
 #include <iostream>
 
@@ -44,7 +45,10 @@ void GameScene::initStartPlatform() {
 }
 
 void GameScene::initFinishPlatform() {
-    
+    Vec2 sz(_size.width * 0.1, _size.height / 1.9);
+    auto sp = FinishPlatformAsset::create(Size(sz));
+    sp->setPosition(Vec2(_size.width, _size.height / 1.9) - sz/2);
+    addChild(sp, 1);
 }
 
 void GameScene::initWater() {

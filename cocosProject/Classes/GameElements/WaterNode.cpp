@@ -49,11 +49,12 @@ void WaterNode::touch(Vec2 point, double verticalVelocity, double horiontalVeloc
 
 void WaterNode::touch(MeteorNode* node) {
     auto point = convertToNodeSpace(node->getPosition());
-
-    auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
-        return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
-    });
-
+    auto closestSpring = std::min_element(
+	_springs.begin(), _springs.end(), 
+	[&](const Spring& a, const Spring& b) {
+	    return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
+	}
+    );
     size_t springIndex = std::distance(_springs.begin(), closestSpring);
     _meteors.push_back({node, springIndex, 5});
 }
