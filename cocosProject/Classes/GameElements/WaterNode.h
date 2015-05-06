@@ -20,7 +20,6 @@ private:
         double velocity;
     };
 
-    std::vector<cocos2d::Vec2> _border;
     std::vector<Spring> _springs;
 
 

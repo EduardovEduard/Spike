@@ -5,6 +5,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <unistd.h>
 
 using namespace cocos2d;
 using namespace std;
@@ -56,14 +57,12 @@ void WaterNode::initBorder() {
     auto size = getContentSize();
     size.width += size.width / 2;
 
-    const auto barWidth = (2 * size.width) / config["BAR_COUNT"];
-    for (int i = -config["WATER_NODE_OFFSET"]; i <= config["BAR_COUNT"] + config["WATER_NODE_OFFSET"]; i++) {
-        auto pos = i * barWidth;
-        _border.push_back(Vec2(pos, _seaLevel));
-    }
-
-    for (auto& point : _border) {
-        _springs.push_back({Vec2(point.x, point.y), 0});
+    const auto barCount = config["BAR_COUNT"];
+    const auto nodeOffset = config["WATER_NODE_OFFSET"];
+    const auto barWidth = (2 * size.width) / (barCount + nodeOffset * 2);
+    for (int i = -nodeOffset; i <= barCount + nodeOffset; i++) {
+        const auto xpos = i * barWidth;
+	_springs.push_back({{xpos, _seaLevel}, 0});
     }
 }
 
@@ -100,9 +99,6 @@ void WaterNode::update(float dt) {
         }
     }
 
-    for (size_t i = 0; i < _springs.size(); ++i) {
-        _border[i] = _springs[i].position;
-    }
     drawWater();
 }
 
@@ -118,10 +114,10 @@ void WaterNode::updateSprings() {
 void WaterNode::drawWater() {
     size_t offset = getContentSize().width / 2;
 
-    for (size_t i = 0; i < _border.size() - 1; ++i) {
-        auto left = _border[i]; left.x -= offset;
-        auto right = _border[i + 1]; right.x -= offset;
-
+    for (size_t i = 0; i < _springs.size() - 1; ++i) {
+        auto left = _springs[i].position; left.x -= offset;
+        auto right = _springs[i + 1].position; right.x -= offset;
+	
         std::vector<Vec2> piece {left, right, Vec2(right.x, 0), Vec2(left.x, 0)};
         _drawNode->drawSolidPoly(piece.data(), piece.size(), Color4F::BLUE);
     }
