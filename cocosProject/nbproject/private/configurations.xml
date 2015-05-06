@@ -20,6 +20,8 @@
           <in>TextAsset.h</in>
           <in>WaterNode.cpp</in>
           <in>WaterNode.h</in>
+          <in>WaterNodeRadial.cpp</in>
+          <in>WaterNodeRadial.h</in>
         </df>
         <df name="GUI">
           <in>AdvLayer.cpp</in>

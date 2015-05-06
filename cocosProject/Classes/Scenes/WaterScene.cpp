@@ -1,5 +1,6 @@
 #include "WaterScene.h"
 #include "GameElements/WaterNode.h"
+#include "GameElements/WaterNodeRadial.h"
 
 #include <iostream>
 
@@ -14,8 +15,7 @@ void WaterScene::onMouseDown(Vec2 pt)
 bool WaterScene::init() {
     if (!BasicScene::init())
         return false;
-
-    _node = WaterNode::create();
+    _node = WaterNodeRadial::create();
     _node->setContentSize(Director::getInstance()->getWinSize());
     addChild(_node, 1);
     return true;

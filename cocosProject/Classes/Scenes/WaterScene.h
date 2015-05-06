@@ -3,6 +3,7 @@
 #include "BasicScene.h"
 #include <cocos2d.h>
 #include "GameElements/WaterNode.h"
+#include "GameElements/WaterNodeRadial.h"
 
 class WaterScene : public BasicScene {
 public:
@@ -10,7 +11,7 @@ public:
 private:
 
     /* STATE */
-    WaterNode* _node;
+    WaterNodeRadial* _node;
 
     /* ELEMENTS */
 

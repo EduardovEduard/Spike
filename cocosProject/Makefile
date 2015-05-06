@@ -469,6 +469,30 @@ Classes/GameElements/WaterNode.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNode.cpp.s
 .PHONY : Classes/GameElements/WaterNode.cpp.s
 
+Classes/GameElements/WaterNodeRadial.o: Classes/GameElements/WaterNodeRadial.cpp.o
+.PHONY : Classes/GameElements/WaterNodeRadial.o
+
+# target to build an object file
+Classes/GameElements/WaterNodeRadial.cpp.o:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNodeRadial.cpp.o
+.PHONY : Classes/GameElements/WaterNodeRadial.cpp.o
+
+Classes/GameElements/WaterNodeRadial.i: Classes/GameElements/WaterNodeRadial.cpp.i
+.PHONY : Classes/GameElements/WaterNodeRadial.i
+
+# target to preprocess a source file
+Classes/GameElements/WaterNodeRadial.cpp.i:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNodeRadial.cpp.i
+.PHONY : Classes/GameElements/WaterNodeRadial.cpp.i
+
+Classes/GameElements/WaterNodeRadial.s: Classes/GameElements/WaterNodeRadial.cpp.s
+.PHONY : Classes/GameElements/WaterNodeRadial.s
+
+# target to generate assembly for a file
+Classes/GameElements/WaterNodeRadial.cpp.s:
+	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNodeRadial.cpp.s
+.PHONY : Classes/GameElements/WaterNodeRadial.cpp.s
+
 Classes/Managers/DataManager.o: Classes/Managers/DataManager.cpp.o
 .PHONY : Classes/Managers/DataManager.o
 
@@ -902,6 +926,9 @@ help:
 	@echo "... Classes/GameElements/WaterNode.o"
 	@echo "... Classes/GameElements/WaterNode.i"
 	@echo "... Classes/GameElements/WaterNode.s"
+	@echo "... Classes/GameElements/WaterNodeRadial.o"
+	@echo "... Classes/GameElements/WaterNodeRadial.i"
+	@echo "... Classes/GameElements/WaterNodeRadial.s"
 	@echo "... Classes/Managers/DataManager.o"
 	@echo "... Classes/Managers/DataManager.i"
 	@echo "... Classes/Managers/DataManager.s"
