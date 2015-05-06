@@ -5,6 +5,8 @@
 #include "GameElements/WaterNode.h"
 #include "GameElements/WaterNodeRadial.h"
 #include "GameElements/MeteorNode.h"
+#include "GameElements/HeroAsset.h"
+
 #include <map>
 
 
@@ -20,6 +22,7 @@ private:
     /* STATE */
     WaterNode* _waterNode;
     std::map<MeteorNode*, MeteorInfo> _meteors;
+    HeroAsset* _hero;
 
     /* ELEMENTS */
 
@@ -34,6 +37,7 @@ private:
     void initStartPlatform();
     void initFinishPlatform();
     void initPlatforms();
+    void initHero();
     
     /* UPDATES */
     

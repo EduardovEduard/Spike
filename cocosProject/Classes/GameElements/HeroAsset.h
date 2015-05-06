@@ -5,7 +5,10 @@
 class HeroAsset : public cocos2d::Node {
 
 public:
-    CREATE_FUNC(HeroAsset);
+    static HeroAsset* create(const cocos2d::Size& size);
+    
+    void setSpeedX(double sx);
+    void addSpeedY(double sy);
     
 private:
     
@@ -15,7 +18,8 @@ private:
     cocos2d::Sprite* _sprite;
     
     /* INITS */
-    bool init() override;
+    bool init(const cocos2d::Size& size);
+    void initPhysics();
     void initSprite();
     
 };

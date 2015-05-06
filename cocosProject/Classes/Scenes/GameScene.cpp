@@ -13,6 +13,7 @@ using namespace std;
 static const int TAG_WATER = 0x05;
 static const int TAG_METEOR = 0x06;
 
+const int TAG_START_PLATFROM = 7;
 
 /* INTIS */
 
@@ -25,7 +26,7 @@ bool GameScene::init() {
     initFinishPlatform();
     initWater();
     initPlatforms();
-    
+    initHero();
     return true;
 }
 
@@ -51,11 +52,12 @@ void GameScene::initPlatforms() {
     }    
 }
 
+
 void GameScene::initStartPlatform() {
     Vec2 sz(_size.width * 0.1, _size.height / 1.9);
     auto sp = StartPlatformAsset::create(Size(sz));
     sp->setPosition(sz/2);
-    addChild(sp, 1);
+    addChild(sp, 1, TAG_START_PLATFROM);
 }
 
 void GameScene::initFinishPlatform() {
@@ -72,6 +74,18 @@ void GameScene::initWater() {
     _waterNode->setWaterPhysicsNodesTag(TAG_WATER);
     _waterNode->setPosition(Vec2(_size.width * 0.1, 0));
     addChild(_waterNode, 1);
+}
+
+
+void GameScene::initHero() {
+    _hero = HeroAsset::create(Size(_size.width * 0.01, _size.height * 0.05));
+    StartPlatformAsset* sp = static_cast<StartPlatformAsset*>(
+	    getChildByTag(TAG_START_PLATFROM));
+    Vec2 pos = sp->getPosition() + Vec2(0, sp->getContentSize().height / 2);
+    pos+=_hero->getContentSize()/2;
+    _hero->setPosition(pos);
+    addChild(_hero, 2);
+    //_hero->setSpeedX(_size.width * 0.1);
 }
 
 
