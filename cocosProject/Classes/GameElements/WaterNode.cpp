@@ -33,10 +33,7 @@ void WaterNode::touch(Vec2 point, double verticalVelocity) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
         return std::abs(a.position.x - point.x) < std::abs(b.position.x - point.x);
     });
-    if(point.y > closestSpring->position.y)
-        closestSpring->velocity += verticalVelocity;
-    else
-        closestSpring->velocity -= verticalVelocity;
+    closestSpring->velocity += verticalVelocity;
 }
 
 bool WaterNode::init() {
@@ -56,9 +53,7 @@ bool WaterNode::init() {
     initSprings();
     _waterPhysics.resize(_springs.size());
     addChild(_drawNode);
-    
-//    schedule(CC_SCHEDULE_SELECTOR(WaterNode::tick), 0.3f);
-	
+    	
     scheduleUpdate();
     
     return true;
@@ -75,9 +70,8 @@ void WaterNode::initSprings() {
 	auto node = Node::create();
 	node->setPosition({xpos, _seaLevel});
 	auto physicsPart = PhysicsBody::createCircle(5);
-	physicsPart->setGravityEnable(false);
-	physicsPart->setCollisionBitmask(0x03);
-	physicsPart->setCategoryBitmask(0x03);
+	//physicsPart->setGravityEnable(false);
+	physicsPart->setDynamic(false);
 	physicsPart->setContactTestBitmask(0xFFFFFFFF);
 	node->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
 	node->setPhysicsBody(physicsPart);
@@ -87,9 +81,9 @@ void WaterNode::initSprings() {
  }
 
 void WaterNode::update(float dt) {
-    _drawNode->clear();
-
+    
     updateSprings();
+    
 
     std::vector<double> leftDeltas(_springs.size());
     std::vector<double> rightDeltas(_springs.size());
@@ -119,11 +113,15 @@ void WaterNode::update(float dt) {
         }
     }
     
+    
+    
     for(auto& sp: _springs) {
-	sp.node->setPosition(sp.position + Vec2(0, 100));
+	sp.node->setPosition(sp.position);
     }
     
-    drawWater();
+    redrawWater();
+
+    
 }
 
 void WaterNode::updateSprings() {
@@ -133,36 +131,33 @@ void WaterNode::updateSprings() {
         spring.position.y += spring.velocity;
         spring.velocity += accelration;
     }
-    
 }
 
-void WaterNode::drawWater() {
+void WaterNode::redrawWater() {
+    _drawNode->clear();
     vector<Vec2> border;
     std::transform(
 	_springs.begin(), _springs.end(), back_inserter(border), 
-	[](const Spring& s) { return s.position; }
+	[](const Spring& sp) {
+	    return sp.node->getPosition();
+	}
     );
+//    border.push_back(Vec2(_drawNode->getContentSize().width - 100, 100));
+//    border.push_back(Vec2(_drawNode->getContentSize().width, 100));
     border.push_back(Vec2(_drawNode->getContentSize().width,0));
     border.push_back(Vec2::ZERO);
+//    _drawNode->drawPolygon(
+//	border.data(), border.size(), Color4F::BLUE, 0, Color4F::BLUE
+//    );
+    
     _drawNode->drawPolygon(
 	border.data(), border.size(), Color4F::BLUE, 0, Color4F::BLUE
     );
     
-
 }
 
 double WaterNode::levelFun(double x, int lvl) {
     return _seaLevel;
-}
-
-void WaterNode::tick(float dt)
-{
-    // TODO Add meteors at random positions.
-//    auto sprite1 = addSpriteAtPosition(Vec2(s_centre.x + cocos2d::random(-300,300),
-//      s_centre.y + cocos2d::random(-300,300)));
-//    auto physicsBody = sprite1->getPhysicsBody();
-//    physicsBody->setVelocity(Vec2(cocos2d::random(-500,500),cocos2d::random(-500,500)));
-//    physicsBody->setContactTestBitmask(0xFFFFFFFF);
 }
 
 void WaterNode::setWaterPhysicsNodesTag(int tag) {

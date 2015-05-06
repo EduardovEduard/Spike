@@ -20,7 +20,6 @@ private:
     /* STATE */
     struct Spring {
 	cocos2d::Node* node;
-        cocos2d::Vec2 position;
         double velocity;
     };
 
@@ -42,11 +41,9 @@ private:
     void update(float dt) override;
     void updateSprings();
     
-    void tick(float dt);
-
 
     /* FUNS */
-    void drawWater();
+    void redrawWater();
     
     double levelFun(double x, int lvl = 1);
 };

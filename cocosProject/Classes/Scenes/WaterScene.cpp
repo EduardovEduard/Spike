@@ -11,9 +11,7 @@ static const int TAG_METEOR = 0x06;
 
 void WaterScene::onMouseDown(Vec2 pt) {
     auto m = MeteorNode::create();
-    m->getPhysicsBody()->setCollisionBitmask(0x03);
-    m->getPhysicsBody()->setCategoryBitmask(0x03);
-    m->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);    
+    m->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     m->setPosition(pt);
     m->setTag(TAG_METEOR);
     _meteors.emplace(m, MeteorInfo());
