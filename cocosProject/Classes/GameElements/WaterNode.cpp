@@ -29,11 +29,22 @@ double WaterNode::configValue(const std::string& key) const {
     return config.find(key)->second;
 }
 
-void WaterNode::touch(Vec2 point, double verticalVelocity) {
+void WaterNode::touch(Vec2 point, double verticalVelocity, double horiontalVelocity) {
     auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
         return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
     });
-    closestSpring->velocity += 3 *  verticalVelocity;
+    closestSpring->velocity += verticalVelocity;
+}
+
+void WaterNode::touch(MeteorNode* node) {
+    auto point = node->getPosition();
+
+    auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
+        return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
+    });
+
+    size_t springIndex = std::distance(_springs.begin(), closestSpring);
+    _meteors.push_back({node, springIndex, 5});
 }
 
 bool WaterNode::init() {
@@ -102,9 +113,54 @@ void WaterNode::initSprings() {
  }
 
 void WaterNode::update(float dt) {
-    
     updateSprings();
+    updatePlatforms();
+    updateMeteors();
+    redrawWater();
+}
 
+void WaterNode::updateMeteors() {
+    
+    decltype(_meteors) savedMeteors;
+    double waterDeceleration = 10;
+
+    for (auto& collision : _meteors) {
+        if (collision.tries == 0)
+            continue;
+
+        MeteorNode* meteor = collision.node;
+        size_t& index = collision.index;
+
+        auto body = meteor->getPhysicsBody();
+        auto velocity = body->getVelocity();
+
+        if (index < 0 || index >= _springs.size())
+            continue;
+
+        auto oldVelocity = body->getVelocity();
+
+        Spring& spring = _springs[index];
+        spring.velocity += .1 * oldVelocity.y;
+
+        std::cerr << spring.velocity << std::endl;
+
+        if (std::abs(oldVelocity.x) <= 0.001)
+            continue;
+
+        int direction = (velocity.x > 0 ? 1 : -1);
+        oldVelocity.x -= direction * 0.0005 * std::pow(oldVelocity.x, 2) / 2;
+        body->setVelocity(oldVelocity);
+
+        index += direction * 5;
+        collision.tries--;
+        savedMeteors.push_back(collision);
+    }
+
+    _meteors = savedMeteors;
+    
+}
+
+void WaterNode::updatePlatforms() {
     std::vector<double> leftDeltas(_springs.size());
     std::vector<double> rightDeltas(_springs.size());
 
@@ -146,11 +202,9 @@ void WaterNode::update(float dt) {
 	    float ang = 180 * toNext.getAngle() / M_PI;
 	    _springs[i].node->setRotation(-ang); // its because rotation clockwise
 	}
-
     }
-    
-    redrawWater();
 }
+
 
 void WaterNode::updateSprings() {
     for (auto& spring : _springs) {
@@ -167,7 +221,6 @@ void WaterNode::updateSprings() {
 
 void WaterNode::redrawWater() {
     _drawNode->clear();
-
     for (size_t i = 0; i + 1 < _springs.size(); ++i) {
         auto left = _springs[i];
         auto right = _springs[i + 1];

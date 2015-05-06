@@ -15,12 +15,13 @@ void WaterScene::onMouseDown(Vec2 pt) {
     m->setPosition(pt);
     m->setTag(TAG_METEOR);
     _meteors.emplace(m, MeteorInfo());
-    addChild(m, 1);
+    addChild(m, 2);
 }
 
 bool WaterScene::init() {
     if (!BasicScene::initWithPhysics())
         return false;
+
     getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     _node = WaterNode::create();
     _node->setWaterPhysicsNodesTag(TAG_WATER);
@@ -29,6 +30,15 @@ bool WaterScene::init() {
     contactListener->onContactBegin = CC_CALLBACK_1(WaterScene::onContactBegin, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
     return true;
+}
+
+void WaterScene::processMeteorCollision(MeteorNode* meteor)
+{
+    if(_meteors.find(meteor) == _meteors.end()) {
+        return;
+    }
+    _meteors.erase(meteor);
+    _node->touch(meteor);
 }
 
 /* STATE */
@@ -50,11 +60,7 @@ bool WaterScene::onContactBegin(PhysicsContact& contact) {
     if(isTagPair(TAG_METEOR, TAG_METEOR)) return false;
     if(isTagPair(TAG_WATER, TAG_METEOR)) {
         MeteorNode* mn = dynamic_cast<MeteorNode*>(nodeA->getTag() == TAG_METEOR ? nodeA : nodeB);
-        if(_meteors.find(mn) == _meteors.end()) {
-            return false;
-        }
-        _meteors.erase(mn);
-        _node->touch(mn->getPosition(), -mn->getPhysicsBody()->getVelocity().length());
+        processMeteorCollision(mn);
         return false;
     }
     return true;

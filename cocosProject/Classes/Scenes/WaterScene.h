@@ -14,7 +14,7 @@ public:
 private:
     
     struct MeteorInfo {
-	bool collided = false;
+        bool collided = false;
     };
 
     /* STATE */
@@ -35,4 +35,5 @@ private:
     /* UPDATES */
     
     /* TOOLS */
+    void processMeteorCollision(MeteorNode*);
 };
