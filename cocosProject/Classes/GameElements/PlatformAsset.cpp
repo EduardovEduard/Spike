@@ -28,7 +28,7 @@ bool PlatformAsset::init(const Size& s) {
 void PlatformAsset::initSprite() {
     auto s = Sprite::create("platform.png");
     Utils::setNodeHeight(s, getContentSize().height);
-    s->setAnchorPoint(Vec2::ANCHOR_BOTTOM_LEFT);
+    s->setAnchorPoint(Vec2::ANCHOR_MIDDLE_LEFT);
     s->setPosition(Vec2::ZERO);
     s->setScaleX(getContentSize().width / s->getContentSize().width);
     s->setScaleY(getContentSize().height / s->getContentSize().height);
@@ -37,7 +37,7 @@ void PlatformAsset::initSprite() {
 
 void PlatformAsset::initPhysics() {
     auto pb = PhysicsBody::createBox(
-	getContentSize()
+	getContentSize(), PhysicsMaterial(0.1, 0, 0)
     );
     setPhysicsBody(pb);
 }

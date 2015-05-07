@@ -13,6 +13,13 @@
 using namespace cocos2d;
 using namespace std;
 
+auto WaterNode::findClosestSpring(cocos2d::Vec2 point) -> decltype(_springs.begin()) {
+    return std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
+	return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
+    });
+}
+
+
 WaterNode* WaterNode::create(const Size& size) {
     auto *pRet = new WaterNode(); 
     if (pRet && pRet->init(size)) { 
@@ -41,22 +48,13 @@ double WaterNode::configValue(const std::string& key) const {
 }
 
 void WaterNode::touch(Vec2 point, double verticalVelocity, double horiontalVelocity) {
-    auto closestSpring = std::min_element(_springs.begin(), _springs.end(), [&](const Spring& a, const Spring& b) {
-        return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
-    });
-    closestSpring->velocity += verticalVelocity;
+    findClosestSpring(point)->addYVelocity(verticalVelocity);
 }
 
 void WaterNode::touch(MeteorNode* node) {
     auto point = convertToNodeSpace(node->getPosition());
-    auto closestSpring = std::min_element(
-	_springs.begin(), _springs.end(), 
-	[&](const Spring& a, const Spring& b) {
-	    return std::abs(a.getPosition().x - point.x) < std::abs(b.getPosition().x - point.x);
-	}
-    );
-    size_t springIndex = std::distance(_springs.begin(), closestSpring);
-    _meteors.push_back({node, springIndex, 5});
+    auto closestSpring = *findClosestSpring(point);
+//    size_t springIndex = std::distance(_springs.begin(), closestSpring);
 }
 
 bool WaterNode::init(const Size& size) {
@@ -101,18 +99,19 @@ void WaterNode::initSprings() {
 	const float xpos = i * barWidth;
         v.push_back({xpos, _seaLevel});
     }
+    
     for (int i = 0; i <= barCount; i++) {
         auto node = Node::create();
 	node->setPosition(v[i]);
 	vector<Vec2> waterSurface = narrowPlatform(v[i+1], v[i]);
-        auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size());
-        physicsPart->setDynamic(false);
-	//physicsPart->setGravityEnable(false);
+        auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size(), PhysicsMaterial(1, 0, 0));
+        physicsPart->setDynamic(true);
+	physicsPart->setGravityEnable(false);
         physicsPart->setContactTestBitmask(0xFFFFFFFF);
         node->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
         node->setPhysicsBody(physicsPart);
         addChild(node);
-        _springs.push_back({node, 0.0});
+        _springs.push_back({node});
     }
  }
 
@@ -122,6 +121,37 @@ void WaterNode::update(float dt) {
     updateMeteors();
     redrawWater();
 }
+
+void WaterNode::pushUpwards(Node* platform) {
+    auto size = platform->getContentSize();
+    auto pos = platform->getPosition();
+    
+    auto leftSpring = findClosestSpring(pos);
+    auto rightSpring = findClosestSpring(pos + Vec2(size.width, 0));
+    
+    assert(rightSpring - leftSpring >= 0);
+    auto springCount = std::distance(leftSpring, rightSpring);
+    
+    auto step = _drawNode->getContentSize().width / config["BAR_COUNT"];
+    auto currentSpringX = leftSpring - step;
+    auto platformVelocity = platform->getPhysicsBody()->getVelocity();
+    
+    auto f = [&](int step) {
+	return std::abs((springCount / 2) - step);
+    };
+    
+    for (auto it = leftSpring; it != rightSpring + 1; ++it) {
+	currentSpringX += step;
+	auto body = it->node->getPhysicsBody();
+	auto vel = body->getVelocity().y;
+		
+	if (vel > 0)
+	{
+	    platformVelocity += f(leftSpring - it) * Vec2(0, vel / springCount);
+	}
+    }
+}
+
 
 void WaterNode::updateMeteors() {
     
@@ -142,10 +172,10 @@ void WaterNode::updateMeteors() {
 
         auto oldVelocity = body->getVelocity();
 
-        Spring& spring = _springs[index];
-        spring.velocity += .1 * oldVelocity.y;
+//        Spring& spring = _springs[index];
+//        spring.velocity += .1 * oldVelocity.y;
 
-        std::cerr << spring.velocity << std::endl;
+//        std::cerr << spring.velocity << std::endl;
 
         if (std::abs(oldVelocity.x) <= 0.001)
             continue;
@@ -167,37 +197,37 @@ void WaterNode::updatePlatforms() {
     std::vector<double> leftDeltas(_springs.size());
     std::vector<double> rightDeltas(_springs.size());
 
-    for (size_t j = 0; j < 8; ++j)
+    for (size_t j = 0; j < 1; ++j)
     {
         for (size_t i = 0; i < _springs.size(); ++i)
         {
             if (i > 0)
             {
                 leftDeltas[i] = config["SPREAD"] * (_springs[i].getPosition().y - _springs[i - 1].getPosition().y);
-                _springs[i - 1].velocity += leftDeltas[i];
+                _springs[i - 1].addYVelocity(leftDeltas[i]);
             }
             if (i < _springs.size() - 1)
             {
                 rightDeltas[i] = config["SPREAD"] * (_springs[i].getPosition().y - _springs[i + 1].getPosition().y);
-                _springs[i + 1].velocity += rightDeltas[i];
+                _springs[i + 1].addYVelocity(rightDeltas[i]);
             }
         }
 
-        for (size_t i = 0; i < _springs.size(); ++i)
-        {
-            if (i > 0)
-            {
-                auto pos = _springs[i - 1].getPosition();
-                pos.y += leftDeltas[i];
-                _springs[i - 1].setPosition(pos);
-            }
-            if (i < _springs.size() - 1)
-            {
-                auto pos = _springs[i + 1].getPosition();
-                pos.y += rightDeltas[i];
-                _springs[i + 1].setPosition(pos);
-            }
-        }
+//        for (size_t i = 0; i < _springs.size(); ++i)
+//        {
+//            if (i > 0)
+//            {
+//                auto pos = _springs[i - 1].getPosition();
+//                pos.y += leftDeltas[i];
+//                _springs[i - 1].setPosition(pos);
+//            }
+//            if (i < _springs.size() - 1)
+//            {
+//                auto pos = _springs[i + 1].getPosition();
+//                pos.y += rightDeltas[i];
+//                _springs[i + 1].setPosition(pos);
+//            }
+//        }
 	
 	// set angles
 	for (size_t i = 0; i + 1 < _springs.size(); ++i) {
@@ -205,25 +235,32 @@ void WaterNode::updatePlatforms() {
 	    float ang = 180 * toNext.getAngle() / M_PI;
 	    _springs[i].node->setRotation(-ang); // its because rotation clockwise
 	}
+	
+	
     }
 }
 
 
 void WaterNode::updateSprings() {
     for (auto& spring : _springs) {
+	auto node = spring.node->getPhysicsBody();
+	auto ySpeed = node->getVelocity().y;
+	
         double yShift =  spring.getPosition().y - levelFun(spring.getPosition().x);
-        double accelration = (-config["TENSION"] * yShift) - config["DAMPENING"] * spring.velocity;
+        double accelration = (-config["TENSION"] * yShift) - config["DAMPENING"] * node->getVelocity().y;
+	
+//        auto pos = spring.getPosition();
+//        pos.y += ySpeed;
+//        spring.setPosition(pos);
 
-        auto pos = spring.getPosition();
-        pos.y += spring.velocity;
-        spring.setPosition(pos);
-
-        spring.velocity += accelration;
+        ySpeed += accelration;
+	node->setVelocity({0, ySpeed});
     }
 }
 
 void WaterNode::redrawWater() {
     _drawNode->clear();
+    
     for (size_t i = 0; i + 1 < _springs.size(); ++i) {
         auto left = _springs[i];
         auto right = _springs[i + 1];

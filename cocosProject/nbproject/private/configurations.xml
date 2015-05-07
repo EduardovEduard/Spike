@@ -48,6 +48,8 @@
           <in>GameScene.h</in>
           <in>SpringScene.cpp</in>
           <in>SpringScene.h</in>
+          <in>WaterScene.cpp</in>
+          <in>WaterScene.h</in>
         </df>
         <in>AppDelegate.cpp</in>
         <in>AppDelegate.h</in>

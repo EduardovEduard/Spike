@@ -1,6 +1,7 @@
 #pragma once
 
 #include "MeteorNode.h"
+#include "PlatformAsset.h"
 
 #include <cocos2d.h>
 #include <vector>
@@ -18,11 +19,12 @@ public:
     
     void setWaterPhysicsNodesTag(int tag);
     
+    void pushUpwards(Node* platform);
+    
 private:
 
     struct Spring {
         cocos2d::Node* node;
-        double velocity;
 
         const cocos2d::Vec2& getPosition() const {
             return node->getPosition();
@@ -31,6 +33,11 @@ private:
         void setPosition(const cocos2d::Vec2& vec) {
             node->setPosition(vec);
         }
+	
+	void addYVelocity(double velocity) {
+	    auto vel = node->getPhysicsBody()->getVelocity();
+	    node->getPhysicsBody()->setVelocity({vel.x, vel.y + velocity});
+	}
     };
 
     struct MeteorCollision {
@@ -67,4 +74,5 @@ private:
     void redrawWater();
     std::vector<cocos2d::Vec2> narrowPlaform(const cocos2d::Vec2&, const cocos2d::Vec2);
     double levelFun(double x, int lvl = 1);
+    auto findClosestSpring(cocos2d::Vec2) -> decltype(_springs.begin());
 };

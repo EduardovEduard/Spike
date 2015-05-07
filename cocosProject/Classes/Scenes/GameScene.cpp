@@ -36,7 +36,7 @@ bool GameScene::init() {
 }
 
 void GameScene::initPhysics() {
-    //getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+//    getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto contactListener = EventListenerPhysicsContact::create();
     contactListener->onContactBegin = CC_CALLBACK_1(GameScene::onContactBegin, this);
     //contactListener->onContactPreSolve = CC_CALLBACK_2(GameScene::onContactPredSolve, this);
@@ -83,7 +83,7 @@ void GameScene::initWater() {
     _waterNode->setWaterPhysicsNodesTag(TAG_WATER);
     _waterNode->setPosition(Vec2(_size.width * 0.15, 0));
     addChild(_waterNode, 1);
-    _waterNode->touch(Vec2(100, 0), 7, 0);
+    //_waterNode->touch(Vec2(100, 0), 7, 0);
 }
 
 
@@ -112,7 +112,8 @@ void GameScene::update(float delta) {
 void GameScene::onMouseDown(Vec2 pt) {
     if(_gameModel.heroJumpState == Models::HeroJumpState::inSecondJump)
 	return;
-    onHeroJump();
+//    onHeroJump();
+    _waterNode->touch(pt, 10, 0);
 }
 
 bool GameScene::onContactBegin(PhysicsContact& contact) {
@@ -131,6 +132,18 @@ bool GameScene::onContactBegin(PhysicsContact& contact) {
        isTagPair(TAG_HERO, TAG_PLATFORM)
     ) {
 	onHeroTouchFloor();
+    }
+    
+    auto getPlatform = [&]() -> Node* {
+	if (nodeA->getTag() == TAG_PLATFORM)
+	    return nodeA;
+	return nodeB;
+    };
+    
+    if (isTagPair(TAG_WATER, TAG_PLATFORM)) {
+	auto platform = getPlatform();
+	_waterNode->pushUpwards(platform);
+	return true;
     }
 
     if(isTagPair(TAG_WATER, TAG_WATER)) return false;
@@ -161,6 +174,19 @@ bool GameScene::onContactPreSolve(
         if (nodeA->getTag() == tagA && nodeB->getTag() == tagB) return true;
         return false;
     };
+    
+    auto getPlatform = [&]() -> Node* {
+	if (nodeA->getTag() == TAG_PLATFORM)
+	    return nodeA;
+	return nodeB;
+    };
+    
+    if (isTagPair(TAG_WATER, TAG_PLATFORM)) {
+	auto platform = getPlatform();
+	_waterNode->pushUpwards(platform);
+	return true;
+    }
+    
     
 //    if(isTagPair(TAG_PLATFORM, TAG_HERO)) {
 //	//solve.setSurfaceVelocity(Vec2(-100, 0));
@@ -215,7 +241,7 @@ void GameScene::addPlatform(double xOffset, double length) {
     n->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     addChild(n, 2);
     n->setPosition(
-	xOffset, _waterNode->getContentSize().height + n->getContentSize().height
+	xOffset, 50 + _waterNode->getContentSize().height + n->getContentSize().height
     );
 }
 

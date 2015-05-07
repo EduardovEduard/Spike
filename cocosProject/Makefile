@@ -565,6 +565,30 @@ Classes/Scenes/SpringScene.cpp.s:
 	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/SpringScene.cpp.s
 .PHONY : Classes/Scenes/SpringScene.cpp.s
 
+Classes/Scenes/WaterScene.o: Classes/Scenes/WaterScene.cpp.o
+.PHONY : Classes/Scenes/WaterScene.o
+
+# target to build an object file
+Classes/Scenes/WaterScene.cpp.o:
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/WaterScene.cpp.o
+.PHONY : Classes/Scenes/WaterScene.cpp.o
+
+Classes/Scenes/WaterScene.i: Classes/Scenes/WaterScene.cpp.i
+.PHONY : Classes/Scenes/WaterScene.i
+
+# target to preprocess a source file
+Classes/Scenes/WaterScene.cpp.i:
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/WaterScene.cpp.i
+.PHONY : Classes/Scenes/WaterScene.cpp.i
+
+Classes/Scenes/WaterScene.s: Classes/Scenes/WaterScene.cpp.s
+.PHONY : Classes/Scenes/WaterScene.s
+
+# target to generate assembly for a file
+Classes/Scenes/WaterScene.cpp.s:
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/WaterScene.cpp.s
+.PHONY : Classes/Scenes/WaterScene.cpp.s
+
 Classes/Utils.o: Classes/Utils.cpp.o
 .PHONY : Classes/Utils.o
 
@@ -698,6 +722,9 @@ help:
 	@echo "... Classes/Scenes/SpringScene.o"
 	@echo "... Classes/Scenes/SpringScene.i"
 	@echo "... Classes/Scenes/SpringScene.s"
+	@echo "... Classes/Scenes/WaterScene.o"
+	@echo "... Classes/Scenes/WaterScene.i"
+	@echo "... Classes/Scenes/WaterScene.s"
 	@echo "... Classes/Utils.o"
 	@echo "... Classes/Utils.i"
 	@echo "... Classes/Utils.s"

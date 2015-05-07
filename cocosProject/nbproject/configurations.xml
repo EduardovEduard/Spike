@@ -24,6 +24,7 @@
           <in>BasicScene.cpp</in>
           <in>GameScene.cpp</in>
           <in>SpringScene.cpp</in>
+          <in>WaterScene.cpp</in>
         </df>
         <in>AppDelegate.cpp</in>
         <in>Utils.cpp</in>
@@ -390,6 +391,10 @@
         </ccTool>
       </item>
       <item path="Classes/Scenes/SpringScene.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Scenes/WaterScene.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>

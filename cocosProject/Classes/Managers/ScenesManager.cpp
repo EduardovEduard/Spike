@@ -1,6 +1,7 @@
 #include "Managers/ScenesManager.h"
 
 #include "Scenes/GameScene.h"
+#include "Scenes/WaterScene.h"
 #include "Scenes/SpringScene.h"
 
 #include <cocos2d.h>
@@ -14,6 +15,13 @@ void ScenesManager::runWithGame() {
     auto director = Director::getInstance();
     director->runWithScene(_currentScene);
 }
+
+void ScenesManager::runWithWater() {
+    _currentScene = WaterScene::create();
+    auto director = Director::getInstance();
+    director->runWithScene(_currentScene);
+}
+
 
 void ScenesManager::runWithSpring() {
     _currentScene = SpringScene::create();
