@@ -102,43 +102,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Graman
+# Target rules for targets named Spike
 
 # Build rule for target.
-Graman: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Graman
-.PHONY : Graman
+Spike: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Spike
+.PHONY : Spike
 
 # fast build rule for target.
-Graman/fast:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/build
-.PHONY : Graman/fast
+Spike/fast:
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/build
+.PHONY : Spike/fast
 
 #=============================================================================
-# Target rules for targets named Graman_CORE_PRE_BUILD
+# Target rules for targets named Spike_CORE_PRE_BUILD
 
 # Build rule for target.
-Graman_CORE_PRE_BUILD: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Graman_CORE_PRE_BUILD
-.PHONY : Graman_CORE_PRE_BUILD
+Spike_CORE_PRE_BUILD: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Spike_CORE_PRE_BUILD
+.PHONY : Spike_CORE_PRE_BUILD
 
 # fast build rule for target.
-Graman_CORE_PRE_BUILD/fast:
-	$(MAKE) -f CMakeFiles/Graman_CORE_PRE_BUILD.dir/build.make CMakeFiles/Graman_CORE_PRE_BUILD.dir/build
-.PHONY : Graman_CORE_PRE_BUILD/fast
+Spike_CORE_PRE_BUILD/fast:
+	$(MAKE) -f CMakeFiles/Spike_CORE_PRE_BUILD.dir/build.make CMakeFiles/Spike_CORE_PRE_BUILD.dir/build
+.PHONY : Spike_CORE_PRE_BUILD/fast
 
 #=============================================================================
-# Target rules for targets named Graman_PRE_BUILD
+# Target rules for targets named Spike_PRE_BUILD
 
 # Build rule for target.
-Graman_PRE_BUILD: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Graman_PRE_BUILD
-.PHONY : Graman_PRE_BUILD
+Spike_PRE_BUILD: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Spike_PRE_BUILD
+.PHONY : Spike_PRE_BUILD
 
 # fast build rule for target.
-Graman_PRE_BUILD/fast:
-	$(MAKE) -f CMakeFiles/Graman_PRE_BUILD.dir/build.make CMakeFiles/Graman_PRE_BUILD.dir/build
-.PHONY : Graman_PRE_BUILD/fast
+Spike_PRE_BUILD/fast:
+	$(MAKE) -f CMakeFiles/Spike_PRE_BUILD.dir/build.make CMakeFiles/Spike_PRE_BUILD.dir/build
+.PHONY : Spike_PRE_BUILD/fast
 
 #=============================================================================
 # Target rules for targets named box2d
@@ -210,7 +210,7 @@ Classes/AppDelegate.o: Classes/AppDelegate.cpp.o
 
 # target to build an object file
 Classes/AppDelegate.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/AppDelegate.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/AppDelegate.cpp.o
 .PHONY : Classes/AppDelegate.cpp.o
 
 Classes/AppDelegate.i: Classes/AppDelegate.cpp.i
@@ -218,7 +218,7 @@ Classes/AppDelegate.i: Classes/AppDelegate.cpp.i
 
 # target to preprocess a source file
 Classes/AppDelegate.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/AppDelegate.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/AppDelegate.cpp.i
 .PHONY : Classes/AppDelegate.cpp.i
 
 Classes/AppDelegate.s: Classes/AppDelegate.cpp.s
@@ -226,7 +226,7 @@ Classes/AppDelegate.s: Classes/AppDelegate.cpp.s
 
 # target to generate assembly for a file
 Classes/AppDelegate.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/AppDelegate.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/AppDelegate.cpp.s
 .PHONY : Classes/AppDelegate.cpp.s
 
 Classes/GUI/GUI.o: Classes/GUI/GUI.cpp.o
@@ -234,7 +234,7 @@ Classes/GUI/GUI.o: Classes/GUI/GUI.cpp.o
 
 # target to build an object file
 Classes/GUI/GUI.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GUI.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GUI/GUI.cpp.o
 .PHONY : Classes/GUI/GUI.cpp.o
 
 Classes/GUI/GUI.i: Classes/GUI/GUI.cpp.i
@@ -242,7 +242,7 @@ Classes/GUI/GUI.i: Classes/GUI/GUI.cpp.i
 
 # target to preprocess a source file
 Classes/GUI/GUI.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GUI.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GUI/GUI.cpp.i
 .PHONY : Classes/GUI/GUI.cpp.i
 
 Classes/GUI/GUI.s: Classes/GUI/GUI.cpp.s
@@ -250,7 +250,7 @@ Classes/GUI/GUI.s: Classes/GUI/GUI.cpp.s
 
 # target to generate assembly for a file
 Classes/GUI/GUI.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GUI.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GUI/GUI.cpp.s
 .PHONY : Classes/GUI/GUI.cpp.s
 
 Classes/GUI/GameOverLayer.o: Classes/GUI/GameOverLayer.cpp.o
@@ -258,7 +258,7 @@ Classes/GUI/GameOverLayer.o: Classes/GUI/GameOverLayer.cpp.o
 
 # target to build an object file
 Classes/GUI/GameOverLayer.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GameOverLayer.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GUI/GameOverLayer.cpp.o
 .PHONY : Classes/GUI/GameOverLayer.cpp.o
 
 Classes/GUI/GameOverLayer.i: Classes/GUI/GameOverLayer.cpp.i
@@ -266,7 +266,7 @@ Classes/GUI/GameOverLayer.i: Classes/GUI/GameOverLayer.cpp.i
 
 # target to preprocess a source file
 Classes/GUI/GameOverLayer.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GameOverLayer.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GUI/GameOverLayer.cpp.i
 .PHONY : Classes/GUI/GameOverLayer.cpp.i
 
 Classes/GUI/GameOverLayer.s: Classes/GUI/GameOverLayer.cpp.s
@@ -274,7 +274,7 @@ Classes/GUI/GameOverLayer.s: Classes/GUI/GameOverLayer.cpp.s
 
 # target to generate assembly for a file
 Classes/GUI/GameOverLayer.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GameOverLayer.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GUI/GameOverLayer.cpp.s
 .PHONY : Classes/GUI/GameOverLayer.cpp.s
 
 Classes/GameElements/FinishPlatformAsset.o: Classes/GameElements/FinishPlatformAsset.cpp.o
@@ -282,7 +282,7 @@ Classes/GameElements/FinishPlatformAsset.o: Classes/GameElements/FinishPlatformA
 
 # target to build an object file
 Classes/GameElements/FinishPlatformAsset.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/FinishPlatformAsset.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/FinishPlatformAsset.cpp.o
 .PHONY : Classes/GameElements/FinishPlatformAsset.cpp.o
 
 Classes/GameElements/FinishPlatformAsset.i: Classes/GameElements/FinishPlatformAsset.cpp.i
@@ -290,7 +290,7 @@ Classes/GameElements/FinishPlatformAsset.i: Classes/GameElements/FinishPlatformA
 
 # target to preprocess a source file
 Classes/GameElements/FinishPlatformAsset.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/FinishPlatformAsset.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/FinishPlatformAsset.cpp.i
 .PHONY : Classes/GameElements/FinishPlatformAsset.cpp.i
 
 Classes/GameElements/FinishPlatformAsset.s: Classes/GameElements/FinishPlatformAsset.cpp.s
@@ -298,7 +298,7 @@ Classes/GameElements/FinishPlatformAsset.s: Classes/GameElements/FinishPlatformA
 
 # target to generate assembly for a file
 Classes/GameElements/FinishPlatformAsset.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/FinishPlatformAsset.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/FinishPlatformAsset.cpp.s
 .PHONY : Classes/GameElements/FinishPlatformAsset.cpp.s
 
 Classes/GameElements/HeroAsset.o: Classes/GameElements/HeroAsset.cpp.o
@@ -306,7 +306,7 @@ Classes/GameElements/HeroAsset.o: Classes/GameElements/HeroAsset.cpp.o
 
 # target to build an object file
 Classes/GameElements/HeroAsset.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/HeroAsset.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/HeroAsset.cpp.o
 .PHONY : Classes/GameElements/HeroAsset.cpp.o
 
 Classes/GameElements/HeroAsset.i: Classes/GameElements/HeroAsset.cpp.i
@@ -314,7 +314,7 @@ Classes/GameElements/HeroAsset.i: Classes/GameElements/HeroAsset.cpp.i
 
 # target to preprocess a source file
 Classes/GameElements/HeroAsset.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/HeroAsset.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/HeroAsset.cpp.i
 .PHONY : Classes/GameElements/HeroAsset.cpp.i
 
 Classes/GameElements/HeroAsset.s: Classes/GameElements/HeroAsset.cpp.s
@@ -322,7 +322,7 @@ Classes/GameElements/HeroAsset.s: Classes/GameElements/HeroAsset.cpp.s
 
 # target to generate assembly for a file
 Classes/GameElements/HeroAsset.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/HeroAsset.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/HeroAsset.cpp.s
 .PHONY : Classes/GameElements/HeroAsset.cpp.s
 
 Classes/GameElements/MeteorNode.o: Classes/GameElements/MeteorNode.cpp.o
@@ -330,7 +330,7 @@ Classes/GameElements/MeteorNode.o: Classes/GameElements/MeteorNode.cpp.o
 
 # target to build an object file
 Classes/GameElements/MeteorNode.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/MeteorNode.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/MeteorNode.cpp.o
 .PHONY : Classes/GameElements/MeteorNode.cpp.o
 
 Classes/GameElements/MeteorNode.i: Classes/GameElements/MeteorNode.cpp.i
@@ -338,7 +338,7 @@ Classes/GameElements/MeteorNode.i: Classes/GameElements/MeteorNode.cpp.i
 
 # target to preprocess a source file
 Classes/GameElements/MeteorNode.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/MeteorNode.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/MeteorNode.cpp.i
 .PHONY : Classes/GameElements/MeteorNode.cpp.i
 
 Classes/GameElements/MeteorNode.s: Classes/GameElements/MeteorNode.cpp.s
@@ -346,7 +346,7 @@ Classes/GameElements/MeteorNode.s: Classes/GameElements/MeteorNode.cpp.s
 
 # target to generate assembly for a file
 Classes/GameElements/MeteorNode.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/MeteorNode.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/MeteorNode.cpp.s
 .PHONY : Classes/GameElements/MeteorNode.cpp.s
 
 Classes/GameElements/SpringWaterNode.o: Classes/GameElements/SpringWaterNode.cpp.o
@@ -354,7 +354,7 @@ Classes/GameElements/SpringWaterNode.o: Classes/GameElements/SpringWaterNode.cpp
 
 # target to build an object file
 Classes/GameElements/SpringWaterNode.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/SpringWaterNode.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/SpringWaterNode.cpp.o
 .PHONY : Classes/GameElements/SpringWaterNode.cpp.o
 
 Classes/GameElements/SpringWaterNode.i: Classes/GameElements/SpringWaterNode.cpp.i
@@ -362,7 +362,7 @@ Classes/GameElements/SpringWaterNode.i: Classes/GameElements/SpringWaterNode.cpp
 
 # target to preprocess a source file
 Classes/GameElements/SpringWaterNode.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/SpringWaterNode.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/SpringWaterNode.cpp.i
 .PHONY : Classes/GameElements/SpringWaterNode.cpp.i
 
 Classes/GameElements/SpringWaterNode.s: Classes/GameElements/SpringWaterNode.cpp.s
@@ -370,7 +370,7 @@ Classes/GameElements/SpringWaterNode.s: Classes/GameElements/SpringWaterNode.cpp
 
 # target to generate assembly for a file
 Classes/GameElements/SpringWaterNode.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/SpringWaterNode.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/SpringWaterNode.cpp.s
 .PHONY : Classes/GameElements/SpringWaterNode.cpp.s
 
 Classes/GameElements/StartPlatformAsset.o: Classes/GameElements/StartPlatformAsset.cpp.o
@@ -378,7 +378,7 @@ Classes/GameElements/StartPlatformAsset.o: Classes/GameElements/StartPlatformAss
 
 # target to build an object file
 Classes/GameElements/StartPlatformAsset.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/StartPlatformAsset.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/StartPlatformAsset.cpp.o
 .PHONY : Classes/GameElements/StartPlatformAsset.cpp.o
 
 Classes/GameElements/StartPlatformAsset.i: Classes/GameElements/StartPlatformAsset.cpp.i
@@ -386,7 +386,7 @@ Classes/GameElements/StartPlatformAsset.i: Classes/GameElements/StartPlatformAss
 
 # target to preprocess a source file
 Classes/GameElements/StartPlatformAsset.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/StartPlatformAsset.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/StartPlatformAsset.cpp.i
 .PHONY : Classes/GameElements/StartPlatformAsset.cpp.i
 
 Classes/GameElements/StartPlatformAsset.s: Classes/GameElements/StartPlatformAsset.cpp.s
@@ -394,7 +394,7 @@ Classes/GameElements/StartPlatformAsset.s: Classes/GameElements/StartPlatformAss
 
 # target to generate assembly for a file
 Classes/GameElements/StartPlatformAsset.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/StartPlatformAsset.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/StartPlatformAsset.cpp.s
 .PHONY : Classes/GameElements/StartPlatformAsset.cpp.s
 
 Classes/GameElements/WaterNode.o: Classes/GameElements/WaterNode.cpp.o
@@ -402,7 +402,7 @@ Classes/GameElements/WaterNode.o: Classes/GameElements/WaterNode.cpp.o
 
 # target to build an object file
 Classes/GameElements/WaterNode.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNode.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/WaterNode.cpp.o
 .PHONY : Classes/GameElements/WaterNode.cpp.o
 
 Classes/GameElements/WaterNode.i: Classes/GameElements/WaterNode.cpp.i
@@ -410,7 +410,7 @@ Classes/GameElements/WaterNode.i: Classes/GameElements/WaterNode.cpp.i
 
 # target to preprocess a source file
 Classes/GameElements/WaterNode.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNode.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/WaterNode.cpp.i
 .PHONY : Classes/GameElements/WaterNode.cpp.i
 
 Classes/GameElements/WaterNode.s: Classes/GameElements/WaterNode.cpp.s
@@ -418,7 +418,7 @@ Classes/GameElements/WaterNode.s: Classes/GameElements/WaterNode.cpp.s
 
 # target to generate assembly for a file
 Classes/GameElements/WaterNode.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNode.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/WaterNode.cpp.s
 .PHONY : Classes/GameElements/WaterNode.cpp.s
 
 Classes/GameElements/WaterNodeRadial.o: Classes/GameElements/WaterNodeRadial.cpp.o
@@ -426,7 +426,7 @@ Classes/GameElements/WaterNodeRadial.o: Classes/GameElements/WaterNodeRadial.cpp
 
 # target to build an object file
 Classes/GameElements/WaterNodeRadial.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNodeRadial.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/WaterNodeRadial.cpp.o
 .PHONY : Classes/GameElements/WaterNodeRadial.cpp.o
 
 Classes/GameElements/WaterNodeRadial.i: Classes/GameElements/WaterNodeRadial.cpp.i
@@ -434,7 +434,7 @@ Classes/GameElements/WaterNodeRadial.i: Classes/GameElements/WaterNodeRadial.cpp
 
 # target to preprocess a source file
 Classes/GameElements/WaterNodeRadial.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNodeRadial.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/WaterNodeRadial.cpp.i
 .PHONY : Classes/GameElements/WaterNodeRadial.cpp.i
 
 Classes/GameElements/WaterNodeRadial.s: Classes/GameElements/WaterNodeRadial.cpp.s
@@ -442,7 +442,7 @@ Classes/GameElements/WaterNodeRadial.s: Classes/GameElements/WaterNodeRadial.cpp
 
 # target to generate assembly for a file
 Classes/GameElements/WaterNodeRadial.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNodeRadial.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/WaterNodeRadial.cpp.s
 .PHONY : Classes/GameElements/WaterNodeRadial.cpp.s
 
 Classes/Managers/ScenesManager.o: Classes/Managers/ScenesManager.cpp.o
@@ -450,7 +450,7 @@ Classes/Managers/ScenesManager.o: Classes/Managers/ScenesManager.cpp.o
 
 # target to build an object file
 Classes/Managers/ScenesManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/ScenesManager.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Managers/ScenesManager.cpp.o
 .PHONY : Classes/Managers/ScenesManager.cpp.o
 
 Classes/Managers/ScenesManager.i: Classes/Managers/ScenesManager.cpp.i
@@ -458,7 +458,7 @@ Classes/Managers/ScenesManager.i: Classes/Managers/ScenesManager.cpp.i
 
 # target to preprocess a source file
 Classes/Managers/ScenesManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/ScenesManager.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Managers/ScenesManager.cpp.i
 .PHONY : Classes/Managers/ScenesManager.cpp.i
 
 Classes/Managers/ScenesManager.s: Classes/Managers/ScenesManager.cpp.s
@@ -466,7 +466,7 @@ Classes/Managers/ScenesManager.s: Classes/Managers/ScenesManager.cpp.s
 
 # target to generate assembly for a file
 Classes/Managers/ScenesManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/ScenesManager.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Managers/ScenesManager.cpp.s
 .PHONY : Classes/Managers/ScenesManager.cpp.s
 
 Classes/Scenes/BasicScene.o: Classes/Scenes/BasicScene.cpp.o
@@ -474,7 +474,7 @@ Classes/Scenes/BasicScene.o: Classes/Scenes/BasicScene.cpp.o
 
 # target to build an object file
 Classes/Scenes/BasicScene.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/BasicScene.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/BasicScene.cpp.o
 .PHONY : Classes/Scenes/BasicScene.cpp.o
 
 Classes/Scenes/BasicScene.i: Classes/Scenes/BasicScene.cpp.i
@@ -482,7 +482,7 @@ Classes/Scenes/BasicScene.i: Classes/Scenes/BasicScene.cpp.i
 
 # target to preprocess a source file
 Classes/Scenes/BasicScene.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/BasicScene.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/BasicScene.cpp.i
 .PHONY : Classes/Scenes/BasicScene.cpp.i
 
 Classes/Scenes/BasicScene.s: Classes/Scenes/BasicScene.cpp.s
@@ -490,7 +490,7 @@ Classes/Scenes/BasicScene.s: Classes/Scenes/BasicScene.cpp.s
 
 # target to generate assembly for a file
 Classes/Scenes/BasicScene.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/BasicScene.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/BasicScene.cpp.s
 .PHONY : Classes/Scenes/BasicScene.cpp.s
 
 Classes/Scenes/GameScene.o: Classes/Scenes/GameScene.cpp.o
@@ -498,7 +498,7 @@ Classes/Scenes/GameScene.o: Classes/Scenes/GameScene.cpp.o
 
 # target to build an object file
 Classes/Scenes/GameScene.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/GameScene.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/GameScene.cpp.o
 .PHONY : Classes/Scenes/GameScene.cpp.o
 
 Classes/Scenes/GameScene.i: Classes/Scenes/GameScene.cpp.i
@@ -506,7 +506,7 @@ Classes/Scenes/GameScene.i: Classes/Scenes/GameScene.cpp.i
 
 # target to preprocess a source file
 Classes/Scenes/GameScene.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/GameScene.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/GameScene.cpp.i
 .PHONY : Classes/Scenes/GameScene.cpp.i
 
 Classes/Scenes/GameScene.s: Classes/Scenes/GameScene.cpp.s
@@ -514,7 +514,7 @@ Classes/Scenes/GameScene.s: Classes/Scenes/GameScene.cpp.s
 
 # target to generate assembly for a file
 Classes/Scenes/GameScene.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/GameScene.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/GameScene.cpp.s
 .PHONY : Classes/Scenes/GameScene.cpp.s
 
 Classes/Scenes/SpringScene.o: Classes/Scenes/SpringScene.cpp.o
@@ -522,7 +522,7 @@ Classes/Scenes/SpringScene.o: Classes/Scenes/SpringScene.cpp.o
 
 # target to build an object file
 Classes/Scenes/SpringScene.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/SpringScene.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/SpringScene.cpp.o
 .PHONY : Classes/Scenes/SpringScene.cpp.o
 
 Classes/Scenes/SpringScene.i: Classes/Scenes/SpringScene.cpp.i
@@ -530,7 +530,7 @@ Classes/Scenes/SpringScene.i: Classes/Scenes/SpringScene.cpp.i
 
 # target to preprocess a source file
 Classes/Scenes/SpringScene.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/SpringScene.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/SpringScene.cpp.i
 .PHONY : Classes/Scenes/SpringScene.cpp.i
 
 Classes/Scenes/SpringScene.s: Classes/Scenes/SpringScene.cpp.s
@@ -538,7 +538,7 @@ Classes/Scenes/SpringScene.s: Classes/Scenes/SpringScene.cpp.s
 
 # target to generate assembly for a file
 Classes/Scenes/SpringScene.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Scenes/SpringScene.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Scenes/SpringScene.cpp.s
 .PHONY : Classes/Scenes/SpringScene.cpp.s
 
 Classes/Utils.o: Classes/Utils.cpp.o
@@ -546,7 +546,7 @@ Classes/Utils.o: Classes/Utils.cpp.o
 
 # target to build an object file
 Classes/Utils.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Utils.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Utils.cpp.o
 .PHONY : Classes/Utils.cpp.o
 
 Classes/Utils.i: Classes/Utils.cpp.i
@@ -554,7 +554,7 @@ Classes/Utils.i: Classes/Utils.cpp.i
 
 # target to preprocess a source file
 Classes/Utils.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Utils.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Utils.cpp.i
 .PHONY : Classes/Utils.cpp.i
 
 Classes/Utils.s: Classes/Utils.cpp.s
@@ -562,7 +562,7 @@ Classes/Utils.s: Classes/Utils.cpp.s
 
 # target to generate assembly for a file
 Classes/Utils.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Utils.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/Utils.cpp.s
 .PHONY : Classes/Utils.cpp.s
 
 proj.linux/Utils.o: proj.linux/Utils.cpp.o
@@ -570,7 +570,7 @@ proj.linux/Utils.o: proj.linux/Utils.cpp.o
 
 # target to build an object file
 proj.linux/Utils.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Utils.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/proj.linux/Utils.cpp.o
 .PHONY : proj.linux/Utils.cpp.o
 
 proj.linux/Utils.i: proj.linux/Utils.cpp.i
@@ -578,7 +578,7 @@ proj.linux/Utils.i: proj.linux/Utils.cpp.i
 
 # target to preprocess a source file
 proj.linux/Utils.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Utils.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/proj.linux/Utils.cpp.i
 .PHONY : proj.linux/Utils.cpp.i
 
 proj.linux/Utils.s: proj.linux/Utils.cpp.s
@@ -586,7 +586,7 @@ proj.linux/Utils.s: proj.linux/Utils.cpp.s
 
 # target to generate assembly for a file
 proj.linux/Utils.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Utils.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/proj.linux/Utils.cpp.s
 .PHONY : proj.linux/Utils.cpp.s
 
 proj.linux/main.o: proj.linux/main.cpp.o
@@ -594,7 +594,7 @@ proj.linux/main.o: proj.linux/main.cpp.o
 
 # target to build an object file
 proj.linux/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/main.cpp.o
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/proj.linux/main.cpp.o
 .PHONY : proj.linux/main.cpp.o
 
 proj.linux/main.i: proj.linux/main.cpp.i
@@ -602,7 +602,7 @@ proj.linux/main.i: proj.linux/main.cpp.i
 
 # target to preprocess a source file
 proj.linux/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/main.cpp.i
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/proj.linux/main.cpp.i
 .PHONY : proj.linux/main.cpp.i
 
 proj.linux/main.s: proj.linux/main.cpp.s
@@ -610,7 +610,7 @@ proj.linux/main.s: proj.linux/main.cpp.s
 
 # target to generate assembly for a file
 proj.linux/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/main.cpp.s
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/proj.linux/main.cpp.s
 .PHONY : proj.linux/main.cpp.s
 
 # Help Target
@@ -619,9 +619,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Graman"
-	@echo "... Graman_CORE_PRE_BUILD"
-	@echo "... Graman_PRE_BUILD"
+	@echo "... Spike"
+	@echo "... Spike_CORE_PRE_BUILD"
+	@echo "... Spike_PRE_BUILD"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... box2d"

@@ -15,7 +15,7 @@ bool AppDelegate::init() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if (!glview) {
-	glview = GLViewImpl::createWithRect("Foxy Bird", Rect(100, 100,
+	glview = GLViewImpl::createWithRect("Spike", Rect(100, 100,
 	    1280, 640
 	));
         director->setOpenGLView(glview);

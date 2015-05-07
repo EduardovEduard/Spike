@@ -119,13 +119,12 @@ void WaterNode::update(float dt) {
     updateSprings();
     updatePlatforms();
     updateMeteors();
-    //redrawWater();
+    redrawWater();
 }
 
 void WaterNode::updateMeteors() {
     
     decltype(_meteors) savedMeteors;
-    double waterDeceleration = 10;
 
     for (auto& collision : _meteors) {
         if (collision.tries == 0)

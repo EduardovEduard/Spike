@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-set(APP_NAME Graman)
+set(APP_NAME Spike)
 project (${APP_NAME})
 
 include(cocos2d/cmake/BuildHelpers.CMakeLists.txt)
