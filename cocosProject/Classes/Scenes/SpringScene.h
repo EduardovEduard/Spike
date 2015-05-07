@@ -3,10 +3,7 @@
 #include "BasicScene.h"
 #include <cocos2d.h>
 #include "GameElements/HeroAsset.h"
-#include "Models/LevelModel.h"
-#include "Models/Article.h"
 #include "Models/GameModel.h"
-#include "GUI/LivesAsset.h"
 
 
 class SpringScene : public BasicScene {

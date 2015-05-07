@@ -4,6 +4,7 @@
 #include "GameElements/StartPlatformAsset.h"
 #include "GameElements/FinishPlatformAsset.h"
 
+#include <cassert>
 #include <iostream>
 #include <utility>
 
@@ -12,15 +13,18 @@ using namespace std;
 
 static const int TAG_WATER = 0x05;
 static const int TAG_METEOR = 0x06;
+static const int TAG_START_PLATFROM = 0x07;
+static const int TAG_FINISH_PLATFROM = 0x08;
+static const int TAG_FLOOR = 0x09;
+static const int TAG_HERO = 0x0A;
 
-const int TAG_START_PLATFROM = 7;
+constexpr float HERO_MAX_WAIT_JUMP = 1.5;
 
 /* INTIS */
 
 bool GameScene::init() {
     if (!BasicScene::initWithPhysics())
         return false;
-  
     initPhysics();
     initStartPlatform();
     initFinishPlatform();
@@ -56,6 +60,8 @@ void GameScene::initPlatforms() {
 void GameScene::initStartPlatform() {
     Vec2 sz(_size.width * 0.1, _size.height / 1.9);
     auto sp = StartPlatformAsset::create(Size(sz));
+    sp->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
+    sp->setTag(TAG_START_PLATFROM);
     sp->setPosition(sz/2);
     addChild(sp, 1, TAG_START_PLATFROM);
 }
@@ -63,8 +69,10 @@ void GameScene::initStartPlatform() {
 void GameScene::initFinishPlatform() {
     Vec2 sz(_size.width * 0.1, _size.height / 1.9);
     auto sp = FinishPlatformAsset::create(Size(sz));
+    sp->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
+    sp->setTag(TAG_FINISH_PLATFROM);
     sp->setPosition(Vec2(_size.width, _size.height / 1.9) - sz/2);
-    addChild(sp, 1);
+    addChild(sp, 1, TAG_FINISH_PLATFROM);
 }
 
 void GameScene::initWater() {
@@ -83,18 +91,45 @@ void GameScene::initHero() {
 	    getChildByTag(TAG_START_PLATFROM));
     Vec2 pos = sp->getPosition() + Vec2(0, sp->getContentSize().height / 2);
     pos+=_hero->getContentSize()/2;
-    _hero->setPosition(pos);
+    _hero->setPosition(pos + Vec2(0, 20));
+    _hero->setTag(TAG_HERO);
+    _hero->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     addChild(_hero, 2);
     //_hero->setSpeedX(_size.width * 0.1);
+}
+
+/* UPDATES */
+
+void GameScene::update(float delta) {
+    BasicScene::update(delta);
+    if(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpFirst || 
+       _gameModel.heroJumpState == Models::HeroJumpState::readyToJumpSecond) {
+	_gameModel.heroWaitTime += delta;
+    }
 }
 
 
 /* HANDLERS */
 
 void GameScene::onMouseDown(Vec2 pt) {
-    //dropMeteor(pt);
-    // TODO: add hero velocity
+    if(_gameModel.heroJumpState == Models::HeroJumpState::inSecondJump)
+	return;
+    if(_gameModel.heroJumpState == Models::HeroJumpState::idle) {
+	_gameModel.heroJumpState = Models::HeroJumpState::readyToJumpFirst;
+	return;
+    }
+    if(_gameModel.heroJumpState == Models::HeroJumpState::inFirstJump) {
+	_gameModel.heroJumpState = Models::HeroJumpState::readyToJumpSecond;
+	return;
+    }
 }
+
+void GameScene::onMouseUp(cocos2d::Vec2 ) {
+    if(_gameModel.heroJumpState == Models::HeroJumpState::inSecondJump)
+	return;
+    onHeroJump();
+}
+
 
 bool GameScene::onContactBegin(PhysicsContact& contact) {
     auto nodeA = contact.getShapeA()->getBody()->getNode();
@@ -107,6 +142,13 @@ bool GameScene::onContactBegin(PhysicsContact& contact) {
         return false;
     };
     
+    if(isTagPair(TAG_HERO, TAG_START_PLATFROM) || 
+       isTagPair(TAG_HERO, TAG_FINISH_PLATFROM) || 
+       isTagPair(TAG_HERO, TAG_FLOOR)
+    ) {
+	onHeroTouchFloor();
+    }
+    
     if(isTagPair(TAG_WATER, TAG_WATER)) return false;
     if(isTagPair(TAG_METEOR, TAG_METEOR)) return false;
     if(isTagPair(TAG_WATER, TAG_METEOR)) {
@@ -117,7 +159,23 @@ bool GameScene::onContactBegin(PhysicsContact& contact) {
     return true;
 }
 
-/* UPDATES */
+void GameScene::onHeroJump() {
+    assert(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpFirst ||
+	   _gameModel.heroJumpState == Models::HeroJumpState::readyToJumpSecond);
+    if(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpFirst) {
+	_gameModel.heroJumpState =  Models::HeroJumpState::inFirstJump;
+    }
+    if(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpSecond) {
+	_gameModel.heroJumpState =  Models::HeroJumpState::inSecondJump;
+    }
+    _hero->addSpeedY(100 * min(_gameModel.heroWaitTime, HERO_MAX_WAIT_JUMP));
+    _gameModel.heroWaitTime = 0;
+}
+
+void GameScene::onHeroTouchFloor() {
+    _gameModel.heroJumpState = Models::HeroJumpState::idle;
+}
+
 
 /* TOOLS */
 
@@ -131,6 +189,7 @@ void GameScene::processMeteorCollision(MeteorNode* meteor) {
 
 void GameScene::dropItem(double xOffset, double length) {
     auto n = Node::create();
+    n->setTag(TAG_FLOOR);
     n->setContentSize(Size(length, 10));
     n->setPhysicsBody(PhysicsBody::createBox(n->getContentSize()));
     addChild(n, 2);

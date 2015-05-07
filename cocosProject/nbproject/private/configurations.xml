@@ -32,8 +32,6 @@
           <in>GUI.h</in>
           <in>GameOverLayer.cpp</in>
           <in>GameOverLayer.h</in>
-          <in>LivesAsset.cpp</in>
-          <in>LivesAsset.h</in>
           <in>ResultsLayer.cpp</in>
           <in>ResultsLayer.h</in>
         </df>
@@ -42,8 +40,6 @@
           <in>DataManager.cpp</in>
           <in>DataManager.h</in>
           <in>EconomicsManager.h</in>
-          <in>LevelsManager.cpp</in>
-          <in>LevelsManager.h</in>
           <in>LivesManager.cpp</in>
           <in>LocalizationManager.cpp</in>
           <in>LocalizationManager.h</in>
@@ -57,9 +53,7 @@
           <in>SoundsManager.h</in>
         </df>
         <df name="Models">
-          <in>Article.h</in>
           <in>GameModel.h</in>
-          <in>LevelModel.h</in>
         </df>
         <df name="Scenes">
           <in>BasicScene.cpp</in>

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <cocos2d.h>
-#include "Models/Article.h"
 #include <vector>
 #include <functional>
 

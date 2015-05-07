@@ -6,6 +6,7 @@
 #include "GameElements/WaterNodeRadial.h"
 #include "GameElements/MeteorNode.h"
 #include "GameElements/HeroAsset.h"
+#include "Models/GameModel.h"
 
 #include <map>
 
@@ -20,15 +21,21 @@ private:
     };
 
     /* STATE */
+    
+    /* MODELS */
+    Models::GameModel _gameModel;
+
+    /* ELEMENTS */
     WaterNode* _waterNode;
     std::map<MeteorNode*, MeteorInfo> _meteors;
     HeroAsset* _hero;
 
-    /* ELEMENTS */
-
     /* HANDLERS */
     virtual void onMouseDown(cocos2d::Vec2 pt) override;
+    virtual void onMouseUp(cocos2d::Vec2 ) override;
     bool onContactBegin(cocos2d::PhysicsContact& contact);
+    void onHeroJump();
+    void onHeroTouchFloor();
     
     /* INITS */
     bool init() override;
@@ -40,6 +47,8 @@ private:
     void initHero();
     
     /* UPDATES */
+    virtual void update(float delta) override;
+
     
     /* TOOLS */
     void processMeteorCollision(MeteorNode*);

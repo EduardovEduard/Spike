@@ -301,30 +301,6 @@ Classes/GUI/GameOverLayer.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GameOverLayer.cpp.s
 .PHONY : Classes/GUI/GameOverLayer.cpp.s
 
-Classes/GUI/LivesAsset.o: Classes/GUI/LivesAsset.cpp.o
-.PHONY : Classes/GUI/LivesAsset.o
-
-# target to build an object file
-Classes/GUI/LivesAsset.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/LivesAsset.cpp.o
-.PHONY : Classes/GUI/LivesAsset.cpp.o
-
-Classes/GUI/LivesAsset.i: Classes/GUI/LivesAsset.cpp.i
-.PHONY : Classes/GUI/LivesAsset.i
-
-# target to preprocess a source file
-Classes/GUI/LivesAsset.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/LivesAsset.cpp.i
-.PHONY : Classes/GUI/LivesAsset.cpp.i
-
-Classes/GUI/LivesAsset.s: Classes/GUI/LivesAsset.cpp.s
-.PHONY : Classes/GUI/LivesAsset.s
-
-# target to generate assembly for a file
-Classes/GUI/LivesAsset.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/LivesAsset.cpp.s
-.PHONY : Classes/GUI/LivesAsset.cpp.s
-
 Classes/GUI/ResultsLayer.o: Classes/GUI/ResultsLayer.cpp.o
 .PHONY : Classes/GUI/ResultsLayer.o
 
@@ -540,30 +516,6 @@ Classes/Managers/DataManager.s: Classes/Managers/DataManager.cpp.s
 Classes/Managers/DataManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/DataManager.cpp.s
 .PHONY : Classes/Managers/DataManager.cpp.s
-
-Classes/Managers/LevelsManager.o: Classes/Managers/LevelsManager.cpp.o
-.PHONY : Classes/Managers/LevelsManager.o
-
-# target to build an object file
-Classes/Managers/LevelsManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/LevelsManager.cpp.o
-.PHONY : Classes/Managers/LevelsManager.cpp.o
-
-Classes/Managers/LevelsManager.i: Classes/Managers/LevelsManager.cpp.i
-.PHONY : Classes/Managers/LevelsManager.i
-
-# target to preprocess a source file
-Classes/Managers/LevelsManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/LevelsManager.cpp.i
-.PHONY : Classes/Managers/LevelsManager.cpp.i
-
-Classes/Managers/LevelsManager.s: Classes/Managers/LevelsManager.cpp.s
-.PHONY : Classes/Managers/LevelsManager.s
-
-# target to generate assembly for a file
-Classes/Managers/LevelsManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/LevelsManager.cpp.s
-.PHONY : Classes/Managers/LevelsManager.cpp.s
 
 Classes/Managers/LocalizationManager.o: Classes/Managers/LocalizationManager.cpp.o
 .PHONY : Classes/Managers/LocalizationManager.o
@@ -905,9 +857,6 @@ help:
 	@echo "... Classes/GUI/GameOverLayer.o"
 	@echo "... Classes/GUI/GameOverLayer.i"
 	@echo "... Classes/GUI/GameOverLayer.s"
-	@echo "... Classes/GUI/LivesAsset.o"
-	@echo "... Classes/GUI/LivesAsset.i"
-	@echo "... Classes/GUI/LivesAsset.s"
 	@echo "... Classes/GUI/ResultsLayer.o"
 	@echo "... Classes/GUI/ResultsLayer.i"
 	@echo "... Classes/GUI/ResultsLayer.s"
@@ -935,9 +884,6 @@ help:
 	@echo "... Classes/Managers/DataManager.o"
 	@echo "... Classes/Managers/DataManager.i"
 	@echo "... Classes/Managers/DataManager.s"
-	@echo "... Classes/Managers/LevelsManager.o"
-	@echo "... Classes/Managers/LevelsManager.i"
-	@echo "... Classes/Managers/LevelsManager.s"
 	@echo "... Classes/Managers/LocalizationManager.o"
 	@echo "... Classes/Managers/LocalizationManager.i"
 	@echo "... Classes/Managers/LocalizationManager.s"
