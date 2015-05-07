@@ -32,11 +32,10 @@ private:
 
     /* HANDLERS */
     virtual void onMouseDown(cocos2d::Vec2 pt) override;
-    virtual void onMouseUp(cocos2d::Vec2 ) override;
     bool onContactBegin(cocos2d::PhysicsContact& contact);
     void onHeroJump();
     void onHeroTouchFloor();
-    
+
     /* INITS */
     bool init() override;
     void initPhysics();

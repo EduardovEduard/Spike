@@ -6,9 +6,7 @@
 namespace Models {
     enum class HeroJumpState {
 	idle,
-	readyToJumpFirst,
 	inFirstJump,
-	readyToJumpSecond,
 	inSecondJump
     };
     struct GameModel {

@@ -18,7 +18,7 @@ static const int TAG_FINISH_PLATFROM = 0x08;
 static const int TAG_FLOOR = 0x09;
 static const int TAG_HERO = 0x0A;
 
-constexpr float HERO_MAX_WAIT_JUMP = 1.5;
+constexpr float HERO_JUMP_RATE = 0.2;
 
 /* INTIS */
 
@@ -102,10 +102,6 @@ void GameScene::initHero() {
 
 void GameScene::update(float delta) {
     BasicScene::update(delta);
-    if(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpFirst || 
-       _gameModel.heroJumpState == Models::HeroJumpState::readyToJumpSecond) {
-	_gameModel.heroWaitTime += delta;
-    }
 }
 
 
@@ -114,22 +110,8 @@ void GameScene::update(float delta) {
 void GameScene::onMouseDown(Vec2 pt) {
     if(_gameModel.heroJumpState == Models::HeroJumpState::inSecondJump)
 	return;
-    if(_gameModel.heroJumpState == Models::HeroJumpState::idle) {
-	_gameModel.heroJumpState = Models::HeroJumpState::readyToJumpFirst;
-	return;
-    }
-    if(_gameModel.heroJumpState == Models::HeroJumpState::inFirstJump) {
-	_gameModel.heroJumpState = Models::HeroJumpState::readyToJumpSecond;
-	return;
-    }
-}
-
-void GameScene::onMouseUp(cocos2d::Vec2 ) {
-    if(_gameModel.heroJumpState == Models::HeroJumpState::inSecondJump)
-	return;
     onHeroJump();
 }
-
 
 bool GameScene::onContactBegin(PhysicsContact& contact) {
     auto nodeA = contact.getShapeA()->getBody()->getNode();
@@ -160,15 +142,14 @@ bool GameScene::onContactBegin(PhysicsContact& contact) {
 }
 
 void GameScene::onHeroJump() {
-    assert(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpFirst ||
-	   _gameModel.heroJumpState == Models::HeroJumpState::readyToJumpSecond);
-    if(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpFirst) {
-	_gameModel.heroJumpState =  Models::HeroJumpState::inFirstJump;
-    }
-    if(_gameModel.heroJumpState == Models::HeroJumpState::readyToJumpSecond) {
+    assert(_gameModel.heroJumpState != Models::HeroJumpState::inSecondJump);
+    if(_gameModel.heroJumpState == Models::HeroJumpState::inFirstJump) {
 	_gameModel.heroJumpState =  Models::HeroJumpState::inSecondJump;
     }
-    _hero->addSpeedY(100 * min(_gameModel.heroWaitTime, HERO_MAX_WAIT_JUMP));
+    if(_gameModel.heroJumpState == Models::HeroJumpState::idle) {
+	_gameModel.heroJumpState =  Models::HeroJumpState::inFirstJump;
+    }
+    _hero->addSpeedY(HERO_JUMP_RATE * _size.height);
     _gameModel.heroWaitTime = 0;
 }
 
