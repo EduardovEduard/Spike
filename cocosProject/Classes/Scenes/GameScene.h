@@ -51,7 +51,7 @@ private:
     
     /* TOOLS */
     void processMeteorCollision(MeteorNode*);
-    void dropItem(double xOffset, double length);
+    void addPlatform(double xOffset, double length);
     void dropMeteor(cocos2d::Vec2 pt);
     
 };

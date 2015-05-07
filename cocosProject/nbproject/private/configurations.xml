@@ -16,6 +16,8 @@
           <in>HeroAsset.h</in>
           <in>MeteorNode.cpp</in>
           <in>MeteorNode.h</in>
+          <in>PlatformAsset.cpp</in>
+          <in>PlatformAsset.h</in>
           <in>SpringWaterNode.cpp</in>
           <in>SpringWaterNode.h</in>
           <in>StartPlatformAsset.cpp</in>

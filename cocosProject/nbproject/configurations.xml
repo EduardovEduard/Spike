@@ -7,6 +7,7 @@
           <in>FinishPlatformAsset.cpp</in>
           <in>HeroAsset.cpp</in>
           <in>MeteorNode.cpp</in>
+          <in>PlatformAsset.cpp</in>
           <in>SpringWaterNode.cpp</in>
           <in>StartPlatformAsset.cpp</in>
           <in>WaterNode.cpp</in>
@@ -338,6 +339,13 @@
         </ccTool>
       </item>
       <item path="Classes/GameElements/MeteorNode.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/GameElements/PlatformAsset.cpp"
             ex="false"
             tool="1"
             flavor2="8">

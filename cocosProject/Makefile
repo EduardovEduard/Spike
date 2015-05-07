@@ -349,6 +349,30 @@ Classes/GameElements/MeteorNode.cpp.s:
 	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/MeteorNode.cpp.s
 .PHONY : Classes/GameElements/MeteorNode.cpp.s
 
+Classes/GameElements/PlatformAsset.o: Classes/GameElements/PlatformAsset.cpp.o
+.PHONY : Classes/GameElements/PlatformAsset.o
+
+# target to build an object file
+Classes/GameElements/PlatformAsset.cpp.o:
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/PlatformAsset.cpp.o
+.PHONY : Classes/GameElements/PlatformAsset.cpp.o
+
+Classes/GameElements/PlatformAsset.i: Classes/GameElements/PlatformAsset.cpp.i
+.PHONY : Classes/GameElements/PlatformAsset.i
+
+# target to preprocess a source file
+Classes/GameElements/PlatformAsset.cpp.i:
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/PlatformAsset.cpp.i
+.PHONY : Classes/GameElements/PlatformAsset.cpp.i
+
+Classes/GameElements/PlatformAsset.s: Classes/GameElements/PlatformAsset.cpp.s
+.PHONY : Classes/GameElements/PlatformAsset.s
+
+# target to generate assembly for a file
+Classes/GameElements/PlatformAsset.cpp.s:
+	$(MAKE) -f CMakeFiles/Spike.dir/build.make CMakeFiles/Spike.dir/Classes/GameElements/PlatformAsset.cpp.s
+.PHONY : Classes/GameElements/PlatformAsset.cpp.s
+
 Classes/GameElements/SpringWaterNode.o: Classes/GameElements/SpringWaterNode.cpp.o
 .PHONY : Classes/GameElements/SpringWaterNode.o
 
@@ -647,6 +671,9 @@ help:
 	@echo "... Classes/GameElements/MeteorNode.o"
 	@echo "... Classes/GameElements/MeteorNode.i"
 	@echo "... Classes/GameElements/MeteorNode.s"
+	@echo "... Classes/GameElements/PlatformAsset.o"
+	@echo "... Classes/GameElements/PlatformAsset.i"
+	@echo "... Classes/GameElements/PlatformAsset.s"
 	@echo "... Classes/GameElements/SpringWaterNode.o"
 	@echo "... Classes/GameElements/SpringWaterNode.i"
 	@echo "... Classes/GameElements/SpringWaterNode.s"

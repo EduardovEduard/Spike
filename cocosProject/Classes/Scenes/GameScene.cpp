@@ -3,6 +3,7 @@
 #include "GameElements/WaterNode.h"
 #include "GameElements/StartPlatformAsset.h"
 #include "GameElements/FinishPlatformAsset.h"
+#include "GameElements/PlatformAsset.h"
 
 #include <cassert>
 #include <iostream>
@@ -50,7 +51,7 @@ void GameScene::initPlatforms() {
     plfs.emplace_back(0.8, 0.05);
     double w = _waterNode->getContentSize().width;
     for(auto p: plfs) {
-	dropItem(
+	addPlatform(
 	    _waterNode->getPosition().x + w * p.first, w * p.second
 	);
     }
@@ -76,10 +77,10 @@ void GameScene::initFinishPlatform() {
 
 void GameScene::initWater() {
     _waterNode = WaterNode::create(Size(
-	_size.width * 0.8, _size.height / 2
+	_size.width * (1 - 0.15 * 1.23 - 0.15), _size.height / 2
     ));
     _waterNode->setWaterPhysicsNodesTag(TAG_WATER);
-    _waterNode->setPosition(Vec2(_size.width * 0.1, 0));
+    _waterNode->setPosition(Vec2(_size.width * 0.15, 0));
     addChild(_waterNode, 1);
 }
 
@@ -167,11 +168,9 @@ void GameScene::processMeteorCollision(MeteorNode* meteor) {
     _waterNode->touch(meteor);
 }
 
-void GameScene::dropItem(double xOffset, double length) {
-    auto n = Node::create();
+void GameScene::addPlatform(double xOffset, double length) {
+    auto n = PlatformAsset::create(Size(length, _size.height * 0.013));
     n->setTag(TAG_FLOOR);
-    n->setContentSize(Size(length, 10));
-    n->setPhysicsBody(PhysicsBody::createBox(n->getContentSize()));
     n->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     addChild(n, 2);
     n->setPosition(
