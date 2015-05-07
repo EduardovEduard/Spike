@@ -26,8 +26,10 @@ bool StartPlatformAsset::init(const Size& size) {
 }
 
 void StartPlatformAsset::initView() {
-    auto s = Sprite::create("gap_green.png");
-    s->setPosition(Vec2::ZERO);
+    auto s = Sprite::create("startPlatform.png");
+    s->setAnchorPoint(Vec2(0.97, 1-0.685));
+    s->setPosition(getContentSize());
+    Utils::setNodeWidth(s, getContentSize().width * (1/0.97));
     addChild(s);
 }
 

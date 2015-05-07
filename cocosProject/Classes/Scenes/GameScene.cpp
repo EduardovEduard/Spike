@@ -56,9 +56,8 @@ void GameScene::initPlatforms() {
     }
 }
 
-
 void GameScene::initStartPlatform() {
-    Vec2 sz(_size.width * 0.1, _size.height / 1.9);
+    Vec2 sz(_size.width * 0.15, _size.height / 1.9);
     auto sp = StartPlatformAsset::create(Size(sz));
     sp->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     sp->setTag(TAG_START_PLATFROM);
@@ -67,7 +66,7 @@ void GameScene::initStartPlatform() {
 }
 
 void GameScene::initFinishPlatform() {
-    Vec2 sz(_size.width * 0.1, _size.height / 1.9);
+    Vec2 sz(_size.width * 0.15 * 1.23, _size.height / 1.9);
     auto sp = FinishPlatformAsset::create(Size(sz));
     sp->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     sp->setTag(TAG_FINISH_PLATFROM);

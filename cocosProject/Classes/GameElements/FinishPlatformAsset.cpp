@@ -26,9 +26,10 @@ bool FinishPlatformAsset::init(const Size& size) {
 }
 
 void FinishPlatformAsset::initView() {
-    // TODO: special thing fro finish
-    auto s = Sprite::create("gap_green.png");
-    s->setPosition(Vec2::ZERO);
+    auto s = Sprite::create("finishPlatform.png");
+    s->setPosition(Vec2(0, getContentSize().height));
+    s->setAnchorPoint(Vec2(0.017, 1 - 0.1625));
+    Utils::setNodeWidth(s, getContentSize().width);
     addChild(s);
 }
 
