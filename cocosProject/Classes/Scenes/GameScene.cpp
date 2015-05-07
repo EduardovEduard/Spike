@@ -16,7 +16,7 @@ static const int TAG_WATER = 0x05;
 static const int TAG_METEOR = 0x06;
 static const int TAG_START_PLATFROM = 0x07;
 static const int TAG_FINISH_PLATFROM = 0x08;
-static const int TAG_FLOOR = 0x09;
+static const int TAG_PLATFORM = 0x09;
 static const int TAG_HERO = 0x0A;
 
 constexpr float HERO_JUMP_RATE = 0.2;
@@ -36,9 +36,10 @@ bool GameScene::init() {
 }
 
 void GameScene::initPhysics() {
-    getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    //getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     auto contactListener = EventListenerPhysicsContact::create();
     contactListener->onContactBegin = CC_CALLBACK_1(GameScene::onContactBegin, this);
+    //contactListener->onContactPreSolve = CC_CALLBACK_2(GameScene::onContactPredSolve, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 }
 
@@ -58,30 +59,31 @@ void GameScene::initPlatforms() {
 }
 
 void GameScene::initStartPlatform() {
-    Vec2 sz(_size.width * 0.15, _size.height / 1.9);
+    Vec2 sz(_size.width * 0.15, _size.height / 8.8);
     auto sp = StartPlatformAsset::create(Size(sz));
     sp->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     sp->setTag(TAG_START_PLATFROM);
     sp->setPosition(sz/2);
-    addChild(sp, 1, TAG_START_PLATFROM);
+    addChild(sp, 2, TAG_START_PLATFROM);
 }
 
 void GameScene::initFinishPlatform() {
-    Vec2 sz(_size.width * 0.15 * 1.23, _size.height / 1.9);
+    Vec2 sz(_size.width * 0.15 * 1.23, _size.height / 8.8);
     auto sp = FinishPlatformAsset::create(Size(sz));
     sp->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     sp->setTag(TAG_FINISH_PLATFROM);
-    sp->setPosition(Vec2(_size.width, _size.height / 1.9) - sz/2);
-    addChild(sp, 1, TAG_FINISH_PLATFROM);
+    sp->setPosition(Vec2(_size.width, _size.height / 8.8) - sz/2);
+    addChild(sp, 2, TAG_FINISH_PLATFROM);
 }
 
 void GameScene::initWater() {
     _waterNode = WaterNode::create(Size(
-	_size.width * (1 - 0.15 * 1.23 - 0.15), _size.height / 2
+	_size.width * (1 - 0.15 * 1.23 - 0.15), _size.height / 10
     ));
     _waterNode->setWaterPhysicsNodesTag(TAG_WATER);
     _waterNode->setPosition(Vec2(_size.width * 0.15, 0));
     addChild(_waterNode, 1);
+    _waterNode->touch(Vec2(100, 0), 7, 0);
 }
 
 
@@ -126,11 +128,11 @@ bool GameScene::onContactBegin(PhysicsContact& contact) {
     
     if(isTagPair(TAG_HERO, TAG_START_PLATFROM) || 
        isTagPair(TAG_HERO, TAG_FINISH_PLATFROM) || 
-       isTagPair(TAG_HERO, TAG_FLOOR)
+       isTagPair(TAG_HERO, TAG_PLATFORM)
     ) {
 	onHeroTouchFloor();
     }
-    
+
     if(isTagPair(TAG_WATER, TAG_WATER)) return false;
     if(isTagPair(TAG_METEOR, TAG_METEOR)) return false;
     if(isTagPair(TAG_WATER, TAG_METEOR)) {
@@ -138,8 +140,47 @@ bool GameScene::onContactBegin(PhysicsContact& contact) {
         processMeteorCollision(mn);
         return false;
     }
+    
+    if(isTagPair(TAG_WATER, TAG_HERO)) {
+	auto pb = _hero->getPhysicsBody();
+	pb->setVelocity(pb->getVelocity() * 0.2);
+	return false;
+    }
     return true;
 }
+
+bool GameScene::onContactPreSolve(
+    PhysicsContact& contact, PhysicsContactPreSolve& solve
+) {
+    auto nodeA = contact.getShapeA()->getBody()->getNode();
+    auto nodeB = contact.getShapeB()->getBody()->getNode();
+    
+    auto isTagPair = [&](int tagA, int tagB) {
+        if(!nodeA || !nodeB) return false;
+        if (nodeA->getTag() == tagB && nodeB->getTag() == tagA) return true;
+        if (nodeA->getTag() == tagA && nodeB->getTag() == tagB) return true;
+        return false;
+    };
+    
+//    if(isTagPair(TAG_PLATFORM, TAG_HERO)) {
+//	//solve.setSurfaceVelocity(Vec2(-100, 0));
+//	solve.setFriction(100);
+//	return true;
+//    }
+    
+//    if(isTagPair(TAG_WATER, TAG_PLATFORM)) {
+//	solve.setFriction(0.01);
+//	solve.setRestitution(0);
+//	//solve.ignore();
+//	cout << "fr: " << solve.getFriction() << endl;
+//	cout << "rs: " << solve.getRestitution() << endl;
+//	cout << "vl: " << solve.getSurfaceVelocity().x << ", " << solve.getSurfaceVelocity().y << endl;
+//	return true;
+//    }
+    
+    return true;;
+}
+
 
 void GameScene::onHeroJump() {
     assert(_gameModel.heroJumpState != Models::HeroJumpState::inSecondJump);
@@ -170,11 +211,11 @@ void GameScene::processMeteorCollision(MeteorNode* meteor) {
 
 void GameScene::addPlatform(double xOffset, double length) {
     auto n = PlatformAsset::create(Size(length, _size.height * 0.013));
-    n->setTag(TAG_FLOOR);
+    n->setTag(TAG_PLATFORM);
     n->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     addChild(n, 2);
     n->setPosition(
-	xOffset, _waterNode->getContentSize().height + n->getContentSize().height/2
+	xOffset, _waterNode->getContentSize().height + n->getContentSize().height
     );
 }
 

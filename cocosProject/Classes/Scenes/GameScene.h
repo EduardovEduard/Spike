@@ -33,6 +33,10 @@ private:
     /* HANDLERS */
     virtual void onMouseDown(cocos2d::Vec2 pt) override;
     bool onContactBegin(cocos2d::PhysicsContact& contact);
+    bool onContactPreSolve(
+	cocos2d::PhysicsContact& contact, 
+	cocos2d::PhysicsContactPreSolve& solve
+    );
     void onHeroJump();
     void onHeroTouchFloor();
 
@@ -48,7 +52,6 @@ private:
     /* UPDATES */
     virtual void update(float delta) override;
 
-    
     /* TOOLS */
     void processMeteorCollision(MeteorNode*);
     void addPlatform(double xOffset, double length);

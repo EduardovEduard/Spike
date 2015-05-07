@@ -107,6 +107,7 @@ void WaterNode::initSprings() {
 	vector<Vec2> waterSurface = narrowPlatform(v[i+1], v[i]);
         auto physicsPart = PhysicsBody::createPolygon(waterSurface.data(), waterSurface.size());
         physicsPart->setDynamic(false);
+	//physicsPart->setGravityEnable(false);
         physicsPart->setContactTestBitmask(0xFFFFFFFF);
         node->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
         node->setPhysicsBody(physicsPart);

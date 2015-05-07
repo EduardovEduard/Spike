@@ -62,7 +62,6 @@ private:
     void updateSprings();
     void updatePlatforms();
     void updateMeteors();
-    
 
     /* FUNS */
     void redrawWater();
