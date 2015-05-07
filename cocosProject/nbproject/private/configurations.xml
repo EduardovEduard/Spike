@@ -26,19 +26,13 @@
           <in>WaterNodeRadial.h</in>
         </df>
         <df name="GUI">
-          <in>AdvLayer.cpp</in>
-          <in>AdvLayer.h</in>
           <in>GUI.cpp</in>
           <in>GUI.h</in>
           <in>GameOverLayer.cpp</in>
           <in>GameOverLayer.h</in>
-          <in>ResultsLayer.cpp</in>
-          <in>ResultsLayer.h</in>
         </df>
         <df name="Managers">
           <in>BasicManager.h</in>
-          <in>DataManager.cpp</in>
-          <in>DataManager.h</in>
           <in>ScenesManager.cpp</in>
           <in>ScenesManager.h</in>
         </df>
@@ -14134,6 +14128,8 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>

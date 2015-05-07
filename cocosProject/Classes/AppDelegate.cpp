@@ -2,8 +2,6 @@
 
 #include "Managers/BasicManager.h"
 #include "Managers/ScenesManager.h"
-#include "Managers/DataManager.h"
-
 #include "AppDelegate.h"
 
 
@@ -35,7 +33,6 @@ bool AppDelegate::init() {
 
 bool AppDelegate::initManagers() {
     auto p = [this](BasicManager* bm){ _managers.push_back(bm); };
-    p(DataManager::getInstance());
     p(ScenesManager::getInstance());
     bool ok = true;
     forAllManagers([&ok](BasicManager* m) {

@@ -229,30 +229,6 @@ Classes/AppDelegate.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/AppDelegate.cpp.s
 .PHONY : Classes/AppDelegate.cpp.s
 
-Classes/GUI/AdvLayer.o: Classes/GUI/AdvLayer.cpp.o
-.PHONY : Classes/GUI/AdvLayer.o
-
-# target to build an object file
-Classes/GUI/AdvLayer.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/AdvLayer.cpp.o
-.PHONY : Classes/GUI/AdvLayer.cpp.o
-
-Classes/GUI/AdvLayer.i: Classes/GUI/AdvLayer.cpp.i
-.PHONY : Classes/GUI/AdvLayer.i
-
-# target to preprocess a source file
-Classes/GUI/AdvLayer.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/AdvLayer.cpp.i
-.PHONY : Classes/GUI/AdvLayer.cpp.i
-
-Classes/GUI/AdvLayer.s: Classes/GUI/AdvLayer.cpp.s
-.PHONY : Classes/GUI/AdvLayer.s
-
-# target to generate assembly for a file
-Classes/GUI/AdvLayer.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/AdvLayer.cpp.s
-.PHONY : Classes/GUI/AdvLayer.cpp.s
-
 Classes/GUI/GUI.o: Classes/GUI/GUI.cpp.o
 .PHONY : Classes/GUI/GUI.o
 
@@ -300,30 +276,6 @@ Classes/GUI/GameOverLayer.s: Classes/GUI/GameOverLayer.cpp.s
 Classes/GUI/GameOverLayer.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/GameOverLayer.cpp.s
 .PHONY : Classes/GUI/GameOverLayer.cpp.s
-
-Classes/GUI/ResultsLayer.o: Classes/GUI/ResultsLayer.cpp.o
-.PHONY : Classes/GUI/ResultsLayer.o
-
-# target to build an object file
-Classes/GUI/ResultsLayer.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/ResultsLayer.cpp.o
-.PHONY : Classes/GUI/ResultsLayer.cpp.o
-
-Classes/GUI/ResultsLayer.i: Classes/GUI/ResultsLayer.cpp.i
-.PHONY : Classes/GUI/ResultsLayer.i
-
-# target to preprocess a source file
-Classes/GUI/ResultsLayer.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/ResultsLayer.cpp.i
-.PHONY : Classes/GUI/ResultsLayer.cpp.i
-
-Classes/GUI/ResultsLayer.s: Classes/GUI/ResultsLayer.cpp.s
-.PHONY : Classes/GUI/ResultsLayer.s
-
-# target to generate assembly for a file
-Classes/GUI/ResultsLayer.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GUI/ResultsLayer.cpp.s
-.PHONY : Classes/GUI/ResultsLayer.cpp.s
 
 Classes/GameElements/FinishPlatformAsset.o: Classes/GameElements/FinishPlatformAsset.cpp.o
 .PHONY : Classes/GameElements/FinishPlatformAsset.o
@@ -492,30 +444,6 @@ Classes/GameElements/WaterNodeRadial.s: Classes/GameElements/WaterNodeRadial.cpp
 Classes/GameElements/WaterNodeRadial.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/GameElements/WaterNodeRadial.cpp.s
 .PHONY : Classes/GameElements/WaterNodeRadial.cpp.s
-
-Classes/Managers/DataManager.o: Classes/Managers/DataManager.cpp.o
-.PHONY : Classes/Managers/DataManager.o
-
-# target to build an object file
-Classes/Managers/DataManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/DataManager.cpp.o
-.PHONY : Classes/Managers/DataManager.cpp.o
-
-Classes/Managers/DataManager.i: Classes/Managers/DataManager.cpp.i
-.PHONY : Classes/Managers/DataManager.i
-
-# target to preprocess a source file
-Classes/Managers/DataManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/DataManager.cpp.i
-.PHONY : Classes/Managers/DataManager.cpp.i
-
-Classes/Managers/DataManager.s: Classes/Managers/DataManager.cpp.s
-.PHONY : Classes/Managers/DataManager.s
-
-# target to generate assembly for a file
-Classes/Managers/DataManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/DataManager.cpp.s
-.PHONY : Classes/Managers/DataManager.cpp.s
 
 Classes/Managers/ScenesManager.o: Classes/Managers/ScenesManager.cpp.o
 .PHONY : Classes/Managers/ScenesManager.o
@@ -704,18 +632,12 @@ help:
 	@echo "... Classes/AppDelegate.o"
 	@echo "... Classes/AppDelegate.i"
 	@echo "... Classes/AppDelegate.s"
-	@echo "... Classes/GUI/AdvLayer.o"
-	@echo "... Classes/GUI/AdvLayer.i"
-	@echo "... Classes/GUI/AdvLayer.s"
 	@echo "... Classes/GUI/GUI.o"
 	@echo "... Classes/GUI/GUI.i"
 	@echo "... Classes/GUI/GUI.s"
 	@echo "... Classes/GUI/GameOverLayer.o"
 	@echo "... Classes/GUI/GameOverLayer.i"
 	@echo "... Classes/GUI/GameOverLayer.s"
-	@echo "... Classes/GUI/ResultsLayer.o"
-	@echo "... Classes/GUI/ResultsLayer.i"
-	@echo "... Classes/GUI/ResultsLayer.s"
 	@echo "... Classes/GameElements/FinishPlatformAsset.o"
 	@echo "... Classes/GameElements/FinishPlatformAsset.i"
 	@echo "... Classes/GameElements/FinishPlatformAsset.s"
@@ -737,9 +659,6 @@ help:
 	@echo "... Classes/GameElements/WaterNodeRadial.o"
 	@echo "... Classes/GameElements/WaterNodeRadial.i"
 	@echo "... Classes/GameElements/WaterNodeRadial.s"
-	@echo "... Classes/Managers/DataManager.o"
-	@echo "... Classes/Managers/DataManager.i"
-	@echo "... Classes/Managers/DataManager.s"
 	@echo "... Classes/Managers/ScenesManager.o"
 	@echo "... Classes/Managers/ScenesManager.i"
 	@echo "... Classes/Managers/ScenesManager.s"

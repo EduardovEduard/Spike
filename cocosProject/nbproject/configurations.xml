@@ -13,13 +13,10 @@
           <in>WaterNodeRadial.cpp</in>
         </df>
         <df name="GUI">
-          <in>AdvLayer.cpp</in>
           <in>GUI.cpp</in>
           <in>GameOverLayer.cpp</in>
-          <in>ResultsLayer.cpp</in>
         </df>
         <df name="Managers">
-          <in>DataManager.cpp</in>
           <in>ScenesManager.cpp</in>
         </df>
         <df name="Scenes">
@@ -321,19 +318,11 @@
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="Classes/GUI/AdvLayer.cpp" ex="false" tool="1" flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
       <item path="Classes/GUI/GUI.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
       <item path="Classes/GUI/GameOverLayer.cpp" ex="false" tool="1" flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
-      <item path="Classes/GUI/ResultsLayer.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
@@ -377,10 +366,6 @@
             ex="false"
             tool="1"
             flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
-      <item path="Classes/Managers/DataManager.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
