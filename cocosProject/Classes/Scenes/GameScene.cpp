@@ -53,7 +53,7 @@ void GameScene::initPlatforms() {
 	dropItem(
 	    _waterNode->getPosition().x + w * p.first, w * p.second
 	);
-    }    
+    }
 }
 
 
@@ -86,16 +86,16 @@ void GameScene::initWater() {
 
 
 void GameScene::initHero() {
-    _hero = HeroAsset::create(Size(_size.width * 0.01, _size.height * 0.05));
+    _hero = HeroAsset::create(Size(_size.width * 0.02, _size.height * 0.08));
     StartPlatformAsset* sp = static_cast<StartPlatformAsset*>(
 	    getChildByTag(TAG_START_PLATFROM));
     Vec2 pos = sp->getPosition() + Vec2(0, sp->getContentSize().height / 2);
     pos+=_hero->getContentSize()/2;
-    _hero->setPosition(pos + Vec2(0, 20));
+    _hero->setPosition(pos);
     _hero->setTag(TAG_HERO);
     _hero->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     addChild(_hero, 2);
-    //_hero->setSpeedX(_size.width * 0.1);
+    _hero->setSpeedX(_size.width * 0.07);
 }
 
 /* UPDATES */
@@ -173,6 +173,7 @@ void GameScene::dropItem(double xOffset, double length) {
     n->setTag(TAG_FLOOR);
     n->setContentSize(Size(length, 10));
     n->setPhysicsBody(PhysicsBody::createBox(n->getContentSize()));
+    n->getPhysicsBody()->setContactTestBitmask(0xFFFFFFFF);
     addChild(n, 2);
     n->setPosition(
 	xOffset, _waterNode->getContentSize().height + n->getContentSize().height/2
