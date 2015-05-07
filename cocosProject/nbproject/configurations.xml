@@ -20,11 +20,7 @@
         </df>
         <df name="Managers">
           <in>DataManager.cpp</in>
-          <in>LivesManager.cpp</in>
-          <in>LocalizationManager.cpp</in>
           <in>ScenesManager.cpp</in>
-          <in>SettingsManager.cpp</in>
-          <in>SoundsManager.cpp</in>
         </df>
         <df name="Scenes">
           <in>BasicScene.cpp</in>
@@ -243,10 +239,6 @@
         </df>
       </df>
       <df name="proj.linux">
-        <df name="Managers">
-          <in>AdvertisingManager.cpp</in>
-          <in>EconomicsManager.cpp</in>
-        </df>
         <in>Utils.cpp</in>
         <in>main.cpp</in>
       </df>
@@ -392,32 +384,7 @@
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="Classes/Managers/LivesManager.cpp" ex="false" tool="1" flavor2="8">
-        <ccTool flags="0">
-          <preprocessorList>
-            <Elem>_GLIBCXX_USE_NANOSLEEP</Elem>
-          </preprocessorList>
-        </ccTool>
-      </item>
-      <item path="Classes/Managers/LocalizationManager.cpp"
-            ex="false"
-            tool="1"
-            flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
       <item path="Classes/Managers/ScenesManager.cpp" ex="false" tool="1" flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
-      <item path="Classes/Managers/SettingsManager.cpp"
-            ex="false"
-            tool="1"
-            flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
-      <item path="Classes/Managers/SoundsManager.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>
@@ -1824,20 +1791,6 @@
           </incDir>
         </ccTool>
       </folder>
-      <item path="proj.linux/Managers/AdvertisingManager.cpp"
-            ex="false"
-            tool="1"
-            flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
-      <item path="proj.linux/Managers/EconomicsManager.cpp"
-            ex="false"
-            tool="1"
-            flavor2="8">
-        <ccTool flags="0">
-        </ccTool>
-      </item>
       <item path="proj.linux/Utils.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="0">
         </ccTool>

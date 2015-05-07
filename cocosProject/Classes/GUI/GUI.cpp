@@ -1,6 +1,4 @@
 #include "GUI/GUI.h"
-#include "Managers/SettingsManager.h"
-#include "Managers/SoundsManager.h"
 #include "Utils.h"
 #include <cocos/ui/UIScale9Sprite.h>
 
@@ -28,14 +26,12 @@ bool GUI::SwapButton::init(const string& icon1, const string& icon2) {
     addChild(_buttonOff);
     _buttonOn->addTouchEventListener([this](Ref*, ui::Widget::TouchEventType touchType) {
 	if(touchType == ui::Widget::TouchEventType::ENDED) {
-	    SoundsManager::getInstance()->playButtonEffect();
 	    setSwitched(false);
 	    if(_onChangeValue) _onChangeValue(false);
 	}
     });
     _buttonOff->addTouchEventListener([this](Ref*, ui::Widget::TouchEventType touchType) {
 	if(touchType == ui::Widget::TouchEventType::ENDED) {
-	    SoundsManager::getInstance()->playButtonEffect();
 	    setSwitched(true);
 	    if(_onChangeValue) _onChangeValue(true);
 	}
@@ -59,7 +55,6 @@ void GUI::SwapButton::setOnChange(const function<void(bool)>& fun) {
 }
 
 void GUI::SwapButton::triggerChange() {
-    SoundsManager::getInstance()->playButtonEffect();
     setSwitched(!isEnabled());
     if(_onChangeValue) _onChangeValue(false);
 }
@@ -105,7 +100,6 @@ bool GUI::TextButton::init(
 void GUI::TextButton::onPressStateChangedToNormal() {
     ui::Button::onPressStateChangedToNormal();
     if(!_inited) return;
-    SoundsManager::getInstance()->playButtonEffect();
     _text->setColor(c3);
     _onClickCallback();
 }

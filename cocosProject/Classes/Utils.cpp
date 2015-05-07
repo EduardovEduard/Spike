@@ -1,7 +1,5 @@
 #include <ctype.h>
 
-#include "Managers/SettingsManager.h"
-
 #include "Utils.h"
 #include "time.h"
 
@@ -94,7 +92,7 @@ float Utils::setNodeHeightR(cocos2d::Node* sprite, float sheight) {
 }
 
 void Utils::setPosition(cocos2d::Node* node, float x, float y) {
-    Size size = SettingsManager::getInstance()->getWinSize();
+    Size size = Director::getInstance()->getWinSize();
     if(node->getParent() != nullptr) 
 	size = node->getParent()->getContentSize();
     node->setPosition(size.width * x, size.height * y);

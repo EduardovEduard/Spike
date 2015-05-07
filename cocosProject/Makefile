@@ -517,30 +517,6 @@ Classes/Managers/DataManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/DataManager.cpp.s
 .PHONY : Classes/Managers/DataManager.cpp.s
 
-Classes/Managers/LocalizationManager.o: Classes/Managers/LocalizationManager.cpp.o
-.PHONY : Classes/Managers/LocalizationManager.o
-
-# target to build an object file
-Classes/Managers/LocalizationManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/LocalizationManager.cpp.o
-.PHONY : Classes/Managers/LocalizationManager.cpp.o
-
-Classes/Managers/LocalizationManager.i: Classes/Managers/LocalizationManager.cpp.i
-.PHONY : Classes/Managers/LocalizationManager.i
-
-# target to preprocess a source file
-Classes/Managers/LocalizationManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/LocalizationManager.cpp.i
-.PHONY : Classes/Managers/LocalizationManager.cpp.i
-
-Classes/Managers/LocalizationManager.s: Classes/Managers/LocalizationManager.cpp.s
-.PHONY : Classes/Managers/LocalizationManager.s
-
-# target to generate assembly for a file
-Classes/Managers/LocalizationManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/LocalizationManager.cpp.s
-.PHONY : Classes/Managers/LocalizationManager.cpp.s
-
 Classes/Managers/ScenesManager.o: Classes/Managers/ScenesManager.cpp.o
 .PHONY : Classes/Managers/ScenesManager.o
 
@@ -564,78 +540,6 @@ Classes/Managers/ScenesManager.s: Classes/Managers/ScenesManager.cpp.s
 Classes/Managers/ScenesManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/ScenesManager.cpp.s
 .PHONY : Classes/Managers/ScenesManager.cpp.s
-
-Classes/Managers/ScoreManager.o: Classes/Managers/ScoreManager.cpp.o
-.PHONY : Classes/Managers/ScoreManager.o
-
-# target to build an object file
-Classes/Managers/ScoreManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/ScoreManager.cpp.o
-.PHONY : Classes/Managers/ScoreManager.cpp.o
-
-Classes/Managers/ScoreManager.i: Classes/Managers/ScoreManager.cpp.i
-.PHONY : Classes/Managers/ScoreManager.i
-
-# target to preprocess a source file
-Classes/Managers/ScoreManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/ScoreManager.cpp.i
-.PHONY : Classes/Managers/ScoreManager.cpp.i
-
-Classes/Managers/ScoreManager.s: Classes/Managers/ScoreManager.cpp.s
-.PHONY : Classes/Managers/ScoreManager.s
-
-# target to generate assembly for a file
-Classes/Managers/ScoreManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/ScoreManager.cpp.s
-.PHONY : Classes/Managers/ScoreManager.cpp.s
-
-Classes/Managers/SettingsManager.o: Classes/Managers/SettingsManager.cpp.o
-.PHONY : Classes/Managers/SettingsManager.o
-
-# target to build an object file
-Classes/Managers/SettingsManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/SettingsManager.cpp.o
-.PHONY : Classes/Managers/SettingsManager.cpp.o
-
-Classes/Managers/SettingsManager.i: Classes/Managers/SettingsManager.cpp.i
-.PHONY : Classes/Managers/SettingsManager.i
-
-# target to preprocess a source file
-Classes/Managers/SettingsManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/SettingsManager.cpp.i
-.PHONY : Classes/Managers/SettingsManager.cpp.i
-
-Classes/Managers/SettingsManager.s: Classes/Managers/SettingsManager.cpp.s
-.PHONY : Classes/Managers/SettingsManager.s
-
-# target to generate assembly for a file
-Classes/Managers/SettingsManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/SettingsManager.cpp.s
-.PHONY : Classes/Managers/SettingsManager.cpp.s
-
-Classes/Managers/SoundsManager.o: Classes/Managers/SoundsManager.cpp.o
-.PHONY : Classes/Managers/SoundsManager.o
-
-# target to build an object file
-Classes/Managers/SoundsManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/SoundsManager.cpp.o
-.PHONY : Classes/Managers/SoundsManager.cpp.o
-
-Classes/Managers/SoundsManager.i: Classes/Managers/SoundsManager.cpp.i
-.PHONY : Classes/Managers/SoundsManager.i
-
-# target to preprocess a source file
-Classes/Managers/SoundsManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/SoundsManager.cpp.i
-.PHONY : Classes/Managers/SoundsManager.cpp.i
-
-Classes/Managers/SoundsManager.s: Classes/Managers/SoundsManager.cpp.s
-.PHONY : Classes/Managers/SoundsManager.s
-
-# target to generate assembly for a file
-Classes/Managers/SoundsManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Managers/SoundsManager.cpp.s
-.PHONY : Classes/Managers/SoundsManager.cpp.s
 
 Classes/Scenes/BasicScene.o: Classes/Scenes/BasicScene.cpp.o
 .PHONY : Classes/Scenes/BasicScene.o
@@ -732,54 +636,6 @@ Classes/Utils.s: Classes/Utils.cpp.s
 Classes/Utils.cpp.s:
 	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/Classes/Utils.cpp.s
 .PHONY : Classes/Utils.cpp.s
-
-proj.linux/Managers/AdvertisingManager.o: proj.linux/Managers/AdvertisingManager.cpp.o
-.PHONY : proj.linux/Managers/AdvertisingManager.o
-
-# target to build an object file
-proj.linux/Managers/AdvertisingManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Managers/AdvertisingManager.cpp.o
-.PHONY : proj.linux/Managers/AdvertisingManager.cpp.o
-
-proj.linux/Managers/AdvertisingManager.i: proj.linux/Managers/AdvertisingManager.cpp.i
-.PHONY : proj.linux/Managers/AdvertisingManager.i
-
-# target to preprocess a source file
-proj.linux/Managers/AdvertisingManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Managers/AdvertisingManager.cpp.i
-.PHONY : proj.linux/Managers/AdvertisingManager.cpp.i
-
-proj.linux/Managers/AdvertisingManager.s: proj.linux/Managers/AdvertisingManager.cpp.s
-.PHONY : proj.linux/Managers/AdvertisingManager.s
-
-# target to generate assembly for a file
-proj.linux/Managers/AdvertisingManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Managers/AdvertisingManager.cpp.s
-.PHONY : proj.linux/Managers/AdvertisingManager.cpp.s
-
-proj.linux/Managers/EconomicsManager.o: proj.linux/Managers/EconomicsManager.cpp.o
-.PHONY : proj.linux/Managers/EconomicsManager.o
-
-# target to build an object file
-proj.linux/Managers/EconomicsManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Managers/EconomicsManager.cpp.o
-.PHONY : proj.linux/Managers/EconomicsManager.cpp.o
-
-proj.linux/Managers/EconomicsManager.i: proj.linux/Managers/EconomicsManager.cpp.i
-.PHONY : proj.linux/Managers/EconomicsManager.i
-
-# target to preprocess a source file
-proj.linux/Managers/EconomicsManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Managers/EconomicsManager.cpp.i
-.PHONY : proj.linux/Managers/EconomicsManager.cpp.i
-
-proj.linux/Managers/EconomicsManager.s: proj.linux/Managers/EconomicsManager.cpp.s
-.PHONY : proj.linux/Managers/EconomicsManager.s
-
-# target to generate assembly for a file
-proj.linux/Managers/EconomicsManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Graman.dir/build.make CMakeFiles/Graman.dir/proj.linux/Managers/EconomicsManager.cpp.s
-.PHONY : proj.linux/Managers/EconomicsManager.cpp.s
 
 proj.linux/Utils.o: proj.linux/Utils.cpp.o
 .PHONY : proj.linux/Utils.o
@@ -884,21 +740,9 @@ help:
 	@echo "... Classes/Managers/DataManager.o"
 	@echo "... Classes/Managers/DataManager.i"
 	@echo "... Classes/Managers/DataManager.s"
-	@echo "... Classes/Managers/LocalizationManager.o"
-	@echo "... Classes/Managers/LocalizationManager.i"
-	@echo "... Classes/Managers/LocalizationManager.s"
 	@echo "... Classes/Managers/ScenesManager.o"
 	@echo "... Classes/Managers/ScenesManager.i"
 	@echo "... Classes/Managers/ScenesManager.s"
-	@echo "... Classes/Managers/ScoreManager.o"
-	@echo "... Classes/Managers/ScoreManager.i"
-	@echo "... Classes/Managers/ScoreManager.s"
-	@echo "... Classes/Managers/SettingsManager.o"
-	@echo "... Classes/Managers/SettingsManager.i"
-	@echo "... Classes/Managers/SettingsManager.s"
-	@echo "... Classes/Managers/SoundsManager.o"
-	@echo "... Classes/Managers/SoundsManager.i"
-	@echo "... Classes/Managers/SoundsManager.s"
 	@echo "... Classes/Scenes/BasicScene.o"
 	@echo "... Classes/Scenes/BasicScene.i"
 	@echo "... Classes/Scenes/BasicScene.s"
@@ -911,12 +755,6 @@ help:
 	@echo "... Classes/Utils.o"
 	@echo "... Classes/Utils.i"
 	@echo "... Classes/Utils.s"
-	@echo "... proj.linux/Managers/AdvertisingManager.o"
-	@echo "... proj.linux/Managers/AdvertisingManager.i"
-	@echo "... proj.linux/Managers/AdvertisingManager.s"
-	@echo "... proj.linux/Managers/EconomicsManager.o"
-	@echo "... proj.linux/Managers/EconomicsManager.i"
-	@echo "... proj.linux/Managers/EconomicsManager.s"
 	@echo "... proj.linux/Utils.o"
 	@echo "... proj.linux/Utils.i"
 	@echo "... proj.linux/Utils.s"

@@ -5,8 +5,6 @@
 #include "Managers/DataManager.h"
 
 #include "AppDelegate.h"
-#include "Managers/SettingsManager.h"
-#include "Managers/SoundsManager.h"
 
 
 using namespace cocos2d;
@@ -38,8 +36,6 @@ bool AppDelegate::init() {
 bool AppDelegate::initManagers() {
     auto p = [this](BasicManager* bm){ _managers.push_back(bm); };
     p(DataManager::getInstance());
-    p(SettingsManager::getInstance());
-    p(SoundsManager::getInstance());
     p(ScenesManager::getInstance());
     bool ok = true;
     forAllManagers([&ok](BasicManager* m) {

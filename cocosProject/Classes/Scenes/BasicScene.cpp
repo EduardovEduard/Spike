@@ -1,5 +1,3 @@
-#include "Managers/SettingsManager.h"
-#include "Managers/LocalizationManager.h"
 #include "Managers/ScenesManager.h"
 
 #include "Scenes/BasicScene.h"
