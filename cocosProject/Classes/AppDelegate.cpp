@@ -15,6 +15,32 @@ using namespace std;
 
 /* INITS */
 
+struct Generic {
+  bool inito(int, int);
+  
+  // SFINAE test
+    template <class Cl, class... Args>
+    class has_operator_plusplus
+    {
+	typedef char yes;
+	typedef long no;
+
+	template <class ClIns, class... ArgsIns> static yes test(decltype(declval<ClIns>().inito(declval<ArgsIns>()...))) ;
+	template <class ClIns, class... ArgsIns> static no test(...);
+
+    public:
+	enum { value = sizeof(test<Cl, Args...>(true)) == sizeof(yes) };
+    };
+    
+    template <class... Args>
+    static int create(Args... args)
+    {
+	static_assert( has_operator_plusplus<Generic, Args...>::value, "has no operator" );
+    }
+
+};
+
+
 bool AppDelegate::init() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
@@ -32,6 +58,8 @@ bool AppDelegate::init() {
     director->setAnimationInterval(1.0 / 60);
     ScenesManager::getInstance()->runWithWater();
     //ScenesManager::getInstance()->runWithSpring();
+    
+    Generic::create(2,"se");
     return true;
 }
 

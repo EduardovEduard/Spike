@@ -122,7 +122,7 @@ void WaterNode::update(float dt) {
 void WaterNode::updateMeteors() {
     
     decltype(_meteors) savedMeteors;
-    double waterDeceleration = 10;
+    
 
     for (auto& collision : _meteors) {
         if (collision.tries == 0)

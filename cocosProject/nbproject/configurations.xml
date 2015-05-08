@@ -26,12 +26,14 @@
           <in>LivesManager.cpp</in>
           <in>LocalizationManager.cpp</in>
           <in>ScenesManager.cpp</in>
+          <in>ScoreManager.cpp</in>
           <in>SettingsManager.cpp</in>
           <in>SoundsManager.cpp</in>
         </df>
         <df name="Scenes">
           <in>BasicScene.cpp</in>
           <in>MainScene.cpp</in>
+          <in>RadialWaterScene.cpp</in>
           <in>SpringScene.cpp</in>
           <in>WaterScene.cpp</in>
         </df>
@@ -423,6 +425,10 @@
         <ccTool flags="0">
         </ccTool>
       </item>
+      <item path="Classes/Managers/ScoreManager.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
       <item path="Classes/Managers/SettingsManager.cpp"
             ex="false"
             tool="1"
@@ -439,6 +445,13 @@
         </ccTool>
       </item>
       <item path="Classes/Scenes/MainScene.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Classes/Scenes/RadialWaterScene.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
         <ccTool flags="0">
         </ccTool>
       </item>

@@ -68,6 +68,8 @@
           <in>BasicScene.h</in>
           <in>MainScene.cpp</in>
           <in>MainScene.h</in>
+          <in>RadialWaterScene.cpp</in>
+          <in>RadialWaterScene.h</in>
           <in>SpringScene.cpp</in>
           <in>SpringScene.h</in>
           <in>WaterScene.cpp</in>
@@ -109,7 +111,23 @@
         </df>
         <df name="Graman_PRE_BUILD.dir">
         </df>
-        <df name="Progress">
+        <df name="Spike.dir">
+          <df name="Classes">
+            <df name="GameElements">
+            </df>
+            <df name="GUI">
+            </df>
+            <df name="Managers">
+            </df>
+            <df name="Scenes">
+            </df>
+          </df>
+          <df name="proj.linux">
+          </df>
+        </df>
+        <df name="Spike_CORE_PRE_BUILD.dir">
+        </df>
+        <df name="Spike_PRE_BUILD.dir">
         </df>
       </df>
       <df name="cocos2d">
@@ -13647,7 +13665,7 @@
                 </df>
               </df>
               <df name="jonyrock">
-                <df name="Spike">
+                <df name="SpikeWater">
                 </df>
               </df>
             </df>
@@ -13670,7 +13688,7 @@
         <df name="gen">
           <df name="org">
             <df name="jonyrock">
-              <df name="Spike">
+              <df name="SpikeWater">
               </df>
             </df>
           </df>
