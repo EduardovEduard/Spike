@@ -85,6 +85,24 @@
         </df>
         <df name="Graman_PRE_BUILD.dir">
         </df>
+        <df name="Spike.dir">
+          <df name="Classes">
+            <df name="GameElements">
+            </df>
+            <df name="GUI">
+            </df>
+            <df name="Managers">
+            </df>
+            <df name="Scenes">
+            </df>
+          </df>
+          <df name="proj.linux">
+          </df>
+        </df>
+        <df name="Spike_CORE_PRE_BUILD.dir">
+        </df>
+        <df name="Spike_PRE_BUILD.dir">
+        </df>
       </df>
       <df name="cocos2d">
         <df name="bin">
@@ -13621,32 +13639,12 @@
                 </df>
               </df>
               <df name="jonyrock">
-                <df name="Spike">
+                <df name="SpikeHero">
                 </df>
               </df>
             </df>
           </df>
-          <df name="dexedLibs">
-          </df>
           <df name="res">
-            <df name="drawable-hdpi">
-            </df>
-            <df name="drawable-mdpi">
-            </df>
-            <df name="drawable-xhdpi">
-            </df>
-            <df name="drawable-xxhdpi">
-            </df>
-            <df name="drawable-xxxhdpi">
-            </df>
-          </df>
-        </df>
-        <df name="gen">
-          <df name="org">
-            <df name="jonyrock">
-              <df name="Spike">
-              </df>
-            </df>
           </df>
         </df>
         <df name="jni">
@@ -14130,8 +14128,6 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
-        <gdb_signals>
-        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>
