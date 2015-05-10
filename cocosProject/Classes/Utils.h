@@ -1,11 +1,27 @@
 #pragma once
 
-
-
 #include <cocos2d.h>
 
 #include <sstream>
 #include <string>
+
+#define CREATE_FUNCTION \
+template <class... Args> \
+static auto create(Args&&... args) -> decltype(this) \
+{ \
+    auto pRet = new typename std::remove_pointer<decltype(create(args...))>::type; \
+    if (pRet && pRet->init(std::forward<Args>(args)...)) \
+    { \
+        pRet->autorelease(); \
+        return pRet; \
+    } \
+    else \
+    { \
+        delete pRet; \
+        pRet = NULL; \
+        return NULL; \
+    } \
+} \
 
 namespace Utils {
 
@@ -62,9 +78,6 @@ namespace Utils {
         auto pos = coordFromPSD(cocos2d::Vec2(x,y));
         node->setPosition(pos);
     }
-    
-
-    
 }
 
 
